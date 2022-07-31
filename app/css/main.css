@@ -22,7 +22,8 @@ a:hover {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   background-color: #0A0A30;
 }
 .header__block .container {
@@ -90,6 +91,8 @@ a:hover {
   content: "";
 }
 .header__block-nav .nav__link-logo {
+  width: 100px;
+  height: 100px;
   padding: 0 50px;
 }
 .header__block-entry {
@@ -172,5 +175,13 @@ a:hover {
 }
 .header .teams li {
   padding: 5px 0 0 20px;
+}
+
+.footer {
+  background-color: #F4F4F4;
+}
+.footer__logo {
+  width: 250px;
+  height: 250px;
 }
 /*# sourceMappingURL=main.css.map */

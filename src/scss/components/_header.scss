@@ -1,5 +1,6 @@
 .header {
-    position: relative;
+    position:  fixed;
+    width: 100%;
     background-color: $dark-blue;
     &__block {
         .container {
@@ -51,6 +52,8 @@
                 content: "";
             }
             .nav__link-logo {
+                width: 100px;
+                height: 100px;
                 padding: 0 50px;
             }
         }
