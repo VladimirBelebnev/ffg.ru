@@ -1,0 +1,136 @@
+.header {
+    position: relative;
+    background-color: $dark-blue;
+    &__block {
+        border-bottom: 1px solid #6E6E94;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-name {
+            margin: 0;
+            font-style: normal;
+            font-weight: $medium;
+            font-size: 14px;
+            line-height: 130%;
+            color: $white;
+        }
+        &-nav {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            .nav__link {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-style: normal;
+                font-weight: $reg;
+                font-size: 20px;
+                line-height: 23px;
+            }
+            .nav__link::after {
+                cursor: pointer;
+                content: url("../../img/svg/menu.svg");
+            }
+            .nav__link:hover {
+                height: 100px;
+                ul {
+                    display: block;
+                }
+            }
+            .nav__link:hover::after {
+                content: url("../../img/svg/menu-open.svg");
+            }
+            .nav__link-none::after {
+                content: "";
+            }
+            .nav__link-none:hover::after {
+                content: "";
+            }
+            .nav__link-logo {
+                padding: 0 50px;
+            }
+        }
+        &-entry {
+            display: flex;
+            gap: 60px;
+            .entry {
+                &__search {
+                    cursor: pointer;
+                    width: 25px;
+                    height: 25px;
+                }
+                &__user {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    &-icon {
+                        width: 25px;
+                        height: 25px;
+                    }
+                    &-btn {
+                        font-weight: $reg;
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .dropdown {
+        display: none;
+        position: absolute;
+        background-color: $open-menu-blue;
+        top: 105px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 0;
+        margin: 0;
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        li {
+            display: inline-block;
+            font-style: normal;
+            font-weight: $reg;
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+        &__nav {
+            color: $white;
+            font-size: 16px;
+
+            &-header {
+                padding: 0;
+                margin: 0;
+                font-weight: $bold;
+            }
+
+            &-links {
+                padding: 5px 0 0 0;
+                margin: 0;
+
+                li {
+                    padding: 5px 0 0 0;
+                    display: block;
+
+                    a {
+                        font-weight: $reg;
+                    }
+                }
+            }
+        }
+    }
+    .teams li {
+        padding: 5px 0 0 20px;
+    }
+}

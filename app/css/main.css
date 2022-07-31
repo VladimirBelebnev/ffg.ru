@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+html {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  background-color: #0A0A30;
+}
+.header__block {
+  border-bottom: 1px solid #6E6E94;
+}
+.header__block .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header__block-name {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: #fff;
+}
+.header__block-nav {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 50px;
+}
+.header__block-nav .nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+.header__block-nav .nav__link::after {
+  cursor: pointer;
+  content: url("../../img/svg/menu.svg");
+}
+.header__block-nav .nav__link:hover {
+  height: 100px;
+}
+.header__block-nav .nav__link:hover ul {
+  display: block;
+}
+.header__block-nav .nav__link:hover::after {
+  content: url("../../img/svg/menu-open.svg");
+}
+.header__block-nav .nav__link-none::after {
+  content: "";
+}
+.header__block-nav .nav__link-none:hover::after {
+  content: "";
+}
+.header__block-nav .nav__link-logo {
+  padding: 0 50px;
+}
+.header__block-entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+.header__block-entry .entry__search {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+.header__block-entry .entry__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+.header__block-entry .entry__user-icon {
+  width: 25px;
+  height: 25px;
+}
+.header__block-entry .entry__user-btn {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.header .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #14143A;
+  top: 105px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+  margin: 0;
+}
+.header .dropdown .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.header .dropdown li {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+.header .dropdown__nav {
+  color: #fff;
+  font-size: 16px;
+}
+.header .dropdown__nav-header {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+}
+.header .dropdown__nav-links {
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+.header .dropdown__nav-links li {
+  padding: 5px 0 0 0;
+  display: block;
+}
+.header .dropdown__nav-links li a {
+  font-weight: 400;
+}
+.header .teams li {
+  padding: 5px 0 0 20px;
+}
+/*# sourceMappingURL=main.css.map */

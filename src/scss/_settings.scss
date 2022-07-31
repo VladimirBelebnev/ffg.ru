@@ -1,0 +1,16 @@
+html {
+    font-family: $ubuntu;
+    font-size: 16px;
+    font-weight: $reg;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1600px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
