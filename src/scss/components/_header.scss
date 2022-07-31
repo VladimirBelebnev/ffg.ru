@@ -2,7 +2,6 @@
     position: relative;
     background-color: $dark-blue;
     &__block {
-        border-bottom: 1px solid #6E6E94;
         .container {
             display: flex;
             justify-content: space-between;
@@ -23,6 +22,7 @@
             align-items: center;
             gap: 50px;
             .nav__link {
+                box-sizing: border-box;
                 display: flex;
                 align-items: center;
                 gap: 6px;
@@ -36,7 +36,7 @@
                 content: url("../../img/svg/menu.svg");
             }
             .nav__link:hover {
-                height: 100px;
+                height: 103px;
                 ul {
                     display: block;
                 }
@@ -81,10 +81,11 @@
         }
     }
     .dropdown {
+        border-top: 1px solid #6E6E94;
         display: none;
         position: absolute;
         background-color: $open-menu-blue;
-        top: 105px;
+        top: 103px;
         right: 0;
         left: 0;
         width: 100%;
