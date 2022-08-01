@@ -1,7 +1,325 @@
 .footer {
+    //
+    padding: 500px 0 50px 0;
     background-color: $footer;
+    .container {
+        display: flex;
+        align-items: flex-start;
+        gap: 150px;
+    }
     &__logo {
         width: 250px;
         height: 250px;
+    }
+    &__menu {
+        width: 100%;
+        .menu__wrap {
+            display: flex;
+            gap: 140px;
+        }
+        &-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                a {
+                    color: $text;
+                    font-style: normal;
+                    font-weight: $medium;
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+            }
+        }
+        .contact-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        &-contact {
+            .contact__block {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+                a, p {
+                    color: $text;
+                    font-style: normal;
+                    font-weight: $medium;
+                    font-size: 18px;
+                    line-height: 21px;
+                    margin: 0;
+                }
+            }
+        }
+        .social-wrap {
+            padding-top: 30px;
+            display: flex;
+            gap: 20px;
+            svg {
+                width: 43px;
+                height: 43px;
+            }
+        }
+    }
+    &__line {
+        margin-top: 30px;
+        display: inline-block;
+        height: 1px;
+        width: 100%;
+        background-color: $text;
+    }
+    .info__wrap {
+        display: flex;
+        gap: 55px;
+    }
+    &__info {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        a {
+            color: $text;
+            font-style: normal;
+            font-weight: $reg;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    a:hover {
+        color: #555555;
+    }
+    .mobile {
+        &__line {
+            width: 100%;
+            margin-top: 30px;
+            display: inline-block;
+            height: 1px;
+            width: 100%;
+            background-color: $text;
+        }
+        &__wrap {
+            padding: 0;
+            display: flex;
+            gap: 35px;
+        }
+        &__info {
+            width: 100%;
+            display: none;
+            &-block {
+                padding-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                a {
+                    color: $text;
+                    font-style: normal;
+                    font-weight: $reg;
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1680px) {
+    .footer {
+        .container {
+            gap: 125px;
+        }
+        .menu__wrap {
+            gap: 120px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .footer {
+        &__logo {
+            width: 225px;
+            height: 225px;
+        }
+        .container {
+            gap: 120px;
+        }
+        .menu__wrap {
+            gap: 110px;
+        }
+        .info__wrap {
+            display: flex;
+            gap: 45px;
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .footer {
+        &__logo {
+            width: 212px;
+            height: 212px;
+        }
+        &__menu {
+            &-nav {
+                li {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+            &-contact {
+                .contact__block {
+                    a, p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .container {
+            gap: 100px;
+        }
+
+        .menu__wrap {
+            gap: 100px;
+        }
+        .info__wrap {
+            gap: 40px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        &__logo {
+            width: 176px;
+            height: 176px;
+        }
+        .container {
+            gap: 80px;
+        }
+
+        .menu__wrap {
+            gap: 80px;
+        }
+
+        .info__wrap {
+            display: none;
+        }
+        &__line {
+            display: none;
+        }
+        .mobile {
+            &__info {
+                display: block;
+                &-block {
+                    padding-top: 10px;
+                    gap: 5px;
+                }
+            }
+        }
+        .social-wrap {
+            svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__logo {
+            width: 150px;
+            height: 150px;
+        }
+        .container {
+            gap: 40px;
+        }
+        .menu__wrap {
+            gap: 40px;
+        }
+        &__menu {
+            &-nav {
+                gap: 10px;
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+            &-contact {
+                .contact__block {
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                    }
+                    gap: 5px;
+                    a,
+                    p {
+                        line-height: 16px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .contact-wrap {
+                gap: 7px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        &__logo {
+            width: 125px;
+            height: 125px;
+        }
+        .container {
+            gap: 20px;
+        }
+        .menu__wrap {
+            gap: 20px;
+        }
+        &__menu {
+            &-nav {
+                gap: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        .container {
+            gap: 0px;
+        }
+        .menu__wrap {
+            gap: 20px;
+        }
+        &__menu {
+            &-nav {
+                display: none;
+                gap: 8px;
+            }
+        }
+        .social-wrap {
+            padding-top: 20px;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .mobile__wrap {
+            gap: 20px;
+        }
+        .mobile__info-block {
+            gap: 10px;
+        }
     }
 }
