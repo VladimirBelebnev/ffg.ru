@@ -1,4 +1,5 @@
 .header {
+    z-index: 9;
     position: fixed;
     width: 100%;
     background-color: $dark-blue;
@@ -172,6 +173,7 @@
 }
 
 .mobile {
+    z-index: 7;
     position: absolute;
     top: 80px;
     border-top: 1px solid #6E6E94;
