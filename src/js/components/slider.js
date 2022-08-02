@@ -39,7 +39,7 @@ const slider = () => {
                 slidesPerView: 2,
                 spaceBetween: 50,
             },
-            320: {
+            300: {
                 slidesPerView: 1,
             }
         }

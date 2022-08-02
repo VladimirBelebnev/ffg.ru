@@ -1,0 +1,206 @@
+.media {
+    padding: 60px 0 120px;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    &__header {
+        margin: 0;
+        padding: 0;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: $black;
+        font-size: 36px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: $text;
+    }
+    &__block {
+        max-width: 800px;
+        width: 100%;
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        &-item {
+            img {
+                max-height: 300px;
+                max-width: 385px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &-date {
+            margin: 0;
+            padding-top: 15px;
+            font-style: normal;
+            font-weight: $reg;
+            font-size: 14px;
+            line-height: 16px;
+            color: #BDBDBD;
+        }
+        &-header {
+            margin: 0;
+            padding-top: 10px;
+            font-style: normal;
+            font-weight: $medium;
+            font-size: 16px;
+            line-height: 130%;
+            color: $text;
+        }
+        &-wrap {
+            position: relative;
+            img {
+                max-height: 300px;
+                max-width: 385px;
+                width: 100%;
+                object-fit: cover;
+            }
+            svg {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                top: 40%;
+                left: 40%;
+            }
+        }
+        &-btn {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .media {
+        padding: 50px 0 100px;
+        &__header {
+            font-size: 32px;
+        }
+        &__block {
+            &-date {
+                padding-top: 10px;
+                font-size: 14px;
+            }
+            &-header {
+                font-size: 15px;
+                line-height: 120%;
+            }
+            &-wrap {
+                svg {
+                    top: 35%;
+                    left: 35%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .media {
+        &__block {
+            &-wrap {
+                svg {
+                    width: 45px;
+                    height: 45px;
+                    top: 35%;
+                    left: 35%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .media {
+        padding: 50px 0 100px;
+        .container {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        &__block {
+            margin-top: 40px;
+            &-date {
+                padding-top: 10px;
+                font-size: 14px;
+            }
+            &-header {
+                font-size: 16px;
+            }
+            &-wrap {
+                svg {
+                    width: 60px;
+                    height: 60px;
+                    top: 40%;
+                    left: 40%;
+                }
+            }
+            &-btn {
+                padding-top: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .media {
+        &__header {
+            font-size: 28px;
+        }
+        &__block {
+            &-date {
+                font-size: 12px;
+            }
+            &-header {
+                font-size: 14px;
+            }
+            &-wrap {
+                svg {
+                    width: 50px;
+                    height: 50px;
+                    top: 38%;
+                    left: 38%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .media {
+        padding: 0 0 50px;
+        &__block {
+            &-header {
+                padding-top: 8px;
+            }
+            &-wrap {
+                svg {
+                    width: 40px;
+                    height: 40px;
+                    top: 40%;
+                    left: 40%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .media {
+        &__block {
+            &-header {
+                font-size: 13px;
+            }
+            &-wrap {
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    top: 39%;
+                    left: 39%;
+                }
+            }
+        }
+    }
+}
