@@ -6,10 +6,12 @@
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/footer";
-@import "./components/slider";
-@import "./components//calendar";
-@import "./components/news";
-@import "./components/media";
-@import "./components/adversting";
-@import "./components/partner";
+@import "./components/main/slider";
+@import "./components/main/calendar";
+@import "./components/main/news";
+@import "./components/main/media";
+@import "./components/main/adversting";
+@import "./components/main/partner";
+
+@import "./components/news-page";
  

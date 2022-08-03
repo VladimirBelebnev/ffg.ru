@@ -5,16 +5,6 @@
         gap: 150px;
         grid-template-columns: 3fr 1fr;
     }
-    &__header {
-        margin: 0;
-        padding: 0;
-        font-family: $roboto;
-        font-weight: $black-font;
-        font-size: 64px;
-        line-height: 75px;
-        text-transform: uppercase;
-        color: $text;
-    }
     &__cards {
         margin-top: 40px;
         display: grid;
@@ -160,9 +150,6 @@
 @media (max-width: 1400px) {
     .news {
         padding: 100px 0 50px;
-        &__header {
-            font-size: 58px;
-        }
         &__cards {
             margin-top: 80px;
         }
@@ -218,9 +205,6 @@
 
 @media (max-width: 1170px) {
     .news {
-        &__header {
-            font-size: 48px;
-        }
         &__tables {
             display: none;
         }
@@ -257,9 +241,6 @@
 
 @media (max-width: 992px) {
     .news {
-        &__header {
-            font-size: 42px;
-        }
         &__cards {
             grid-template-columns: 1fr;
         }
@@ -288,9 +269,6 @@
 
 @media (max-width: 768px) {
     .news {
-        &__header {
-            font-size: 36px;
-        }
         &-card {
             max-height: 250px;
             &__photo {
@@ -311,9 +289,6 @@
 @media (max-width: 576px) {
     .news {
         padding: 70px 0 50px;
-        &__header {
-            font-size: 36px;
-        }
         &-card {
             max-height: 225px;
             &__photo {

@@ -1,0 +1,313 @@
+.news-page {
+    padding: 170px 0 70px;
+    &__menu {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__wrap {
+        display: flex;
+        gap: 25px;
+    }
+    &__btn {
+        cursor: pointer;
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        background: $blue;
+        opacity: 0.5;
+        border-radius: 3px;
+        font-weight: $medium;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: $white;
+        &-comand {
+            background: $arrow;
+        }
+        &-all {
+            background: $arrow;
+        }
+    }
+    &__search {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        input {
+            width: 270px;
+            background-color: inherit;
+            border: none;
+            border-bottom: 1px solid #BDBDBD;
+            outline: none;
+            font-weight: $reg;
+            font-size: 15px;
+            line-height: 17px;
+            color: #BDBDBD;
+        }
+        input::placeholder {
+            color: #BDBDBD;
+        }
+        button {
+            border: none;
+            background-color: inherit;
+            padding: 0;
+            outline: none;
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+    &__block {
+        position: relative;
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+    }
+    &__contact {
+        max-height: 580px;
+        box-sizing: border-box;
+        padding: 40px;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 20px rgba(217, 217, 217, 0.5);
+        border-radius: 3px;
+        background: $white;
+        width: 100%;
+        max-height: 445px;
+        &-wrap {
+            max-height: 185px;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+    }
+    &__photo {
+        object-fit: cover;
+        width: 100%;
+        max-height: 270px;
+        height: 100%;
+    }
+    &__date {
+        padding: 0;
+        margin: 0;
+        font-weight: $reg;
+        font-size: 14px;
+        line-height: 16px;
+        color: $grey;
+    }
+    &__header {
+        margin: 0;
+        font-family: $roboto;
+        padding-top: 10px;
+        font-weight: $bold;
+        font-size: 18px;
+        line-height: 130%;
+        color: $text;
+    }
+    &__descr {
+        margin: 0;
+        padding-top: 10px;
+        font-weight: $reg;
+        font-size: 16px;
+        line-height: 130%;
+        color: $text;
+    }
+    .active {
+        opacity: 1;
+    }
+    .hidden {
+        display: none;
+    }
+}
+
+@media (max-width: 1680px) {
+    .news-page {
+        &__search {
+            input {
+                width: 180px;
+            }
+        }
+        &__wrap {
+            gap: 10px;
+        }
+        &__btn {
+            font-size: 16px;
+        }
+        &__header {
+            font-size: 16px;
+            padding-top: 5px;
+        }
+        &__descr {
+            padding-top: 5px;
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .news-page {
+        &__search {
+            input {
+                width: 140px;
+            }
+        }
+        &__btn {
+            padding: 10px 15px;
+            font-size: 15px;
+        }
+        &__items {
+            grid-template-columns: 1fr 1fr;
+        }
+        &__icon {
+            padding-top: 25px;
+            gap: 25px;
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .news-page {
+        padding: 150px 0 50px;
+        &__search {
+            display: none;
+        }
+        &__menu {
+            margin-top: 30px;
+        }
+        &__btn {
+            padding: 10px 15px;
+            font-size: 15px;
+        }
+        &__block {
+            margin-top: 50px;
+            grid-template-columns: 1fr;
+        }
+        &__items {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &__contact {
+            display: none;
+        }
+        &__header {
+            padding-top: 8px;
+        }
+        &__descr {
+            padding-top: 8px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .news-page {
+        padding: 120px 0 40px;
+        &__menu {
+            margin-top: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        &__wrap {
+            gap: 15px;
+        }
+        &__btn {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+        &__btn:first-child {
+            order: 3;
+        }
+        &__items {
+            grid-template-columns: 1fr 1fr;
+        }
+        &__header {
+            padding-top: 5px;
+        }
+
+        &__descr {
+            padding-top: 5px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+   .news-page {
+        padding: 110px 0 30px;
+       &__menu {
+           margin-top: 0px;
+           gap: 15px;
+       }
+       &__btn {
+           padding: 10px 15px;
+           font-size: 13px;
+       }
+       &__block {
+        margin-top: 30px;
+       }
+
+       &__items {
+           grid-template-columns: 1fr;
+       }
+
+       &__descr {
+           padding-top: 0px;
+       }
+   }
+}
+
+@media (max-width: 576px) {
+    .news-page {
+        padding: 100px 0 40px;
+        &__btn {
+            padding: 8px 15px;
+            font-size: 10px;
+        }
+        &__date {
+            font-size: 12px;
+        }
+        &__header {
+            font-size: 15px;
+            padding-top: 5px;
+        }
+
+        &__descr {
+            font-size: 14px;
+            padding-top: 5px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .news-page {
+        &__btn {
+            padding: 8px 15px;
+            font-size: 10px;
+        }
+        &__wrap {
+            flex-wrap: wrap;
+        }
+        &__date {
+            font-size: 12px;
+        }
+        &__header {
+            font-size: 15px;
+        }
+        &__descr {
+            font-size: 13px;
+        }
+    }
+}
