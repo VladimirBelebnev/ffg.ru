@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-height: 500px;
-    &-photo {
+    &__photo {
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -17,31 +17,24 @@
         background: $dark-blue;
         color: $white;
         h3 {
-            padding: 0;
-            margin: 0;
-            font-family: $roboto;
-            font-style: normal;
-            font-weight: $black;
-            font-size: 36px;
-            line-height: 130%;
-            text-transform: uppercase;
+            color: $white;
         }
         p {
             padding: 10px 0 0 0;
             margin: 0;
-            font-style: normal;
             font-weight: $reg;
             font-size: 16px;
             line-height: 130%;
         }
-        &-icon {
-            padding-top: 30px;
-            display: flex;
-            gap: 40px;
-            svg {
-                width: 50px;
-                height: 50px;
-            }
+    }
+    &__icon {
+        padding-top: 30px;
+        display: flex;
+        gap: 40px;
+
+        svg {
+            width: 50px;
+            height: 50px;
         }
     }
 }
@@ -50,9 +43,6 @@
     .adversting {
         &__contact {
             padding: 75px;
-            h3 {
-                font-size: 32px;
-            }
         }
     }
 }
@@ -61,16 +51,14 @@
     .adversting {
         &__contact {
             padding: 35px;
-            h3 {
-                font-size: 28px;
-            }
-            &-icon {
-                padding-top: 25px;
-                gap: 30px;
-                svg {
-                    width: 40px;
-                    height: 40px;
-                }
+        }
+        &__icon {
+            padding-top: 25px;
+            gap: 30px;
+
+            svg {
+                width: 40px;
+                height: 40px;
             }
         }
     }
@@ -80,24 +68,21 @@
     .adversting {
         max-height: 700px;
         grid-template-columns: 1fr;
-        &-photo {
+        &__photo {
             max-height: 350px;
         }
         &__contact {
             box-sizing: border-box;
             height: 350px;
             padding: 0 75px;
-            h3 {
-                font-size: 28px;
-            }
+        }
+        &__icon {
+            padding-top: 25px;
+            gap: 30px;
 
-            &-icon {
-                padding-top: 25px;
-                gap: 30px;
-                svg {
-                    width: 40px;
-                    height: 40px;
-                }
+            svg {
+                width: 40px;
+                height: 40px;
             }
         }
     }
@@ -106,7 +91,7 @@
 @media (max-width: 768px) {
     .adversting {
         max-height: 600px;
-        &-photo {
+        &__photo {
             max-height: 300px;
         }
         &__contact {
@@ -118,8 +103,8 @@
 @media (max-width: 576px) {
     .adversting {
         max-height: 600px;
-        &-photo {
-            max-height: 300px;
+        &__photo {
+            height: 300px;
         }
         &__contact {
             height: 300px;
@@ -129,9 +114,8 @@
 
 @media (max-width: 480px) {
     .adversting {
-        max-height: 500px;
+        max-height: 600px;
         &__contact {
-            height: 250px;
             padding: 0 30px;
             h3 {
                 font-size: 24px;
@@ -139,12 +123,13 @@
             p {
                 font-size: 15px;
             }
-            &-icon {
-                gap: 25px;
-                svg {
-                    width: 30px;
-                    height: 30px;
-                }
+        }
+        &__icon {
+            gap: 25px;
+
+            svg {
+                width: 30px;
+                height: 30px;
             }
         }
     }

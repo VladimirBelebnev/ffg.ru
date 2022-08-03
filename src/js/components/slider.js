@@ -1,3 +1,7 @@
+import Swiper, {Pagination, Navigation} from "swiper";
+
+Swiper.use([Pagination, Navigation]);
+
 const slider = () => {
     const sliderSlider = new Swiper('.slider__slider', {
         direction: 'horizontal',
@@ -23,12 +27,12 @@ const slider = () => {
         loop: true,
         slidesPerView: 3,
         pagination: {
-            el: '.calendar__slider-pagination',
+            el: '.calendar__pagination',
             clickable: true,
         },
         navigation: {
-            nextEl: '.calendar__slider-next',
-            prevEl: '.calendar__slider-prev',
+            nextEl: '.calendar__next',
+            prevEl: '.calendar__prev',
         },
         breakpoints: {
             1170: {
