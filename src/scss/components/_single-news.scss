@@ -47,6 +47,7 @@
     }
     &__text {
         text-align: justify;
+        -webkit-text-align: justify;
         column-gap: 20px;
         column-count: 2;
         -moz-column-count: 2;
@@ -84,6 +85,14 @@
         svg {
             width: 35px;
             height: 35px;
+        }
+    }
+}
+
+@media (max-height: 1680px) {
+    .single-news {
+        &__text {
+            font-size: 17px;
         }
     }
 }
