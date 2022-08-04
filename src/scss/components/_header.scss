@@ -92,6 +92,9 @@
                     line-height: 16px;
                     color: #5A5A80;
                 }
+                &__input::placeholder {
+                    color: #5A5A80;
+                }
                 &__user {
                     display: flex;
                     align-items: center;
@@ -181,9 +184,12 @@
     height: 100vh;
     &__logo {
         flex-basis: 33.3%;
-        object-fit: contain;
-        width: 80px;
-        height: 80px;
+        text-align: center;
+        img {
+            object-fit: contain;
+            width: 80px;
+            height: 80px;
+        }
     }
     li {
         list-style-type: none;
@@ -451,7 +457,7 @@
     }
     .mobile {
         top: 70px;
-        &__logo {
+        &__logo img {
             width: 70px;
             height: 70px;
         }

@@ -1,5 +1,4 @@
 .news-page {
-    padding: 170px 0 70px;
     &__menu {
         margin-top: 40px;
         display: flex;
@@ -182,7 +181,6 @@
 
 @media (max-width: 1170px) {
     .news-page {
-        padding: 150px 0 50px;
         &__search {
             display: none;
         }
@@ -214,7 +212,6 @@
 
 @media (max-width: 992px) {
     .news-page {
-        padding: 120px 0 40px;
         &__menu {
             margin-top: 20px;
             flex-direction: column;
@@ -246,7 +243,6 @@
 
 @media (max-width: 768px) {
    .news-page {
-        padding: 110px 0 30px;
        &__menu {
            margin-top: 0px;
            gap: 15px;
@@ -271,7 +267,6 @@
 
 @media (max-width: 576px) {
     .news-page {
-        padding: 100px 0 40px;
         &__btn {
             padding: 8px 15px;
             font-size: 10px;

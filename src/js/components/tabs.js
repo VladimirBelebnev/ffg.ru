@@ -1,6 +1,6 @@
 const newsTabs = () => {
     const btns = document.querySelectorAll('.news-page__btn'),
-        content = document.querySelectorAll('.news-page__item');
+          content = document.querySelectorAll('.news-page__item');
 
     const showContent = (selector) => {
         if (selector === 'all') {
@@ -15,42 +15,62 @@ const newsTabs = () => {
     };
 
     const showActiveBtn = (target) => {
-        btns.forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        target.classList.add('active');
+        if (typeof target === 'string') {
+            btns.forEach(btn => {
+                btn.getAttribute('id') === target ? btn.classList.add('active') : btn.classList.remove('active');
+            });
+        } else {
+            btns.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            target.classList.add('active');
+        }
     };
 
-    btns.forEach(btn => {
-        btn.addEventListener('click', event => {
-            const target = event.target;
+    const links = document.querySelectorAll('.news__link');
 
-            if (target.classList.contains('news-page__btn')) {
-                switch (target.getAttribute('id')) {
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            localStorage.setItem('news-link', JSON.stringify(this.getAttribute('id')));    
+        });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('news-link')) {
+            showContent(JSON.parse(localStorage.getItem('news-link')));
+            showActiveBtn(JSON.parse(localStorage.getItem('news-link')));
+        }
+        
+        localStorage.removeItem('news-link');
+    });
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (this && this.classList.contains('news-page__btn')) {
+                switch (this.getAttribute('id')) {
                     case 'local':
                         showContent('local');
-                        showActiveBtn(target);
+                        showActiveBtn(this);
                         break;
                     case 'kray':
                         showContent('kray');
-                        showActiveBtn(target);
+                        showActiveBtn(this);
                         break;
                     case 'rus':
                         showContent('rus');
-                        showActiveBtn(target);
+                        showActiveBtn(this);
                         break;
                     case 'spartak':
                         showContent('spartak');
-                        showActiveBtn(target);
+                        showActiveBtn(this);
                         break;
                     case 'vista':
                         showContent('vista');
-                        showActiveBtn(target);
+                        showActiveBtn(this);
                         break;
                     default:
-                        showContent(target.getAttribute('id'));
-                        showActiveBtn(target);
+                        showContent(this.getAttribute('id'));
+                        showActiveBtn(this);
                 }
             }
         });

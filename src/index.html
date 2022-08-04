@@ -14,18 +14,21 @@
 	<header class="header">
 		<div class="header__block">
 			<div class="container">
-				<h4 class="header__block-name">Геленджикская городская<br>общественная организация<br>«Федерация футбола города–<br>курорта Геленджик»</h4>
+				<a href="#slider">
+					<h1 class="header__block-name">Геленджикская городская<br>общественная организация<br>«Федерация
+						футбола города–<br>курорта Геленджик»</h1>
+				</a>
 				<ul class="header__block-nav">
 					<li class="nav__link nav__link-none"><a href="#">О нас</a></li>
 					<li class="nav__link">
-						<a href="#">Новости</a>
+						<a href="./news.html">Новости</a>
 						<ul class="dropdown">
 							<div class="container">
-								<li><a href="#">Местные новости</a></li>
-								<li><a href="#">Краевой футбол</a></li>
-								<li><a href="#">Российский футбол</a></li>
-								<li><a href="#">Спартак Геленджик</a></li>
-								<li><a href="#">Vista</a></li>
+								<li><a class="news__link" href="./news.html" id="local">Местные новости</a></li>
+								<li><a class="news__link" href="./news.html" id="kray">Краевой футбол</a></li>
+								<li><a class="news__link" href="./news.html" id="rus">Российский футбол</a></li>
+								<li><a class="news__link" href="./news.html" id="spartak">Спартак Геленджик</a></li>
+								<li><a class="news__link" href="./news.html" id="vista">Vista</a></li>
 							</div>
 						</ul>
 					</li>
@@ -83,7 +86,7 @@
 							</div>
 						</ul>
 					</li>
-					<a class="nav__link-img" href="#"><img src="./img/small-logo.png" alt="logo"></a>
+					<a class="nav__link-img" href="#slider"><img src="./img/small-logo.png" alt="logo"></a>
 					<li class="nav__link">
 						<a href="#">Спортшколы</a>
 						<ul class="dropdown">
@@ -109,7 +112,7 @@
 					<span class="burger-line mid-line"></span>
 					<span class="burger-line bottom-line"></span>
 				</button>
-				<img class="mobile__logo" src="./img/small-logo.png" alt="logo">
+				<a class="mobile__logo" href="#slider"><img src="./img/small-logo.png" alt="logo"></a>
 				<div class="header__block-entry">
 					<button class="entry__search">
 						<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -274,7 +277,7 @@
 		</div>
 	</header>
 
-	<section class="slider">
+	<section class="slider" id="slider">
 		<div class="swiper slider__slider">
 			<div class="swiper-wrapper slider__wrapper">
 				<div class="slider__content swiper-slide">
@@ -427,7 +430,7 @@
 				<div class="news__news">
 					<h2 class="header-title">Новости</h2>
 					<div class="news__cards">
-						<a href="#" class="news-card">
+						<a href="./single-news.html" class="news-card">
 							<img class="news-card__photo" src="./img/news-card-2.jpg" alt="news card photo">
 							<div class="news-card__content">
 								<p class="news-card__date">10 июля 2022</p>
@@ -435,7 +438,7 @@
 								<p class="news-card__descr">Олег Романцев, Анатолий Дывадов, Дмитрий Аленичев и Алексей Игонин - о мачте легенд “Зенита” и “Спартака”</p>
 							</div>
 						</a>
-						<a href="#" class="news-card">
+						<a href="./single-news.html" class="news-card">
 							<img class="news-card__photo" src="./img/news-card-1.jpg" alt="news card photo">
 							<div class="news-card__content">
 								<p class="news-card__date">10 июля 2022</p>
@@ -444,7 +447,7 @@
 									легенд “Зенита” и “Спартака”</p>
 							</div>
 						</a>
-						<a href="#" class="news-card">
+						<a href="./single-news.html" class="news-card">
 							<img class="news-card__photo" src="./img/news-card-1.jpg" alt="news card photo">
 							<div class="news-card__content">
 								<p class="news-card__date">10 июля 2022</p>
@@ -453,7 +456,7 @@
 									легенд “Зенита” и “Спартака”</p>
 							</div>
 						</a>
-						<a href="#" class="news-card">
+						<a href="./single-news.html" class="news-card">
 							<img class="news-card__photo" src="./img/news-card-2.jpg" alt="news card photo">
 							<div class="news-card__content">
 								<p class="news-card__date">10 июля 2022</p>
@@ -876,6 +879,5 @@
 	</footer>
 
 	<script src="./js/main.js"></script>
-	
 </body>
 </html>

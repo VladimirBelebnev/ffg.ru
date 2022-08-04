@@ -17,6 +17,11 @@ a {
     margin: 0 auto;
 }
 
+
+.main {
+    padding: 170px 0 70px;
+}
+
 .hidden {
     display: none;
 }
@@ -145,6 +150,9 @@ a {
     .container {
         max-width: 960px;
     }
+    .main {
+        padding: 150px 0 60px;
+    }
     .header-title {
         font-size: 48px;
     }
@@ -153,6 +161,9 @@ a {
 @media (max-width: 992px) {
     .container {
         max-width: 720px;
+    }
+    .main {
+        padding: 120px 0 60px;
     }
     .title {
         font-size: 32px;
@@ -178,11 +189,17 @@ a {
     .header-title {
         font-size: 36px;
     }
+    .main {
+        padding: 110px 0 50px;
+    }
 }
 
 @media (max-width: 576px) {
     .container {
         max-width: 450px;
+    }
+    .main {
+        padding: 100px 0 50px;
     }
     .title {
         font-size: 30px;
