@@ -1,0 +1,47 @@
+.tournaments {
+    &__menu {
+        margin-top: 25px;
+    }
+    &__wrap {
+        &-btn {
+            display: flex;
+            gap: 20px;
+        }
+    }
+    &__main {
+        &-btn {
+            cursor: pointer;
+            background: inherit;
+            border: none;
+            outline: none;
+            opacity: 0.5;
+        }
+        &-tab {
+            margin-top: 20px;
+            display: flex;
+            gap: 30px;
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        border-radius: 3px;
+        font-weight: $medium;
+        font-size: 18px;
+        line-height: 21px;
+        color: $white;
+        opacity: 0.5;
+        border: none;
+        background: $arrow;
+        padding: 10px 20px;
+    }
+
+    &__btn:hover {
+        background: $arrow-hover;
+    }
+    .active {
+        opacity: 1;
+    }
+    .hidden {
+        display: none;
+    }
+}

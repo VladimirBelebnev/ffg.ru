@@ -288,7 +288,10 @@
 
 @media (max-width: 576px) {
     .news {
-        padding: 70px 0 50px;
+        padding: 60px 0 50px;
+        &__cards {
+            margin-top: 20px;
+        }
         &-card {
             max-height: 225px;
             &__photo {
@@ -311,8 +314,7 @@
 
 @media (max-width: 480px) {
     .news {
-        padding: 60px 0 30px;
-
+        padding: 50px 0 30px;
         &__header {
             font-size: 32px;
         }

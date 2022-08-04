@@ -21,36 +21,50 @@
                     <ul class="header__block-nav">
                         <li class="nav__link nav__link-none"><a href="#">О нас</a></li>
                         <li class="nav__link">
-                            <a href="./news.html">Новости</a>
+                            <a href="./news.html" data-news="all">Новости</a>
                             <ul class="dropdown">
                                 <div class="container">
-                                    <li><a class="news__link" href="./news.html" id="local">Местные новости</a></li>
-                                    <li><a class="news__link" href="./news.html" id="kray">Краевой футбол</a></li>
-                                    <li><a class="news__link" href="./news.html" id="rus">Российский футбол</a></li>
-                                    <li><a class="news__link" href="./news.html" id="spartak">Спартак Геленджик</a></li>
-                                    <li><a class="news__link" href="./news.html" id="vista">Vista</a></li>
+                                    <li><a class="news__link" data-news="local" href="./news.html">Местные новости</a></li>
+                                    <li><a class="news__link" data-news="kray" href="./news.html">Краевой футбол</a></li>
+                                    <li><a class="news__link" data-news="rus" href="./news.html">Российский футбол</a></li>
+                                    <li><a class="news__link" data-news="spartak" href="./news.html">Спартак Геленджик</a></li>
+                                    <li><a class="news__link" data-news="vista" href="./news.html">Vista</a></li>
                                 </div>
                             </ul>
                         </li>
                         <li class="nav__link">
-                            <a href="#">Турниры</a>
+                            <a href="./tournaments.html" data-tournaments="all">Турниры</a>
                             <ul class="dropdown">
                                 <div class="container">
                                     <li class="dropdown__nav">
-                                        <a class="dropdown__nav-header" href="#">Краевые</a>
+                                        <a class="dropdown__nav-header tournaments__link" href="./tournaments.html"
+                                            data-tournaments="kray-tab">Краевые</a>
                                         <ul class="dropdown__nav-links">
-                                            <li><a href="#">Высшая лига</a></li>
-                                            <li><a href="#">Кубок Губернатора</a></li>
-                                            <li><a href="#">Кубок Краснодарского Края</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="vishaya-liga"
+                                                    href="./tournaments.html">Высшая
+                                                    лига</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="kubok-gubernatora"
+                                                    href="./tournaments.html">Кубок
+                                                    Губернатора</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="kubok-kraya"
+                                                    href="./tournaments.html">Кубок
+                                                    Краснодарского Края</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown__nav">
-                                        <a class="dropdown__nav-header" href="#">Местные</a>
+                                        <a class="dropdown__nav-header tournaments__link" href="./tournaments.html"
+                                            data-tournaments="local-tab">Местные</a>
                                         <ul class="dropdown__nav-links">
-                                            <li><a href="#">НФЛ</a></li>
-                                            <li><a href="#">Зимнее первенство</a></li>
-                                            <li><a href="#">Кубок Главы</a></li>
-                                            <li><a href="#">Первенство города</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="nfl"
+                                                    href="./tournaments.html">НФЛ</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="zimnie-pervenstvo"
+                                                    href="./tournaments.html">Зимнее
+                                                    первенство</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="kubok-glavi"
+                                                    href="./tournaments.html">Кубок
+                                                    Главы</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="pervenstvo-goroda"
+                                                    href="./tournaments.html">Первенство города</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown__nav">
@@ -124,7 +138,8 @@
                         <input class="entry__input hidden" type="text" placeholder="Поиск">
                         <div class="entry__user">
                             <a href="./enter.html">
-                                <svg class="entry__user-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="entry__user-icon" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M15.1023 14.8438H10.1313C5.44023 14.8438 1.6355 18.6328 1.6355 23.3057C1.6355 24.2432 2.39635 25 3.33466 25H21.8999C22.8382 25 23.5981 24.2432 23.5981 23.3057C23.5981 18.6328 19.7939 14.8438 15.1023 14.8438ZM12.6168 12.5C16.0828 12.5 18.8918 9.70166 18.8918 6.25C18.8918 2.79834 16.0828 0 12.6168 0C9.15083 0 6.34177 2.79834 6.34177 6.25C6.34177 9.70166 9.15083 12.5 12.6168 12.5Z"
                                         fill="white" />
@@ -141,23 +156,25 @@
                         <ul class="mobile__nav">
                             <li class="mobile__link mobile__link-none"><a href="#">О нас</a></li>
                             <li class="mobile__link">
-                                <a href="#">Новости</a>
+                                <a href="./news.html" data-news="all">Новости</a>
                                 <ul class="mobile__dropdown">
-                                    <li><a href="#">Местные новости</a></li>
-                                    <li><a href="#">Краевой футбол</a></li>
-                                    <li><a href="#">Российский футбол</a></li>
-                                    <li><a href="#">Спартак Геленджик</a></li>
-                                    <li><a href="#">Vista</a></li>
+                                    <li><a data-news="local" href="./news.html">Местные новости</a></li>
+                                    <li><a data-news="kray" href="./news.html">Краевой футбол</a></li>
+                                    <li><a data-news="rus" href="./news.html">Российский футбол</a></li>
+                                    <li><a data-news="spartak" href="./news.html">Спартак Геленджик</a></li>
+                                    <li><a data-news="vista" href="./news.html">Vista</a></li>
                                 </ul>
                             </li>
                             <li class="mobile__link">
-                                <a href="#">Турниры</a>
+                                <a href="./tournaments.html" data-tournaments="all">Турниры</a>
                                 <ul class="mobile__dropdown">
                                     <li class="mobile__dropdown-block">
-                                        <a class="mobile__dropdown-header" href="#">Краевые</a>
+                                        <a class="mobile__dropdown-header tournaments__link" data-tournaments="kray-tab"
+                                            href="./tournaments.html">Краевые</a>
                                     </li>
                                     <li class="mobile__dropdown-block">
-                                        <a class="mobile__dropdown-header" href="#">Местные</a>
+                                        <a class="mobile__dropdown-header tournaments__link" data-tournaments="local-tab"
+                                            href="./tournaments.html">Местные</a>
                                     </li>
                                     <li class="mobile__dropdown-block">
                                         <a class="mobile__dropdown-header" href="#">Команды</a>
@@ -283,7 +300,7 @@
         <main class="enter">
             <div class="container">
                <form action="#" class="enter__form">
-                    <h2>Войти</h2>
+                    <h2 class="title">Войти</h2>
                     <input class="enter__form-input" type="text" placeholder="Почта">
                     <input type="text" placeholder="Пароль">
                     <div class="enter__registration">

@@ -1,21 +1,15 @@
 .enter {
-    background: url("../../img/enter-bg.jpg") center no-repeat;
+    background: url(../../img/enter-bg.jpg) center no-repeat;
     background-size: cover;
     &__form {
         margin: 0 auto;
-        padding: 260px 0;
+        padding: 290px 0;
         max-width: 260px;
         box-sizing: border-box;
         text-align: center;
         h2 {
             margin: 0 0 20px 0;
-            padding: 0;
-            font-family: $roboto;
             color: $white;
-            font-weight: $black;
-            font-size: 36px;
-            line-height: 130%;
-            text-transform: uppercase;
         }
         input {
             box-sizing: border-box;
@@ -111,7 +105,7 @@
 
 .registration {
     &__form {
-        padding: 220px 0;
+        padding: 200px 0 120px;
     }
     &__btn {
         justify-content: center;
@@ -126,12 +120,12 @@
 @media (max-width: 1400px) {
     .enter {
         &__form {
-            padding: 230px 0 140px;
+            padding: 260px 0 170px;
         }
     }
     .registration {
         &__form {
-            padding: 190px 0 90px;
+            padding: 180px 0 90px;
         }
     }
 }
@@ -139,7 +133,7 @@
 @media (max-width: 1170px) {
     .enter {
         &__form {
-            padding: 200px 0 110px;
+            padding: 230px 0 140px;
         }
     }
     .registration {
@@ -152,10 +146,7 @@
 @media (max-width: 992px) {
     .enter {
         &__form {
-            padding: 180px 0 100px;
-            h2 {
-                font-size: 32px;
-            }
+            padding: 210px 0 130px;
             label {
                 input[type="checkbox"] {
                     width: 10px;
@@ -175,7 +166,7 @@
     }
     .registration {
         &__form {
-            padding: 160px 0 80px;
+            padding: 150px 0 80px;
         }
     }
 }
@@ -183,10 +174,9 @@
 @media (max-width: 768px) {
     .enter {
         &__form {
-            padding: 160px 0 90px;
+            padding: 190px 0 120px;
         }
         h2 {
-            font-size: 30px;
             margin: 0 0 10px 0;
         }
         input {
@@ -211,7 +201,7 @@
 @media (max-width: 576px) {
     .enter {
         &__form {
-            padding: 130px 0 70px;
+            padding: 160px 0 100px;
         }
     }
     .registration {
@@ -224,7 +214,7 @@
 @media (max-width: 480px) {
     .enter {
         &__form {
-            padding: 120px 0 50px;
+            padding: 150px 0 80px;
             label {
                 font-size: 10px;
             }
