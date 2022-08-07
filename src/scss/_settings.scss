@@ -132,6 +132,12 @@ a {
     .container {
         max-width: 1320px;
     }
+    .header-title {
+        font-size: 58px;
+    }
+    .main {
+        padding: 160px 0 70px;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -142,7 +148,7 @@ a {
         font-size: 34px;
     }
     .header-title {
-        font-size: 58px;
+        font-size: 52px;
     }
 }
 

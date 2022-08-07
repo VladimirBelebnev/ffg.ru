@@ -84,12 +84,14 @@
             color: $text;
         }
         &__table {
-            margin-top: 10px;
+            width: 360px;
+            height: 235px;
+
+            margin-top: 15px;
             padding: 10px;
             background: radial-gradient(50% 50% at 50% 50%, #0077B6 0%, #023E8A 100%);
             border-radius: 3px;
             color: $white;
-            width: 100%;
             line-height: 130%;
         }
     }
@@ -128,7 +130,7 @@
             gap: 50px;
         }
         &__cards {
-            margin-top: 115px;
+            margin-top: 70px;
         }
         &-card {
             &__photo {
@@ -137,6 +139,12 @@
             &__content {
                 padding: 10px;
                 width: 100%;
+            }
+        }
+        &-tables {
+            &__table {
+                width: 340px;
+                height: 225px;
             }
         }
         &-table {
@@ -150,8 +158,8 @@
 @media (max-width: 1400px) {
     .news {
         padding: 100px 0 50px;
-        &__cards {
-            margin-top: 80px;
+        &__wrap {
+            gap: 20px;
         }
         &-card {
             max-height: 500px;
@@ -180,6 +188,8 @@
                 font-size: 16px;
             }
             &__table {
+                width: 320px;
+                height: 215px;
                 margin-top: 10px;
                 padding: 5px;
             }
@@ -205,6 +215,7 @@
 
 @media (max-width: 1170px) {
     .news {
+        padding: 90px 0 45px;
         &__tables {
             display: none;
         }
@@ -288,7 +299,7 @@
 
 @media (max-width: 576px) {
     .news {
-        padding: 60px 0 50px;
+        padding: 70px 0 35px;
         &__cards {
             margin-top: 20px;
         }
@@ -314,7 +325,7 @@
 
 @media (max-width: 480px) {
     .news {
-        padding: 50px 0 30px;
+        padding: 50px 0 25px;
         &__header {
             font-size: 32px;
         }
