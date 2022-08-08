@@ -194,8 +194,11 @@ const tabs = () => {
         tabsMainContent = document.querySelectorAll('.tournaments__main-tab'),
         tabsSecondaryBtns = document.querySelectorAll('.tournaments__btn'),
         tabsSecondaryContent = document.querySelectorAll('.tournaments__content'),
+        mediaBtns = document.querySelectorAll('.media-page__btn'),
+        mediaContent = document.querySelectorAll('.media-page__items'),
         newsLinks = document.querySelectorAll('.news__link'),
-        tournamentsLinks = document.querySelectorAll('.tournaments__link');
+        tournamentsLinks = document.querySelectorAll('.tournaments__link'),
+        mediaLinks = document.querySelectorAll('.media__link');
 
   const showContent = (content, selector) => {
     if (content === newsContent) {
@@ -211,6 +214,10 @@ const tabs = () => {
     } else if (content === tabsMainContent || content === tabsSecondaryContent) {
       content.forEach(item => {
         item.dataset.tournaments === selector ? item.classList.remove('hidden') : item.classList.add('hidden');
+      });
+    } else if (content === mediaContent) {
+      content.forEach(item => {
+        item.dataset.media === selector ? item.classList.remove('hidden') : item.classList.add('hidden');
       });
     }
   };
@@ -241,20 +248,33 @@ const tabs = () => {
           localStorage.setItem('tournaments-link', JSON.stringify(this.dataset.tournaments));
         });
       });
+    } else if (links[0].classList.contains('media__link')) {
+      links.forEach(link => {
+        link.addEventListener('click', function () {
+          localStorage.setItem('media-link', JSON.stringify(this.dataset.media));
+        });
+      });
     }
   };
 
   writeInLocalstorageLinkSelector(newsLinks);
   writeInLocalstorageLinkSelector(tournamentsLinks);
+  writeInLocalstorageLinkSelector(mediaLinks);
 
   const showContentWithLocalstorage = () => {
     window.addEventListener('DOMContentLoaded', () => {
       const tournamentsStorage = JSON.parse(localStorage.getItem('tournaments-link'));
       const newsStorage = JSON.parse(localStorage.getItem('news-link'));
+      const mediaStorage = JSON.parse(localStorage.getItem('media-link'));
 
       if (localStorage.getItem('news-link')) {
         showContent(newsContent, newsStorage);
         showActiveBtn(newsBtns, newsStorage);
+      }
+
+      if (localStorage.getItem('media-link')) {
+        showContent(mediaContent, mediaStorage);
+        showActiveBtn(mediaBtns, mediaStorage);
       }
 
       switch (tournamentsStorage) {
@@ -324,6 +344,7 @@ const tabs = () => {
 
       localStorage.removeItem('tournaments-link');
       localStorage.removeItem('news-link');
+      localStorage.removeItem('media-link');
     });
   };
 
@@ -411,6 +432,16 @@ const tabs = () => {
             showContent(tabsSecondaryContent, 'pervenstvo-goroda');
             showActiveBtn(tabsSecondaryBtns, this);
             break;
+
+          case 'photo-media':
+            showContent(mediaContent, 'photo-media');
+            showActiveBtn(mediaBtns, this);
+            break;
+
+          case 'video-media':
+            showContent(mediaContent, 'video-media');
+            showActiveBtn(mediaBtns, this);
+            break;
         }
       });
     });
@@ -419,6 +450,7 @@ const tabs = () => {
   showContentOnClick(newsBtns);
   showContentOnClick(tabsMainBtns);
   showContentOnClick(tabsSecondaryBtns);
+  showContentOnClick(mediaBtns);
 };
 
 tabs();

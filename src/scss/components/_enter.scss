@@ -146,7 +146,7 @@
 @media (max-width: 992px) {
     .enter {
         &__form {
-            padding: 210px 0 130px;
+            padding: 230px 0 150px;
             label {
                 input[type="checkbox"] {
                     width: 10px;
@@ -174,7 +174,7 @@
 @media (max-width: 768px) {
     .enter {
         &__form {
-            padding: 190px 0 120px;
+            padding: 220px 0 150px;
         }
         h2 {
             margin: 0 0 10px 0;
@@ -201,7 +201,7 @@
 @media (max-width: 576px) {
     .enter {
         &__form {
-            padding: 160px 0 100px;
+            padding: 190px 0 120px;
         }
     }
     .registration {
@@ -214,7 +214,6 @@
 @media (max-width: 480px) {
     .enter {
         &__form {
-            padding: 150px 0 80px;
             label {
                 font-size: 10px;
             }
