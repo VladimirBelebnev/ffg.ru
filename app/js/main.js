@@ -18,6 +18,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_scrolling__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/scrolling */ "./src/js/components/scrolling.js");
 /* harmony import */ var _components_scrolling__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_scrolling__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_phoneMask__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/phoneMask */ "./src/js/components/phoneMask.js");
+/* harmony import */ var _components_phoneMask__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_phoneMask__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -53,6 +56,69 @@ const burger = () => {
 };
 
 burger();
+
+/***/ }),
+
+/***/ "./src/js/components/phoneMask.js":
+/*!****************************************!*\
+  !*** ./src/js/components/phoneMask.js ***!
+  \****************************************/
+/***/ (() => {
+
+const phoneMask = () => {
+  let setCursorPosition = (position, element) => {
+    element.focus();
+
+    if (element.setSelectionRange) {
+      element.setSelectionRange(position, position);
+    } else if (element.createTextRange) {
+      let range = element.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', position);
+      range.moveStart('character', position);
+      range.select();
+    }
+  };
+
+  function createMask(event) {
+    let matrix = '+7 (___) ___ __ __',
+        i = 0,
+        def = matrix.replace(/\D/g, ''),
+        val = this.value.replace(/\D/g, '');
+
+    if (def.length >= val.length) {
+      val = def;
+    }
+
+    this.value = matrix.replace(/./g, a => {
+      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
+    });
+
+    if (event.type === 'blur') {
+      if (this.value.length == 2) {
+        this.value = '';
+      }
+    } else {
+      setCursorPosition(this.value.length, this);
+    }
+
+    if (this.value.charAt(1) != '7') {
+      this.value = '';
+      this.blur();
+    }
+  }
+
+  let input = document.querySelector('[name="phone"]');
+  input.addEventListener('input', createMask);
+  input.addEventListener('focus', createMask);
+  input.addEventListener('blur', createMask);
+};
+
+try {
+  phoneMask();
+} catch (error) {
+  console.log(error.message);
+}
 
 /***/ }),
 

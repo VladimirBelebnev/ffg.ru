@@ -10,6 +10,7 @@
     }
     &__main {
         &-btn {
+            color: $text;
             padding: 0;
             font-family: $roboto;
             font-weight: $black-font;
@@ -22,6 +23,9 @@
             border: none;
             outline: none;
             opacity: 0.5;
+        }
+        &-btn:hover {
+            color: #444444;
         }
         &-tab {
             margin-top: 20px;

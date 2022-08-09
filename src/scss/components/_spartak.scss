@@ -1,0 +1,183 @@
+.spartak {
+    padding-bottom: 0;
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        h1 {
+            line-height: 100%;
+        }
+        img {
+            max-width: 125px;
+        }
+    }
+    &__content {
+        margin-top: 30px;
+        column-gap: 20px;
+        column-count: 2;
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        max-width: 100%;
+    }
+    &__photo {
+        border-radius: 3px;
+        object-fit: cover;
+        max-height: 530px;
+        width: 100%;
+    }
+    &__descr {
+        padding: 0;
+        margin: 0;
+        padding-top: 40px;
+        white-space: pre-wrap;
+        font-weight: $reg;
+        font-size: 18px;
+        line-height: 130%;
+        color: $text;
+        text-align: justify;
+        -webkit-text-align: justify;
+    }
+    &__player {
+        margin-top: 60px;
+    }
+    &__bg {
+        margin-top: 60px;
+        width: 100%;
+        padding: 60px 425px;
+    }
+    &__table {
+        background: linear-gradient(121.1deg, #E30613 18.11%, #FF4C59 100%);
+        opacity: 0.95;
+    }
+    // &__contact {
+    //     background: #250000;
+    // }
+}
+
+@media (max-width: 1680px) {
+    .spartak {
+        &__bg {
+            padding: 60px 350px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .spartak {
+        &__logo {
+            gap: 10px;
+
+            img {
+                max-width: 112px;
+            }
+        }
+
+        &__photo {
+            max-height: 480px;
+        }
+
+        &__descr {
+            padding-top: 30px;
+            font-size: 16px;
+        }
+
+        &__bg {
+            padding: 60px 280px;
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .spartak {
+        &__photo {
+            max-height: 460px;
+        }
+
+        &__bg {
+            padding: 60px 220px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .spartak {
+        &__logo {
+            img {
+                max-width: 88px;
+            }
+        }
+        &__photo {
+            width: 100%;
+            max-height: 450px;
+        }
+        &__content {
+            margin-top: 20px;
+            column-gap: 0px;
+            column-count: 1;
+            -moz-column-count: 1;
+            -moz-column-gap: 0px;
+            -webkit-column-count: 1;
+            -webkit-column-gap: 0px;
+        }
+        &__descr {
+            padding-top: 20px;
+        }
+        &__bg {
+            margin-top: 50px;
+            padding: 60px;
+        }
+        &__player {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .spartak {
+        &__logo {
+            img {
+                max-width: 76px;
+            }
+        }
+        &__photo {
+            max-height: 400px;
+        }
+
+        &__bg {
+            padding: 30px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .spartak {
+        &__logo {
+            img {
+                max-width: 64px;
+            }
+        }
+        &__photo {
+            max-height: 350px;
+        }
+        &__descr {
+            font-size: 15px;
+        }
+        &__bg {
+            margin-top: 40px;
+            padding: 0px;
+        }
+        &__player {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .spartak {
+        &__photo {
+            max-height: 300px;
+        }
+    }
+}
