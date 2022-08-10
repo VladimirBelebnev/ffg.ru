@@ -1,5 +1,6 @@
 .about {
     padding-top: 0px;
+    padding-bottom: 0px;
     &__header {
         padding-top: 100px;
         position: relative;
@@ -177,7 +178,7 @@
 @media (max-width: 992px) {
     .about {
         &__header {
-            padding-top: 80px;
+            display: none;
         }
         &-header {
             &__logo {
@@ -186,6 +187,10 @@
         }
         &__block {
             margin-top: 40px;
+        }
+        &__block:first-child {
+            margin-top: 0;
+            padding-top: 120px;
         }
         &__descr {
             padding-top: 20px;
@@ -219,15 +224,9 @@
         &__header {
             padding-top: 70px;
         }
-        &-header {
-            &__block {
-                top: 75%;
-            }
-            &__logo {
-                max-width: 124px;
-            }
+        &__block:first-child {
+            padding-top: 110px;
         }
-
         &-regalia {
             &__block {
                 gap: 10px;
@@ -245,15 +244,6 @@
 
 @media (max-width: 576px) {
     .about {
-        &-header {
-            &__logo {
-                max-width: 112px;
-            }
-            &__title {
-                max-width: 270px;
-                font-size: 16px;
-            }
-        }
         &__descr {
             font-size: 15px;
         }
@@ -279,15 +269,6 @@
 
 @media (max-width: 400px) {
     .about {
-        &-header {
-            &__logo {
-                max-width: 108px;
-            }
-            &__title {
-                padding-right: 15px;
-                font-size: 15px;
-            }
-        }
         .title {
             font-size: 28px;
         }
@@ -311,15 +292,6 @@
 
 @media (max-width: 360px) {
     .about {
-        &-header {
-            &__logo {
-                max-width: 90px;
-            }
-            &__title {
-                padding-right: 15px;
-                font-size: 14px;
-            }
-        }
         .title {
             font-size: 26px;
         }

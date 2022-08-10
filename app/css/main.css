@@ -3520,14 +3520,14 @@ a {
   border-radius: 3px;
   position: relative;
   width: 100%;
-  height: 650px;
+  height: 600px;
 }
 .sports-schools__photo {
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 3px;
   width: 100%;
-  height: 650px;
+  height: 600px;
 }
 .sports-schools__content {
   position: absolute;
@@ -3560,10 +3560,10 @@ a {
     margin-top: 40px;
   }
   .sports-schools__block {
-    height: 600px;
+    height: 500px;
   }
   .sports-schools__photo {
-    height: 600px;
+    height: 500px;
   }
   .sports-schools__content {
     padding: 40px 40px 40px 80px;
@@ -3576,10 +3576,10 @@ a {
 }
 @media (max-width: 1170px) {
   .sports-schools__block {
-    height: 500px;
+    height: 450px;
   }
   .sports-schools__photo {
-    height: 500px;
+    height: 450px;
   }
   .sports-schools__desc {
     padding-top: 10px;
@@ -3591,10 +3591,10 @@ a {
     margin-top: 20px;
   }
   .sports-schools__block {
-    height: 450px;
+    height: 400px;
   }
   .sports-schools__photo {
-    height: 450px;
+    height: 400px;
   }
   .sports-schools__content {
     padding: 20px 20px 20px 40px;
@@ -3609,10 +3609,10 @@ a {
     gap: 30px;
   }
   .sports-schools__block {
-    height: 400px;
+    height: 350px;
   }
   .sports-schools__photo {
-    height: 400px;
+    height: 350px;
   }
   .sports-schools__desc {
     font-size: 14px;
@@ -3621,10 +3621,10 @@ a {
 }
 @media (max-width: 576px) {
   .sports-schools__block {
-    max-height: 350px;
+    max-height: 300px;
   }
   .sports-schools__photo {
-    max-height: 350px;
+    max-height: 300px;
   }
   .sports-schools__content {
     padding: 10px 10px 10px 20px;
@@ -3634,12 +3634,6 @@ a {
   }
 }
 @media (max-width: 480px) {
-  .sports-schools__block {
-    max-height: 300px;
-  }
-  .sports-schools__photo {
-    max-height: 300px;
-  }
   .sports-schools__desc {
     max-width: 300px;
   }
@@ -4404,6 +4398,7 @@ a {
 }
 .about {
   padding-top: 0px;
+  padding-bottom: 0px;
 }
 .about__header {
   padding-top: 100px;
@@ -4561,13 +4556,17 @@ a {
 }
 @media (max-width: 992px) {
   .about__header {
-    padding-top: 80px;
+    display: none;
   }
   .about-header__logo {
     max-width: 144px;
   }
   .about__block {
     margin-top: 40px;
+  }
+  .about__block:first-child {
+    margin-top: 0;
+    padding-top: 120px;
   }
   .about__descr {
     padding-top: 20px;
@@ -4597,11 +4596,8 @@ a {
   .about__header {
     padding-top: 70px;
   }
-  .about-header__block {
-    top: 75%;
-  }
-  .about-header__logo {
-    max-width: 124px;
+  .about__block:first-child {
+    padding-top: 110px;
   }
   .about-regalia__block {
     gap: 10px;
@@ -4612,13 +4608,6 @@ a {
   }
 }
 @media (max-width: 576px) {
-  .about-header__logo {
-    max-width: 112px;
-  }
-  .about-header__title {
-    max-width: 270px;
-    font-size: 16px;
-  }
   .about__descr {
     font-size: 15px;
   }
@@ -4637,13 +4626,6 @@ a {
   }
 }
 @media (max-width: 400px) {
-  .about-header__logo {
-    max-width: 108px;
-  }
-  .about-header__title {
-    padding-right: 15px;
-    font-size: 15px;
-  }
   .about .title {
     font-size: 28px;
   }
@@ -4659,13 +4641,6 @@ a {
   }
 }
 @media (max-width: 360px) {
-  .about-header__logo {
-    max-width: 90px;
-  }
-  .about-header__title {
-    padding-right: 15px;
-    font-size: 14px;
-  }
   .about .title {
     font-size: 26px;
   }
