@@ -1,0 +1,227 @@
+.comands {
+    &__menu {
+        margin-top: 40px;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    &__btn {
+        cursor: pointer;
+        padding: 10px 20px;
+        font-weight: $medium;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: $white;
+        border: none;
+        background: $arrow;
+        border-radius: 3px;
+        opacity: 0.5;
+    }
+
+    &__btn:hover {
+        background: $arrow-hover;
+    }
+
+    .active {
+        opacity: 1;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    &__block {
+        margin-top: 70px;
+    }
+
+    &__items {
+        display: grid;
+        gap: 30px 20px; 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    &__item {
+        cursor: pointer;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 20px rgba(217, 217, 217, 0.5);
+        border-radius: 3px;
+        width: 100%;
+        max-height: 385px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px 5px;
+    }
+
+    &__item:hover {
+        transform: translateY(-10px);
+    }
+
+    &__photo {
+        max-width: 275px;
+        max-height: 275px;
+        object-fit: contain;
+        height: 100%;
+    }
+    &__name {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: $medium;
+        font-size: 24px;
+        line-height: 110%;
+        color: $text;
+    }
+}
+
+@media (max-width: 1680px) {
+    .comands {
+        &__menu {
+            margin-top: 30px;
+        }
+
+        &__block {
+            margin-top: 60px;
+        }
+        &__photo {
+            max-width: 250px;
+            max-height: 250px;
+        }
+        &__item {
+            gap: 8px
+        }
+        &__name {
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .comands {
+        &__menu {
+            margin-top: 30px;
+            gap: 25px;
+        }
+
+        &__block {
+            margin-top: 50px;
+        }
+
+        &__btn {
+            font-size: 16px;
+        }
+        &__photo {
+            max-width: 225px;
+            max-height: 225px;
+        }
+        &__name {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .comands {
+        &__menu {
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        &__block {
+            margin-top: 40px;
+        }
+
+        &__items {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px 20px;
+        }
+
+        &__btn {
+            font-size: 16px;
+        }
+
+        &__photo {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        &__name {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .comands {
+        &__menu {
+            margin-top: 15px;
+            gap: 15px;
+        }
+
+        &__btn {
+            font-size: 14px;
+        }
+
+        &__items {
+            gap: 20px 15px;
+        }
+
+        &__photo {
+            max-width: 175px;
+            max-height: 175px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .comands {
+        &__items {
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 10px;
+        }
+        &__photo {
+            max-width: 164px;
+            max-height: 164px;
+        }
+        &__item {
+            gap: 5px;
+        }
+        &__name {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .comands {
+        &__btn {
+            padding: 8px 15px;
+        }
+        &__photo {
+            max-width: 150px;
+            max-height: 150px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .comands {
+        &__btn {
+            font-size: 12px;
+        }
+        &__photo {
+            max-width: 125px;
+            max-height: 125px;
+        }
+
+        &__name {
+            font-size: 16px;
+        }
+    }
+}

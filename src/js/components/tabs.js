@@ -7,6 +7,8 @@ const tabs = () => {
           tabsSecondaryContent = document.querySelectorAll('.tournaments__content'),
           mediaBtns = document.querySelectorAll('.media-page__btn'),
           mediaContent = document.querySelectorAll('.media-page__items'),
+          comandsBtns = document.querySelectorAll('.comands__btn'),
+          comandsContent = document.querySelectorAll('.comands__items'),
           newsLinks = document.querySelectorAll('.news__link'),
           tournamentsLinks = document.querySelectorAll('.tournaments__link'),
           mediaLinks = document.querySelectorAll('.media__link');
@@ -29,6 +31,10 @@ const tabs = () => {
         } else if (content === mediaContent) {
             content.forEach(item => {
                 item.dataset.media === selector ? item.classList.remove('hidden') : item.classList.add('hidden');
+            });
+        } else if (content === comandsContent) {
+            content.forEach(item => {
+                item.dataset.comands === selector ? item.classList.remove('hidden') : item.classList.add('hidden');
             });
         }
     };
@@ -230,6 +236,14 @@ const tabs = () => {
                         showContent(mediaContent, 'video-media');
                         showActiveBtn(mediaBtns, this);
                         break;
+                    case 'local-comands':
+                        showContent(comandsContent, 'local-comands');
+                        showActiveBtn(comandsBtns, this);
+                        break;
+                    case 'kray-comands':
+                        showContent(comandsContent, 'kray-comands');
+                        showActiveBtn(comandsBtns, this);
+                        break;
                 }
             });
         });
@@ -239,6 +253,7 @@ const tabs = () => {
     showContentOnClick(tabsMainBtns);
     showContentOnClick(tabsSecondaryBtns);
     showContentOnClick(mediaBtns);
+    showContentOnClick(comandsBtns);
 };
 
 tabs();

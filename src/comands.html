@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#111111">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/vendor.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Федерация футбола города-курорта Геленджик</title>
+    </head>
+    <body>
+        @include('partials/header.html')
+
+        <main class="sports-schools main comands">
+            <div class="container">
+                <h1 class="header-title">Команды</h1>
+                <div class="comands__menu">
+                    <button class="comands__btn active" id="local-comands">Команды ЛФК МО Геленджик</button>
+                    <button class="comands__btn" id="kray-comands">Краевые</button>
+                </div>
+                <div class="comands__block">
+                    <div class="comands__items" data-comands="local-comands">
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">РССМ</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Cпарта</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Волна</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Побережье</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Ника</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Софи</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Ветераны</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Геленстрой</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Чемпион ММА</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Черноморец</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Юность</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Кабардинка</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">Византия</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
+                            <p class="comands__name">KingBeer</p>
+                        </a>
+                    </div>
+                    <div class="comands__items hidden" data-comands="kray-comands">
+                        <a href="./spartak.html" class="comands__item">
+                            <img class="comands__photo" src="./img/spartak-logo.png" alt="comand logo">
+                            <p class="comands__name">Cпартак Геленджик</p>
+                        </a>
+                        <a href="./rssm.html" class="comands__item">
+                            <img class="comands__photo" src="./img/vista-logo.png" alt="comand logo">
+                            <p class="comands__name">Vista</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        @include('partials/footer.html')
+        <script src="./js/main.js"></script>
+    </body>
+</html>
