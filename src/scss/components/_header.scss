@@ -166,8 +166,16 @@
     .teams li {
         padding: 5px 0 0 20px;
     }
+    a {
+        transition: color .3s;
+    }
     a:hover {
-        color: #f0f0f0;
+        color: #e7e7e7;
+        transition: color .2s;
+    }
+    a h1:hover, h2:hover {
+        color: #e7e7e7;
+        transition: color .2s;
     }
     .mobile__logo {
         display: none;

@@ -62,10 +62,18 @@ a {
         line-height: 21px;
         text-transform: uppercase;
         color: $arrow;
+        transition: color .2s;
         svg {
             width: 60px;
             height: 35px;
         }
+    }
+}
+
+.btn {
+    a:hover {
+        color: $arrow-hover;
+        transition: color .2s;
     }
 }
 

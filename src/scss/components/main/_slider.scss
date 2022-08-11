@@ -73,7 +73,10 @@
         border-radius: 3px;
         opacity: 1;
     }
-
+    .swiper-pagination-bullet:hover {
+        opacity: 0.7;
+        transition: opacity .2s;
+    }
     .swiper-pagination-bullet-active {
         background: $arrow;
         opacity: 1;

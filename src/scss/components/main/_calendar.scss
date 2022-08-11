@@ -22,6 +22,10 @@
             line-height: 130%;
             color: $pale-blue;
         }
+        a:hover {
+            color: #65658a;
+            transition: color .2s;
+        }
     }
     &__slider {
         height: 385px;
@@ -91,6 +95,11 @@
             line-height: 130%;
         }
     }
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        opacity: 0.8;
+        transition: opacity .2s;
+    }
     .swiper-pagination,
     .swiper-button-prev,
     .swiper-button-next {
@@ -109,6 +118,11 @@
         background: $white;
         border-radius: 3px;
         opacity: 1;
+    }
+
+    .swiper-pagination-bullet:hover {
+        opacity: 0.7;
+        transition: opacity .2s;
     }
 
     .swiper-pagination-bullet-active {

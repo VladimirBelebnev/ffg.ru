@@ -15,6 +15,7 @@
         border: none;
         outline: none;
         background: $blue;
+        transition: background .3s;
         opacity: 0.5;
         border-radius: 3px;
         font-weight: $medium;
@@ -28,6 +29,10 @@
         &-all {
             background: $arrow;
         }
+    }
+    &__btn:hover {
+        background: $arrow-hover;
+        transition: background .3s;
     }
     &__search {
         display: flex;
@@ -85,6 +90,8 @@
         background: $white;
         width: 100%;
         max-height: 445px;
+        transform: translateY(0px);
+        transition: transform .3s;
         &-wrap {
             max-height: 185px;
             height: 100%;
@@ -94,6 +101,7 @@
     }
     &__item:hover {
         transform: translateY(-10px);
+        transition: transform .3s;
     }
     &__photo {
         border-radius: 3px;

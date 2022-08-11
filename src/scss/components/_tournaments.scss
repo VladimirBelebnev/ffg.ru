@@ -11,6 +11,7 @@
     &__main {
         &-btn {
             color: $text;
+            transition: color .2s;
             padding: 0;
             font-family: $roboto;
             font-weight: $black-font;
@@ -25,7 +26,8 @@
             opacity: 0.5;
         }
         &-btn:hover {
-            color: #444444;
+           color: #555555;
+           transition: color .2s;
         }
         &-tab {
             margin-top: 20px;
@@ -42,12 +44,14 @@
         color: $white;
         opacity: 0.5;
         border: none;
-        background: $arrow;
         padding: 10px 20px;
+        background: $arrow;
+        transition: background .2s;
     }
 
     &__btn:hover {
         background: $arrow-hover;
+        transition: background .2s;
     }
     .active {
         opacity: 1;

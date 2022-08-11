@@ -18,10 +18,12 @@
         background: $arrow;
         border-radius: 3px;
         opacity: 0.5;
+        transition: background .2s;
     }
 
     &__btn:hover {
         background: $arrow-hover;
+        transition: background .2s;
     }
 
     .active {
@@ -55,10 +57,13 @@
         flex-direction: column;
         gap: 10px;
         padding: 30px 5px;
+        transform: translateY(0px);
+        transition: transform .3s;
     }
 
     &__item:hover {
         transform: translateY(-10px);
+        transition: transform .3s;
     }
 
     &__photo {
@@ -90,8 +95,8 @@
             margin-top: 60px;
         }
         &__photo {
-            max-width: 250px;
-            max-height: 250px;
+            max-width: 225px;
+            max-height: 225px;
         }
         &__item {
             gap: 8px
@@ -117,8 +122,8 @@
             font-size: 16px;
         }
         &__photo {
-            max-width: 225px;
-            max-height: 225px;
+            max-width: 200px;
+            max-height: 200px;
         }
         &__name {
             font-size: 20px;
@@ -146,10 +151,10 @@
             font-size: 16px;
         }
 
-        &__photo {
-            max-width: 200px;
-            max-height: 200px;
-        }
+        // &__photo {
+        //     max-width: 200px;
+        //     max-height: 200px;
+        // }
 
         &__name {
             font-size: 20px;

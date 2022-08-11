@@ -1,1 +1,730 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="theme-color" content="#111111"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="./css/vendor.css"><link rel="stylesheet" href="./css/main.css"><title>Федерация футбола города-курорта Геленджик</title></head><body><header class="header"><div class="header__block"><div class="container"><a href="./index.html"><h2 class="header__block-name">Геленджикская городская<br>общественная организация<br>«Федерация футбола города–<br>курорта Геленджик»</h2></a><ul class="header__block-nav"><li class="nav__link nav__link-none"><a href="./about.html">О нас</a></li><li class="nav__link"><a href="./news.html" data-news="all-news">Новости</a><ul class="dropdown"><div class="container"><li><a class="news__link" data-news="local" href="./news.html">Местные новости</a></li><li><a class="news__link" data-news="kray" href="./news.html">Краевой футбол</a></li><li><a class="news__link" data-news="rus" href="./news.html">Российский футбол</a></li><li><a class="news__link" data-news="spartak" href="./news.html">Спартак Геленджик</a></li><li><a class="news__link" data-news="vista" href="./news.html">Vista</a></li></div></ul></li><li class="nav__link"><a href="./tournaments.html" data-tournaments="all-tournaments">Турниры</a><ul class="dropdown"><div class="container"><li class="dropdown__nav"><a class="dropdown__nav-header tournaments__link" href="./tournaments.html" data-tournaments="kray-tab">Краевые</a><ul class="dropdown__nav-links"><li><a class="tournaments__link" data-tournaments="vishaya-liga" href="./tournaments.html">Высшая лига</a></li><li><a class="tournaments__link" data-tournaments="kubok-gubernatora" href="./tournaments.html">Кубок Губернатора</a></li><li><a class="tournaments__link" data-tournaments="kubok-kraya" href="./tournaments.html">Кубок Краснодарского Края</a></li></ul></li><li class="dropdown__nav"><a class="dropdown__nav-header tournaments__link" href="./tournaments.html" data-tournaments="local-tab">Местные</a><ul class="dropdown__nav-links"><li><a class="tournaments__link" data-tournaments="nfl" href="./tournaments.html">НФЛ</a></li><li><a class="tournaments__link" data-tournaments="zimnie-pervenstvo" href="./tournaments.html">Зимнее первенство</a></li><li><a class="tournaments__link" data-tournaments="kubok-glavi" href="./tournaments.html">Кубок Главы</a></li><li><a class="tournaments__link" data-tournaments="pervenstvo-goroda" href="./tournaments.html">Первенство города</a></li></ul></li><li class="dropdown__nav"><a class="dropdown__nav-header" href="./comands.html">Команды</a><ul class="dropdown__nav-links teams"><a href="./comands.html">Команды ЛФК МО Геленджик</a><li><a href="./rssm.html">РССМ</a></li><li><a href="./rssm.html">Спарта</a></li><li><a href="./rssm.html">Волна</a></li><li><a href="./rssm.html">Побережье</a></li><li><a href="./rssm.html">Ника</a></li><li><a href="./rssm.html">Софи</a></li><li><a href="./rssm.html">Ветераны</a></li><li><a href="./rssm.html">Геленстрой</a></li><li><a href="./rssm.html">Чемпион ММА</a></li><li><a href="./rssm.html">Черноморец</a></li><li><a href="./rssm.html">Юность</a></li><li><a href="./rssm.html">Кабардинка</a></li><li><a href="./rssm.html">Византия</a></li><li><a href="./rssm.html">KingBeer</a></li></ul><ul class="dropdown__nav-links"><li><a href="./spartak.html">Спартак Геленджик</a></li><li><a href="#">Vista</a></li></ul></li><li class="dropdown__nav"><a class="dropdown__nav-header" href="#">Стадионы</a></li><li class="dropdown__nav"><a class="dropdown__nav-header" href="#">Судьи</a></li></div></ul></li><a class="nav__link-img" href="./index.html"><img src="./img/small-logo.png" alt="logo"></a><li class="nav__link"><a href="./sports-schools.html">Спортшколы</a><ul class="dropdown"><div class="container"><li><a href="./fortuna.html">Фортуна</a></li><li><a href="./fortuna.html">Старт</a></li><li><a href="./fortuna.html">Спарта</a></li></div></ul></li><li class="nav__link"><a class="media__link" href="./media.html" data-media="photo-media">Медиа</a><ul class="dropdown"><div class="container"><li><a class="media__link" data-media="photo-media" href="./media.html">Фото</a></li><li><a class="media__link" data-media="video-media" href="./media.html">Видео</a></li></div></ul></li></ul><button class="burger"><span class="burger-line top-line"></span> <span class="burger-line mid-line"></span> <span class="burger-line bottom-line"></span></button> <a class="mobile__logo" href="./index.html"><img src="./img/small-logo.png" alt="logo"></a><div class="header__block-entry"><button class="entry__search"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.1901 15.4782L23.6458 21.934C23.8727 22.1611 24.0001 22.469 24 22.79C23.9999 23.111 23.8723 23.4189 23.6452 23.6458C23.4181 23.8727 23.1102 24.0001 22.7892 24C22.4682 23.9999 22.1604 23.8723 21.9335 23.6452L15.4778 17.1893C13.5479 18.6841 11.1211 19.3875 8.69104 19.1565C6.26097 18.9255 4.01018 17.7773 2.39656 15.9457C0.782936 14.114 -0.0723147 11.7364 0.00479537 9.29655C0.0819054 6.85668 1.08558 4.53783 2.81165 2.81172C4.53771 1.08561 6.85651 0.0819075 9.29632 0.00479549C11.7361 -0.0723165 14.1137 0.782955 15.9453 2.39662C17.7769 4.01028 18.925 6.26113 19.156 8.69126C19.387 11.1214 18.6836 13.5483 17.1889 15.4782H17.1901ZM9.60045 16.7993C11.5099 16.7993 13.3412 16.0408 14.6914 14.6905C16.0416 13.3403 16.8001 11.509 16.8001 9.59949C16.8001 7.68997 16.0416 5.85866 14.6914 4.50843C13.3412 3.15819 11.5099 2.39964 9.60045 2.39964C7.69098 2.39964 5.85971 3.15819 4.50951 4.50843C3.15932 5.85866 2.40078 7.68997 2.40078 9.59949C2.40078 11.509 3.15932 13.3403 4.50951 14.6905C5.85971 16.0408 7.69098 16.7993 9.60045 16.7993Z" fill="white"/></svg></button> <input class="entry__input hidden" type="text" placeholder="Поиск"><div class="entry__user"><a href="./enter.html"><svg class="entry__user-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.1023 14.8438H10.1313C5.44023 14.8438 1.6355 18.6328 1.6355 23.3057C1.6355 24.2432 2.39635 25 3.33466 25H21.8999C22.8382 25 23.5981 24.2432 23.5981 23.3057C23.5981 18.6328 19.7939 14.8438 15.1023 14.8438ZM12.6168 12.5C16.0828 12.5 18.8918 9.70166 18.8918 6.25C18.8918 2.79834 16.0828 0 12.6168 0C9.15083 0 6.34177 2.79834 6.34177 6.25C6.34177 9.70166 9.15083 12.5 12.6168 12.5Z" fill="white"/></svg> </a><a class="entry__user-btn" href="./enter.html">Войти</a></div></div></div></div><div class="mobile hidden"><div class="container"><div class="mobile__wrap"><ul class="mobile__nav"><li class="mobile__link mobile__link-none"><a href="./about.html">О нас</a></li><li class="mobile__link"><a class="news__link" href="./news.html" data-news="all-news">Новости</a><ul class="mobile__dropdown"><li><a class="news__link" data-news="local" href="./news.html">Местные новости</a></li><li><a class="news__link" data-news="kray" href="./news.html">Краевой футбол</a></li><li><a class="news__link" data-news="rus" href="./news.html">Российский футбол</a></li><li><a class="news__link" data-news="spartak" href="./news.html">Спартак Геленджик</a></li><li><a class="news__link" data-news="vista" href="./news.html">Vista</a></li></ul></li><li class="mobile__link"><a href="./tournaments.html" data-tournaments="all-tournaments">Турниры</a><ul class="mobile__dropdown"><li class="mobile__dropdown-block"><a class="mobile__dropdown-header tournaments__link" data-tournaments="kray-tab" href="./tournaments.html">Краевые</a></li><li class="mobile__dropdown-block"><a class="mobile__dropdown-header tournaments__link" data-tournaments="local-tab" href="./tournaments.html">Местные</a></li><li class="mobile__dropdown-block"><a class="mobile__dropdown-header" href="./comands.html">Команды</a></li><li class="mobile__dropdown-block"><a class="mobile__dropdown-header" href="#">Стадионы</a></li><li class="mobile__dropdown-block"><a class="mobile__dropdown-header" href="#">Судьи</a></li></ul></li><li class="mobile__link"><a href="./sports-schools.html">Спортшколы</a><ul class="mobile__dropdown"><li><a href="./fortuna.html">Фортуна</a></li><li><a href="./fortuna.html">Старт</a></li><li><a href="./fortuna.html">Спарта</a></li></ul></li><li class="mobile__link"><a class="media__link" href="./media.html" data-media="photo-media">Медиа</a><ul class="mobile__dropdown"><li><a class="media__link" href="./media.html" data-media="photo-media">Фото</a></li><li><a class="media__link" href="./media.html" data-media="video-media">Видео</a></li></ul></li></ul><div class="mobile__contact"><div class="mobile__contact-wrap"><div class="mobile__contact-block"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C6.00606 0 2.75676 3.2493 2.75676 7.2432C2.75676 12.1998 9.23875 19.4763 9.51473 19.7836C9.77395 20.0723 10.2265 20.0718 10.4853 19.7836C10.7613 19.4763 17.2432 12.1998 17.2432 7.2432C17.2432 3.2493 13.9939 0 10 0ZM10 10.8875C7.99055 10.8875 6.35578 9.25266 6.35578 7.2432C6.35578 5.23375 7.99059 3.59898 10 3.59898C12.0094 3.59898 13.6442 5.23379 13.6442 7.24324C13.6442 9.2527 12.0094 10.8875 10 10.8875Z" fill="#0077B6"/></svg><p>ул. Солнцедарская, д. 1з, Геленджик</p></div><div class="mobile__contact-block"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0ZM13.2803 13.6552C13.134 13.8014 12.942 13.875 12.75 13.875C12.5581 13.875 12.3659 13.8014 12.2198 13.6552L8.46977 9.90527C8.32874 9.76506 8.25005 9.57445 8.25005 9.37505V4.5C8.25005 4.08527 8.58595 3.75005 9 3.75005C9.41405 3.75005 9.74995 4.08527 9.74995 4.5V9.06454L13.2803 12.5947C13.5735 12.8881 13.5735 13.362 13.2803 13.6552Z" fill="#0077B6"/></svg><p>Ежедневно 9.00 — 21.00</p></div><div class="mobile__contact-block"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_9_280)"><path d="M17.2324 13.9201C16.0242 12.8867 14.7981 12.2608 13.6047 13.2926L12.8921 13.9162C12.3707 14.3689 11.4014 16.484 7.65347 12.1726C3.90635 7.86665 6.1362 7.19621 6.65835 6.74743L7.37484 6.12304C8.56196 5.08889 8.11396 3.78704 7.25776 2.44694L6.74108 1.63524C5.88098 0.29826 4.9444 -0.579789 3.75415 0.452796L3.11103 1.01475C2.58498 1.39797 1.11454 2.64363 0.757861 5.01006C0.328592 7.84948 1.68274 11.101 4.78518 14.6686C7.88372 18.2378 10.9175 20.0306 13.7912 19.9993C16.1795 19.9736 17.6219 18.692 18.073 18.2261L18.7184 17.6633C19.9056 16.6315 19.168 15.581 17.959 14.5453L17.2324 13.9201Z" fill="#0077B6"/></g><defs><clipPath id="clip0_9_280"><rect width="20" height="20" fill="white"/></clipPath></defs></svg> <a href="callto:+7 (995) 319-09-91">+7 995 319-09-91</a></div><div class="mobile__contact-block"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_9_265)"><path d="M19.8239 3.97363L13.7583 10.0002L19.8239 16.0267C19.9335 15.7975 20 15.5441 20 15.2736V4.72672C20 4.45613 19.9335 4.20281 19.8239 3.97363Z" fill="#0077B6"/><path d="M18.2422 2.96875H1.75785C1.48726 2.96875 1.23394 3.03527 1.00476 3.14492L8.75722 10.8583C9.44269 11.5438 10.5574 11.5438 11.2428 10.8583L18.9953 3.14492C18.7661 3.03527 18.5128 2.96875 18.2422 2.96875Z" fill="#0077B6"/><path d="M0.176172 3.97363C0.0665234 4.20281 0 4.45613 0 4.72672V15.2736C0 15.5442 0.0665234 15.7975 0.176172 16.0267L6.24176 10.0002L0.176172 3.97363Z" fill="#0077B6"/><path d="M12.9297 10.8286L12.0714 11.6869C10.9293 12.8291 9.07078 12.8291 7.92863 11.6869L7.07035 10.8286L1.00476 16.8551C1.23394 16.9648 1.48726 17.0313 1.75785 17.0313H18.2422C18.5128 17.0313 18.7661 16.9648 18.9953 16.8551L12.9297 10.8286Z" fill="#0077B6"/></g><defs><clipPath id="clip0_9_265"><rect width="20" height="20" fill="white"/></clipPath></defs></svg> <a href="mailto:ffg@gmail.com">ffg@gmail.com</a></div></div><div class="mobile__social-wrap"><a href="#"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15.5" cy="16.5" r="10.5" fill="#0077B6"/><path d="M15 0C6.71323 0 0 6.71419 0 15C0 23.2858 6.71419 30 15 30C23.2868 30 30 23.2858 30 15C30 6.71419 23.2858 0 15 0ZM22.3674 10.2765L19.9055 21.8777C19.7235 22.7003 19.2339 22.8997 18.5506 22.5126L14.8006 19.7487L12.9919 21.4906C12.7926 21.69 12.6232 21.8594 12.2361 21.8594L12.5023 18.0426L19.4516 11.7639C19.7545 11.4977 19.3848 11.3468 18.9852 11.6129L10.3965 17.0197L6.69484 15.8642C5.89065 15.6106 5.87226 15.06 6.86419 14.6729L21.3261 9.09581C21.9977 8.85387 22.5842 9.25935 22.3665 10.2755L22.3674 10.2765Z" fill="white"/></svg> </a><a href="#"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="white"/><path d="M25.217 10.1134C25.0923 9.66768 24.8546 9.26171 24.527 8.9348C24.1994 8.60788 23.7929 8.3711 23.3469 8.24738C21.6728 7.79983 14.9428 7.79983 14.9428 7.79983C14.9428 7.79983 8.22549 7.78909 6.53393 8.24738C6.08866 8.37164 5.68297 8.60868 5.35609 8.93556C5.0292 9.26245 4.79217 9.66813 4.66791 10.1134C4.34999 11.8273 4.19341 13.5671 4.20023 15.3102C4.19712 17.0449 4.35368 18.7762 4.66791 20.4822C4.79257 20.9277 5.02968 21.3337 5.35645 21.6612C5.68322 21.9886 6.08869 22.2266 6.53393 22.3523C8.20805 22.7998 14.9428 22.7998 14.9428 22.7998C14.9428 22.7998 21.656 22.7998 23.3469 22.3523C23.7929 22.2272 24.1991 21.9894 24.5267 21.6619C24.8542 21.3344 25.0919 20.9282 25.217 20.4822C25.525 18.7772 25.6753 17.0434 25.6645 15.3102C25.6753 13.5656 25.5283 11.8291 25.217 10.1134V10.1134ZM12.7929 18.5222V12.0841L18.395 15.3102L12.7929 18.5222Z" fill="#0077B6"/></svg> </a><a href="#"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="white"/><rect x="4" y="9" width="22" height="13" fill="#0077B6"/><path d="M5.94 7.4249C3.8313 9.27014 1.8 8.76506 1.8 14.7046V17.4062C1.8 23.3458 3.8313 21.1798 5.94 23.0249C8.04884 24.8701 7.68697 26.3249 14.475 26.3249H16.425C23.2131 26.3249 24.5313 25.4701 26.64 23.6249C28.7488 21.7798 28.02 21.7708 28.02 15.8312V13.5081C28.02 7.56848 27.2588 8.37008 25.15 6.5249C23.0413 4.67979 22.4631 2.3999 15.675 2.3999H14.475C7.6869 2.3999 8.04878 5.57978 5.94 7.4249ZM5.1375 10.3844H8.56253C8.67503 15.3937 11.2 17.5156 13.2 17.9531V10.3843H16.425V14.7046C18.4 14.5187 20.475 12.5499 21.175 10.3843H24.4C24.1361 11.5074 23.6103 12.5709 22.8554 13.5081C22.1004 14.4453 21.1326 15.2361 20.0125 15.8312C21.2632 16.3745 22.3679 17.1438 23.2535 18.0885C24.1391 19.0331 24.7855 20.1314 25.15 21.3109H21.6C21.2729 20.2864 20.6072 19.3692 19.6866 18.6746C18.7659 17.9799 17.6312 17.5386 16.425 17.4062V21.3109H16.0375C9.20003 21.3109 5.30003 17.2094 5.1375 10.3844Z" fill="white"/></svg></a></div></div></div><h4 class="mobile__name">Геленджикская городская<br>общественная организация<br>«Федерация футбола города–<br>курорта Геленджик»</h4></div></div></header><main class="main media-page"><div class="container"><h1 class="header-title">медиа</h1><div class="media-page__menu"><button class="media-page__btn active" id="photo-media">Фото</button> <button class="media-page__btn" id="video-media">Видео</button></div><div class="media-page__block"><div class="media-page__items" data-media="photo-media"><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-1.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-2.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-3.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-1.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-2.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-3.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-1.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-2.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-3.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-1.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-2.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/photo-3.jpg" alt="media photo"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p><p>24 фото</p></div></div></a></div><div class="media-page__items hidden" data-media="video-media"><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-1.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-2.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-3.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-1.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-2.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-3.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-1.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-2.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-3.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-1.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-2.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a><a href="#" class="media-page__item"><img class="media-page__photo" src="./img/video-3.jpg" alt="media video"><div class="media-page__wrap"><p class="media-page__name">Спартак — Сопка Героев</p><div class="media-page__info"><p>12 июля 2022</p></div></div></a></div><div class="adversting__contact news-page__contact media-page__contact"><h3 class="title">Мы в соцсетях:</h3><p>Следите за нами в соиацльных сетях, подписывайтесь на новостные паблики, чтобы узнать о событиях клуба первыми!</p><div class="adversting__icon news-page__icon"><a href="#"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 0C11.1887 0 0 11.1903 0 25C0 38.8097 11.1903 50 25 50C38.8113 50 50 38.8097 50 25C50 11.1903 38.8097 0 25 0ZM37.279 17.1274L33.1758 36.4629C32.8726 37.8339 32.0565 38.1661 30.9177 37.521L24.6677 32.9145L21.6532 35.8177C21.321 36.15 21.0387 36.4323 20.3935 36.4323L20.8371 30.071L32.4194 19.6065C32.9242 19.1629 32.3081 18.9113 31.6419 19.3548L17.3274 28.3661L11.1581 26.4403C9.81774 26.0177 9.7871 25.1 11.4403 24.4548L35.5435 15.1597C36.6629 14.7565 37.6403 15.4323 37.2774 17.1258L37.279 17.1274Z" fill="white"/></svg> </a><a href="#"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="25" fill="white"/><path d="M42.0283 16.856C41.8205 16.1131 41.4244 15.4365 40.8783 14.8917C40.3323 14.3468 39.6548 13.9522 38.9115 13.746C36.1213 13 24.9046 13 24.9046 13C24.9046 13 13.7091 12.9821 10.8899 13.746C10.1477 13.9531 9.4716 14.3481 8.9268 14.8929C8.38199 15.4377 7.98693 16.1139 7.77982 16.856C7.24996 19.7124 6.989 22.6122 7.00036 25.5174C6.99519 28.4085 7.25611 31.294 7.77982 34.1373C7.9876 34.8799 8.38277 35.5565 8.92739 36.1023C9.47201 36.6481 10.1478 37.0447 10.8899 37.2541C13.6801 38 24.9046 38 24.9046 38C24.9046 38 36.0934 38 38.9115 37.2541C39.6548 37.0456 40.3319 36.6494 40.8777 36.1035C41.4236 35.5577 41.8198 34.8806 42.0283 34.1373C42.5416 31.2957 42.7921 28.406 42.7742 25.5174C42.7921 22.6097 42.5472 19.7155 42.0283 16.856ZM21.3215 30.8707V20.1405L30.6583 25.5174L21.3215 30.8707Z" fill="#0A0A30"/></svg> </a><a href="#"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="25" fill="white"/><rect x="8" y="15" width="36" height="21" fill="#0A0A30"/><path d="M9.9 12.375C6.38549 15.4504 3 14.6086 3 24.5078V29.0104C3 38.9098 6.38549 35.2998 9.9 38.375C13.4147 41.4503 12.8116 43.875 24.125 43.875H27.375C38.6885 43.875 40.8855 42.4503 44.4 39.375C47.9146 36.2998 46.7 36.2848 46.7 26.3854V22.5136C46.7 12.6143 45.4313 13.9503 41.9166 10.875C38.4021 7.7998 37.4385 4 26.125 4H24.125C12.8115 4 13.4146 9.2998 9.9 12.375ZM8.5625 17.3074H14.2709C14.4584 25.6563 18.6666 29.1928 22 29.922V17.3073H27.375V24.5078C30.6666 24.1979 34.125 20.9167 35.2916 17.3073H40.6666C40.2269 19.1792 39.3505 20.9516 38.0923 22.5136C36.834 24.0756 35.221 25.3937 33.3541 26.3854C35.4386 27.2909 37.2798 28.5732 38.7558 30.1476C40.2318 31.722 41.3092 33.5525 41.9166 35.5183H36C35.4548 33.8108 34.3454 32.2822 32.8109 31.1244C31.2765 29.9666 29.3854 29.2312 27.375 29.0104V35.5183H26.7291C15.3334 35.5183 8.83337 28.6824 8.5625 17.3074Z" fill="white"/></svg></a></div></div></div></div></main><footer class="footer"><div class="container"><img class="footer__logo" src="./img/big-logo.png"><div class="footer__menu"><div class="footer__wrap"><ul class="footer__links"><li><a href="./about.html">О нас</a></li><li><a href="./news.html">Новости</a></li><li><a href="./tournaments.html">Турниры</a></li><li><a href="./sports-schools.html">Спортшколы</a></li><li><a href="./media.html">Медиа</a></li></ul><div class="footer-contact"><div class="footer-contact__wrap"><div class="footer-contact__item"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_9_280)"><path d="M17.2324 13.9201C16.0242 12.8867 14.7981 12.2608 13.6047 13.2926L12.8921 13.9162C12.3707 14.3689 11.4014 16.484 7.65347 12.1726C3.90635 7.86665 6.1362 7.19621 6.65835 6.74743L7.37484 6.12304C8.56196 5.08889 8.11396 3.78704 7.25776 2.44694L6.74108 1.63524C5.88098 0.29826 4.9444 -0.579789 3.75415 0.452796L3.11103 1.01475C2.58498 1.39797 1.11454 2.64363 0.757861 5.01006C0.328592 7.84948 1.68274 11.101 4.78518 14.6686C7.88372 18.2378 10.9175 20.0306 13.7912 19.9993C16.1795 19.9736 17.6219 18.692 18.073 18.2261L18.7184 17.6633C19.9056 16.6315 19.168 15.581 17.959 14.5453L17.2324 13.9201Z" fill="#0077B6"/></g><defs><clipPath id="clip0_9_280"><rect width="20" height="20" fill="white"/></clipPath></defs></svg> <a href="callto:+7 (995) 319-09-91">+7 995 319-09-91</a></div><div class="footer-contact__item"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_9_265)"><path d="M19.8239 3.97363L13.7583 10.0002L19.8239 16.0267C19.9335 15.7975 20 15.5441 20 15.2736V4.72672C20 4.45613 19.9335 4.20281 19.8239 3.97363Z" fill="#0077B6"/><path d="M18.2422 2.96875H1.75785C1.48726 2.96875 1.23394 3.03527 1.00476 3.14492L8.75722 10.8583C9.44269 11.5438 10.5574 11.5438 11.2428 10.8583L18.9953 3.14492C18.7661 3.03527 18.5128 2.96875 18.2422 2.96875Z" fill="#0077B6"/><path d="M0.176172 3.97363C0.0665234 4.20281 0 4.45613 0 4.72672V15.2736C0 15.5442 0.0665234 15.7975 0.176172 16.0267L6.24176 10.0002L0.176172 3.97363Z" fill="#0077B6"/><path d="M12.9297 10.8286L12.0714 11.6869C10.9293 12.8291 9.07078 12.8291 7.92863 11.6869L7.07035 10.8286L1.00476 16.8551C1.23394 16.9648 1.48726 17.0313 1.75785 17.0313H18.2422C18.5128 17.0313 18.7661 16.9648 18.9953 16.8551L12.9297 10.8286Z" fill="#0077B6"/></g><defs><clipPath id="clip0_9_265"><rect width="20" height="20" fill="white"/></clipPath></defs></svg> <a href="mailto:ffg@gmail.com">ffg@gmail.com</a></div><div class="footer-contact__item"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C6.00606 0 2.75676 3.2493 2.75676 7.2432C2.75676 12.1998 9.23875 19.4763 9.51473 19.7836C9.77395 20.0723 10.2265 20.0718 10.4853 19.7836C10.7613 19.4763 17.2432 12.1998 17.2432 7.2432C17.2432 3.2493 13.9939 0 10 0ZM10 10.8875C7.99055 10.8875 6.35578 9.25266 6.35578 7.2432C6.35578 5.23375 7.99059 3.59898 10 3.59898C12.0094 3.59898 13.6442 5.23379 13.6442 7.24324C13.6442 9.2527 12.0094 10.8875 10 10.8875Z" fill="#0077B6"/></svg><p>ул. Солнцедарская, д. 1з, Геленджик</p></div><div class="footer-contact__item"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0ZM13.2803 13.6552C13.134 13.8014 12.942 13.875 12.75 13.875C12.5581 13.875 12.3659 13.8014 12.2198 13.6552L8.46977 9.90527C8.32874 9.76506 8.25005 9.57445 8.25005 9.37505V4.5C8.25005 4.08527 8.58595 3.75005 9 3.75005C9.41405 3.75005 9.74995 4.08527 9.74995 4.5V9.06454L13.2803 12.5947C13.5735 12.8881 13.5735 13.362 13.2803 13.6552Z" fill="#0077B6"/></svg><p>Ежедневно 9.00 — 21.00</p></div></div><div class="footer-contact__social-wrap"><a href="#"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15.5" cy="16.5" r="10.5" fill="#0077B6"/><path d="M15 0C6.71323 0 0 6.71419 0 15C0 23.2858 6.71419 30 15 30C23.2868 30 30 23.2858 30 15C30 6.71419 23.2858 0 15 0ZM22.3674 10.2765L19.9055 21.8777C19.7235 22.7003 19.2339 22.8997 18.5506 22.5126L14.8006 19.7487L12.9919 21.4906C12.7926 21.69 12.6232 21.8594 12.2361 21.8594L12.5023 18.0426L19.4516 11.7639C19.7545 11.4977 19.3848 11.3468 18.9852 11.6129L10.3965 17.0197L6.69484 15.8642C5.89065 15.6106 5.87226 15.06 6.86419 14.6729L21.3261 9.09581C21.9977 8.85387 22.5842 9.25935 22.3665 10.2755L22.3674 10.2765Z" fill="white"/></svg> </a><a href="#"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="white"/><path d="M25.217 10.1134C25.0923 9.66768 24.8546 9.26171 24.527 8.9348C24.1994 8.60788 23.7929 8.3711 23.3469 8.24738C21.6728 7.79983 14.9428 7.79983 14.9428 7.79983C14.9428 7.79983 8.22549 7.78909 6.53393 8.24738C6.08866 8.37164 5.68297 8.60868 5.35609 8.93556C5.0292 9.26245 4.79217 9.66813 4.66791 10.1134C4.34999 11.8273 4.19341 13.5671 4.20023 15.3102C4.19712 17.0449 4.35368 18.7762 4.66791 20.4822C4.79257 20.9277 5.02968 21.3337 5.35645 21.6612C5.68322 21.9886 6.08869 22.2266 6.53393 22.3523C8.20805 22.7998 14.9428 22.7998 14.9428 22.7998C14.9428 22.7998 21.656 22.7998 23.3469 22.3523C23.7929 22.2272 24.1991 21.9894 24.5267 21.6619C24.8542 21.3344 25.0919 20.9282 25.217 20.4822C25.525 18.7772 25.6753 17.0434 25.6645 15.3102C25.6753 13.5656 25.5283 11.8291 25.217 10.1134V10.1134ZM12.7929 18.5222V12.0841L18.395 15.3102L12.7929 18.5222Z" fill="#0077B6"/></svg> </a><a href="#"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="white"/><rect x="4" y="9" width="22" height="13" fill="#0077B6"/><path d="M5.94 7.4249C3.8313 9.27014 1.8 8.76506 1.8 14.7046V17.4062C1.8 23.3458 3.8313 21.1798 5.94 23.0249C8.04884 24.8701 7.68697 26.3249 14.475 26.3249H16.425C23.2131 26.3249 24.5313 25.4701 26.64 23.6249C28.7488 21.7798 28.02 21.7708 28.02 15.8312V13.5081C28.02 7.56848 27.2588 8.37008 25.15 6.5249C23.0413 4.67979 22.4631 2.3999 15.675 2.3999H14.475C7.6869 2.3999 8.04878 5.57978 5.94 7.4249ZM5.1375 10.3844H8.56253C8.67503 15.3937 11.2 17.5156 13.2 17.9531V10.3843H16.425V14.7046C18.4 14.5187 20.475 12.5499 21.175 10.3843H24.4C24.1361 11.5074 23.6103 12.5709 22.8554 13.5081C22.1004 14.4453 21.1326 15.2361 20.0125 15.8312C21.2632 16.3745 22.3679 17.1438 23.2535 18.0885C24.1391 19.0331 24.7855 20.1314 25.15 21.3109H21.6C21.2729 20.2864 20.6072 19.3692 19.6866 18.6746C18.7659 17.9799 17.6312 17.5386 16.425 17.4062V21.3109H16.0375C9.20003 21.3109 5.30003 17.2094 5.1375 10.3844Z" fill="white"/></svg></a></div></div></div><span class="footer__line"></span><div class="footer-info__wrap"><div class="footer__info"><a href="#">Политика конфиденциальности</a> <a href="#">Порядок использования информации</a></div><div class="footer__info"><a href="#">Сообщить о нарушении</a> <a href="#">Форма для связи</a></div></div></div></div><div class="container"><div class="footer-mobile__info"><span class="footer-mobile__line"></span><div class="footer-mobile__wrap"><div class="footer-mobile__info-block"><a href="#">Политика конфиденциальности</a> <a href="#">Порядок использования информации</a></div><div class="footer-mobile__info-block"><a href="#">Сообщить о нарушении</a> <a href="#">Форма для связи</a></div></div></div></div></footer><script src="./js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#111111">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/vendor.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Федерация футбола города-курорта Геленджик</title>
+    </head>
+    <body>
+        <header class="header">
+    <div class="header__block">
+        <div class="container">
+            <a href="./index.html">
+                <h2 class="header__block-name">Геленджикская городская<br>общественная организация<br>«Федерация
+                    футбола города–<br>курорта Геленджик»</h2>
+            </a>
+            <ul class="header__block-nav">
+                <li class="nav__link nav__link-none"><a href="./about.html">О нас</a></li>
+                <li class="nav__link">
+                    <a href="./news.html" data-news="all-news">Новости</a>
+                    <ul class="dropdown">
+                        <div class="container">
+                            <li><a class="news__link" data-news="local" href="./news.html">Местные новости</a>
+                            </li>
+                            <li><a class="news__link" data-news="kray" href="./news.html">Краевой футбол</a>
+                            </li>
+                            <li><a class="news__link" data-news="rus" href="./news.html">Российский футбол</a>
+                            </li>
+                            <li><a class="news__link" data-news="spartak" href="./news.html">Спартак
+                                    Геленджик</a></li>
+                            <li><a class="news__link" data-news="vista" href="./news.html">Vista</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav__link">
+                    <a href="./tournaments.html" data-tournaments="all-tournaments">Турниры</a>
+                    <ul class="dropdown">
+                        <div class="container">
+                            <li class="dropdown__nav">
+                                <a class="dropdown__nav-header tournaments__link" href="./tournaments.html"
+                                    data-tournaments="kray-tab">Краевые</a>
+                                <ul class="dropdown__nav-links">
+                                    <li><a class="tournaments__link" data-tournaments="vishaya-liga"
+                                            href="./tournaments.html">Высшая
+                                            лига</a></li>
+                                    <li><a class="tournaments__link" data-tournaments="kubok-gubernatora"
+                                            href="./tournaments.html">Кубок
+                                            Губернатора</a></li>
+                                    <li><a class="tournaments__link" data-tournaments="kubok-kraya"
+                                            href="./tournaments.html">Кубок
+                                            Краснодарского Края</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown__nav">
+                                <a class="dropdown__nav-header tournaments__link" href="./tournaments.html"
+                                    data-tournaments="local-tab">Местные</a>
+                                <ul class="dropdown__nav-links">
+                                    <li><a class="tournaments__link" data-tournaments="nfl"
+                                            href="./tournaments.html">НФЛ</a></li>
+                                    <li><a class="tournaments__link" data-tournaments="zimnie-pervenstvo"
+                                            href="./tournaments.html">Зимнее
+                                            первенство</a></li>
+                                    <li><a class="tournaments__link" data-tournaments="kubok-glavi"
+                                            href="./tournaments.html">Кубок
+                                            Главы</a></li>
+                                    <li><a class="tournaments__link" data-tournaments="pervenstvo-goroda"
+                                            href="./tournaments.html">Первенство города</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown__nav">
+                                <a class="dropdown__nav-header" href="./comands.html">Команды</a>
+                                <ul class="dropdown__nav-links teams">
+                                    <a href="./comands.html">Команды ЛФК МО Геленджик</a>
+                                    <li><a href="./rssm.html">РССМ</a></li>
+                                    <li><a href="./rssm.html">Спарта</a></li>
+                                    <li><a href="./rssm.html">Волна</a></li>
+                                    <li><a href="./rssm.html">Побережье</a></li>
+                                    <li><a href="./rssm.html">Ника</a></li>
+                                    <li><a href="./rssm.html">Софи</a></li>
+                                    <li><a href="./rssm.html">Ветераны</a></li>
+                                    <li><a href="./rssm.html">Геленстрой</a></li>
+                                    <li><a href="./rssm.html">Чемпион ММА</a></li>
+                                    <li><a href="./rssm.html">Черноморец</a></li>
+                                    <li><a href="./rssm.html">Юность</a></li>
+                                    <li><a href="./rssm.html">Кабардинка</a></li>
+                                    <li><a href="./rssm.html">Византия</a></li>
+                                    <li><a href="./rssm.html">KingBeer</a></li>
+                                </ul>
+                                <ul class="dropdown__nav-links">
+                                    <li><a href="./spartak.html">Спартак Геленджик</a></li>
+                                    <li><a href="#">Vista</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown__nav">
+                                <a class="dropdown__nav-header" href="#">Стадионы</a>
+                            </li>
+                            <li class="dropdown__nav">
+                                <a class="dropdown__nav-header" href="#">Судьи</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <a class="nav__link-img" href="./index.html"><img src="./img/small-logo.png" alt="logo"></a>
+                <li class="nav__link">
+                    <a href="./sports-schools.html">Спортшколы</a>
+                    <ul class="dropdown">
+                        <div class="container">
+                            <li><a href="./fortuna.html">Фортуна</a></li>
+                            <li><a href="./fortuna.html">Старт</a></li>
+                            <li><a href="./fortuna.html">Спарта</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav__link">
+                    <a class="media__link" href="./media.html" data-media="photo-media">Медиа</a>
+                    <ul class="dropdown">
+                        <div class="container">
+                            <li><a class="media__link" data-media="photo-media" href="./media.html">Фото</a></li>
+                            <li><a class="media__link" data-media="video-media" href="./media.html">Видео</a></li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+            <button class="burger">
+                <span class="burger-line top-line"></span>
+                <span class="burger-line mid-line"></span>
+                <span class="burger-line bottom-line"></span>
+            </button>
+            <a class="mobile__logo" href="./index.html"><img src="./img/small-logo.png" alt="logo"></a>
+            <div class="header__block-entry">
+                <button class="entry__search">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.1901 15.4782L23.6458 21.934C23.8727 22.1611 24.0001 22.469 24 22.79C23.9999 23.111 23.8723 23.4189 23.6452 23.6458C23.4181 23.8727 23.1102 24.0001 22.7892 24C22.4682 23.9999 22.1604 23.8723 21.9335 23.6452L15.4778 17.1893C13.5479 18.6841 11.1211 19.3875 8.69104 19.1565C6.26097 18.9255 4.01018 17.7773 2.39656 15.9457C0.782936 14.114 -0.0723147 11.7364 0.00479537 9.29655C0.0819054 6.85668 1.08558 4.53783 2.81165 2.81172C4.53771 1.08561 6.85651 0.0819075 9.29632 0.00479549C11.7361 -0.0723165 14.1137 0.782955 15.9453 2.39662C17.7769 4.01028 18.925 6.26113 19.156 8.69126C19.387 11.1214 18.6836 13.5483 17.1889 15.4782H17.1901ZM9.60045 16.7993C11.5099 16.7993 13.3412 16.0408 14.6914 14.6905C16.0416 13.3403 16.8001 11.509 16.8001 9.59949C16.8001 7.68997 16.0416 5.85866 14.6914 4.50843C13.3412 3.15819 11.5099 2.39964 9.60045 2.39964C7.69098 2.39964 5.85971 3.15819 4.50951 4.50843C3.15932 5.85866 2.40078 7.68997 2.40078 9.59949C2.40078 11.509 3.15932 13.3403 4.50951 14.6905C5.85971 16.0408 7.69098 16.7993 9.60045 16.7993Z"
+                            fill="white" />
+                    </svg>
+                </button>
+                <input class="entry__input hidden" type="text" placeholder="Поиск">
+                <div class="entry__user">
+                    <a href="./enter.html">
+                        <svg class="entry__user-icon" viewBox="0 0 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.1023 14.8438H10.1313C5.44023 14.8438 1.6355 18.6328 1.6355 23.3057C1.6355 24.2432 2.39635 25 3.33466 25H21.8999C22.8382 25 23.5981 24.2432 23.5981 23.3057C23.5981 18.6328 19.7939 14.8438 15.1023 14.8438ZM12.6168 12.5C16.0828 12.5 18.8918 9.70166 18.8918 6.25C18.8918 2.79834 16.0828 0 12.6168 0C9.15083 0 6.34177 2.79834 6.34177 6.25C6.34177 9.70166 9.15083 12.5 12.6168 12.5Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a class="entry__user-btn" href="./enter.html">Войти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile hidden">
+        <div class="container">
+            <div class="mobile__wrap">
+                <ul class="mobile__nav">
+                    <li class="mobile__link mobile__link-none"><a href="./about.html">О нас</a></li>
+                    <li class="mobile__link">
+                        <a class="news__link" href="./news.html" data-news="all-news">Новости</a>
+                        <ul class="mobile__dropdown">
+                            <li><a class="news__link" data-news="local" href="./news.html">Местные новости</a></li>
+                            <li><a class="news__link" data-news="kray" href="./news.html">Краевой футбол</a></li>
+                            <li><a class="news__link" data-news="rus" href="./news.html">Российский футбол</a></li>
+                            <li><a class="news__link" data-news="spartak" href="./news.html">Спартак Геленджик</a></li>
+                            <li><a class="news__link" data-news="vista" href="./news.html">Vista</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile__link">
+                        <a href="./tournaments.html" data-tournaments="all-tournaments">Турниры</a>
+                        <ul class="mobile__dropdown">
+                            <li class="mobile__dropdown-block">
+                                <a class="mobile__dropdown-header tournaments__link" data-tournaments="kray-tab"
+                                    href="./tournaments.html">Краевые</a>
+                            </li>
+                            <li class="mobile__dropdown-block">
+                                <a class="mobile__dropdown-header tournaments__link" data-tournaments="local-tab"
+                                    href="./tournaments.html">Местные</a>
+                            </li>
+                            <li class="mobile__dropdown-block">
+                                <a class="mobile__dropdown-header" href="./comands.html">Команды</a>
+                            </li>
+                            <li class="mobile__dropdown-block">
+                                <a class="mobile__dropdown-header" href="#">Стадионы</a>
+                            </li>
+                            <li class="mobile__dropdown-block">
+                                <a class="mobile__dropdown-header" href="#">Судьи</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile__link">
+                        <a href="./sports-schools.html">Спортшколы</a>
+                        <ul class="mobile__dropdown">
+                            <li><a href="./fortuna.html">Фортуна</a></li>
+                            <li><a href="./fortuna.html">Старт</a></li>
+                            <li><a href="./fortuna.html">Спарта</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile__link">
+                        <a class="media__link" href="./media.html" data-media="photo-media">Медиа</a>
+                        <ul class="mobile__dropdown">
+                            <li><a class="media__link" href="./media.html" data-media="photo-media">Фото</a></li>
+                            <li><a class="media__link" href="./media.html" data-media="video-media">Видео</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="mobile__contact">
+                    <div class="mobile__contact-wrap">
+                        <div class="mobile__contact-block">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 0C6.00606 0 2.75676 3.2493 2.75676 7.2432C2.75676 12.1998 9.23875 19.4763 9.51473 19.7836C9.77395 20.0723 10.2265 20.0718 10.4853 19.7836C10.7613 19.4763 17.2432 12.1998 17.2432 7.2432C17.2432 3.2493 13.9939 0 10 0ZM10 10.8875C7.99055 10.8875 6.35578 9.25266 6.35578 7.2432C6.35578 5.23375 7.99059 3.59898 10 3.59898C12.0094 3.59898 13.6442 5.23379 13.6442 7.24324C13.6442 9.2527 12.0094 10.8875 10 10.8875Z"
+                                    fill="#0077B6" />
+                            </svg>
+                            <p>ул. Солнцедарская, д. 1з, Геленджик</p>
+                        </div>
+                        <div class="mobile__contact-block">
+                            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0ZM13.2803 13.6552C13.134 13.8014 12.942 13.875 12.75 13.875C12.5581 13.875 12.3659 13.8014 12.2198 13.6552L8.46977 9.90527C8.32874 9.76506 8.25005 9.57445 8.25005 9.37505V4.5C8.25005 4.08527 8.58595 3.75005 9 3.75005C9.41405 3.75005 9.74995 4.08527 9.74995 4.5V9.06454L13.2803 12.5947C13.5735 12.8881 13.5735 13.362 13.2803 13.6552Z"
+                                    fill="#0077B6" />
+                            </svg>
+                            <p>Ежедневно 9.00 — 21.00</p>
+                        </div>
+                        <div class="mobile__contact-block">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_9_280)">
+                                    <path
+                                        d="M17.2324 13.9201C16.0242 12.8867 14.7981 12.2608 13.6047 13.2926L12.8921 13.9162C12.3707 14.3689 11.4014 16.484 7.65347 12.1726C3.90635 7.86665 6.1362 7.19621 6.65835 6.74743L7.37484 6.12304C8.56196 5.08889 8.11396 3.78704 7.25776 2.44694L6.74108 1.63524C5.88098 0.29826 4.9444 -0.579789 3.75415 0.452796L3.11103 1.01475C2.58498 1.39797 1.11454 2.64363 0.757861 5.01006C0.328592 7.84948 1.68274 11.101 4.78518 14.6686C7.88372 18.2378 10.9175 20.0306 13.7912 19.9993C16.1795 19.9736 17.6219 18.692 18.073 18.2261L18.7184 17.6633C19.9056 16.6315 19.168 15.581 17.959 14.5453L17.2324 13.9201Z"
+                                        fill="#0077B6" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_9_280">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="callto:+7 (995) 319-09-91">+7 995 319-09-91</a>
+                        </div>
+                        <div class="mobile__contact-block">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_9_265)">
+                                    <path
+                                        d="M19.8239 3.97363L13.7583 10.0002L19.8239 16.0267C19.9335 15.7975 20 15.5441 20 15.2736V4.72672C20 4.45613 19.9335 4.20281 19.8239 3.97363Z"
+                                        fill="#0077B6" />
+                                    <path
+                                        d="M18.2422 2.96875H1.75785C1.48726 2.96875 1.23394 3.03527 1.00476 3.14492L8.75722 10.8583C9.44269 11.5438 10.5574 11.5438 11.2428 10.8583L18.9953 3.14492C18.7661 3.03527 18.5128 2.96875 18.2422 2.96875Z"
+                                        fill="#0077B6" />
+                                    <path
+                                        d="M0.176172 3.97363C0.0665234 4.20281 0 4.45613 0 4.72672V15.2736C0 15.5442 0.0665234 15.7975 0.176172 16.0267L6.24176 10.0002L0.176172 3.97363Z"
+                                        fill="#0077B6" />
+                                    <path
+                                        d="M12.9297 10.8286L12.0714 11.6869C10.9293 12.8291 9.07078 12.8291 7.92863 11.6869L7.07035 10.8286L1.00476 16.8551C1.23394 16.9648 1.48726 17.0313 1.75785 17.0313H18.2422C18.5128 17.0313 18.7661 16.9648 18.9953 16.8551L12.9297 10.8286Z"
+                                        fill="#0077B6" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_9_265">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="mailto:ffg@gmail.com">ffg@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="mobile__social-wrap">
+                        <a href="#">
+                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15.5" cy="16.5" r="10.5" fill="#0077B6" />
+                                <path
+                                    d="M15 0C6.71323 0 0 6.71419 0 15C0 23.2858 6.71419 30 15 30C23.2868 30 30 23.2858 30 15C30 6.71419 23.2858 0 15 0ZM22.3674 10.2765L19.9055 21.8777C19.7235 22.7003 19.2339 22.8997 18.5506 22.5126L14.8006 19.7487L12.9919 21.4906C12.7926 21.69 12.6232 21.8594 12.2361 21.8594L12.5023 18.0426L19.4516 11.7639C19.7545 11.4977 19.3848 11.3468 18.9852 11.6129L10.3965 17.0197L6.69484 15.8642C5.89065 15.6106 5.87226 15.06 6.86419 14.6729L21.3261 9.09581C21.9977 8.85387 22.5842 9.25935 22.3665 10.2755L22.3674 10.2765Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="white" />
+                                <path
+                                    d="M25.217 10.1134C25.0923 9.66768 24.8546 9.26171 24.527 8.9348C24.1994 8.60788 23.7929 8.3711 23.3469 8.24738C21.6728 7.79983 14.9428 7.79983 14.9428 7.79983C14.9428 7.79983 8.22549 7.78909 6.53393 8.24738C6.08866 8.37164 5.68297 8.60868 5.35609 8.93556C5.0292 9.26245 4.79217 9.66813 4.66791 10.1134C4.34999 11.8273 4.19341 13.5671 4.20023 15.3102C4.19712 17.0449 4.35368 18.7762 4.66791 20.4822C4.79257 20.9277 5.02968 21.3337 5.35645 21.6612C5.68322 21.9886 6.08869 22.2266 6.53393 22.3523C8.20805 22.7998 14.9428 22.7998 14.9428 22.7998C14.9428 22.7998 21.656 22.7998 23.3469 22.3523C23.7929 22.2272 24.1991 21.9894 24.5267 21.6619C24.8542 21.3344 25.0919 20.9282 25.217 20.4822C25.525 18.7772 25.6753 17.0434 25.6645 15.3102C25.6753 13.5656 25.5283 11.8291 25.217 10.1134V10.1134ZM12.7929 18.5222V12.0841L18.395 15.3102L12.7929 18.5222Z"
+                                    fill="#0077B6" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="white" />
+                                <rect x="4" y="9" width="22" height="13" fill="#0077B6" />
+                                <path
+                                    d="M5.94 7.4249C3.8313 9.27014 1.8 8.76506 1.8 14.7046V17.4062C1.8 23.3458 3.8313 21.1798 5.94 23.0249C8.04884 24.8701 7.68697 26.3249 14.475 26.3249H16.425C23.2131 26.3249 24.5313 25.4701 26.64 23.6249C28.7488 21.7798 28.02 21.7708 28.02 15.8312V13.5081C28.02 7.56848 27.2588 8.37008 25.15 6.5249C23.0413 4.67979 22.4631 2.3999 15.675 2.3999H14.475C7.6869 2.3999 8.04878 5.57978 5.94 7.4249ZM5.1375 10.3844H8.56253C8.67503 15.3937 11.2 17.5156 13.2 17.9531V10.3843H16.425V14.7046C18.4 14.5187 20.475 12.5499 21.175 10.3843H24.4C24.1361 11.5074 23.6103 12.5709 22.8554 13.5081C22.1004 14.4453 21.1326 15.2361 20.0125 15.8312C21.2632 16.3745 22.3679 17.1438 23.2535 18.0885C24.1391 19.0331 24.7855 20.1314 25.15 21.3109H21.6C21.2729 20.2864 20.6072 19.3692 19.6866 18.6746C18.7659 17.9799 17.6312 17.5386 16.425 17.4062V21.3109H16.0375C9.20003 21.3109 5.30003 17.2094 5.1375 10.3844Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h4 class="mobile__name">Геленджикская городская<br>общественная организация<br>«Федерация футбола
+                города–<br>курорта
+                Геленджик»</h4>
+        </div>
+    </div>
+</header>
+
+        <main class="main media-page">
+            <div class="container">
+                <h1 class="header-title">медиа</h1>
+                <div class="media-page__menu">
+                    <button class="media-page__btn active" id="photo-media">Фото</button>
+                    <button class="media-page__btn" id="video-media">Видео</button>
+                </div>
+                <div class="media-page__block">
+                    <div class="media-page__items" data-media="photo-media">
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-1.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-2.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-3.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-1.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-2.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-3.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-1.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-2.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-3.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-1.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-2.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/photo-3.jpg" alt="media photo">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                    <p>24 фото</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="media-page__items hidden" data-media="video-media">
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-1.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-2.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-3.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-1.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-2.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-3.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-1.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-2.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-3.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-1.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-2.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="media-page__item">
+                            <img class="media-page__photo" src="./img/video-3.jpg" alt="media video">
+                            <div class="media-page__wrap">
+                                <p class="media-page__name">Спартак — Сопка Героев</p>
+                                <div class="media-page__info">
+                                    <p>12 июля 2022</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="adversting__contact news-page__contact media-page__contact">
+                        <h3 class="title">Мы в соцсетях:</h3>
+                        <p>Следите за нами в соиацльных сетях, подписывайтесь на новостные паблики, чтобы узнать о событиях клуба первыми!
+                        </p>
+                        <div class="adversting__icon news-page__icon">
+                            <a href="#">
+                                <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M25 0C11.1887 0 0 11.1903 0 25C0 38.8097 11.1903 50 25 50C38.8113 50 50 38.8097 50 25C50 11.1903 38.8097 0 25 0ZM37.279 17.1274L33.1758 36.4629C32.8726 37.8339 32.0565 38.1661 30.9177 37.521L24.6677 32.9145L21.6532 35.8177C21.321 36.15 21.0387 36.4323 20.3935 36.4323L20.8371 30.071L32.4194 19.6065C32.9242 19.1629 32.3081 18.9113 31.6419 19.3548L17.3274 28.3661L11.1581 26.4403C9.81774 26.0177 9.7871 25.1 11.4403 24.4548L35.5435 15.1597C36.6629 14.7565 37.6403 15.4323 37.2774 17.1258L37.279 17.1274Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="25" cy="25" r="25" fill="white" />
+                                    <path
+                                        d="M42.0283 16.856C41.8205 16.1131 41.4244 15.4365 40.8783 14.8917C40.3323 14.3468 39.6548 13.9522 38.9115 13.746C36.1213 13 24.9046 13 24.9046 13C24.9046 13 13.7091 12.9821 10.8899 13.746C10.1477 13.9531 9.4716 14.3481 8.9268 14.8929C8.38199 15.4377 7.98693 16.1139 7.77982 16.856C7.24996 19.7124 6.989 22.6122 7.00036 25.5174C6.99519 28.4085 7.25611 31.294 7.77982 34.1373C7.9876 34.8799 8.38277 35.5565 8.92739 36.1023C9.47201 36.6481 10.1478 37.0447 10.8899 37.2541C13.6801 38 24.9046 38 24.9046 38C24.9046 38 36.0934 38 38.9115 37.2541C39.6548 37.0456 40.3319 36.6494 40.8777 36.1035C41.4236 35.5577 41.8198 34.8806 42.0283 34.1373C42.5416 31.2957 42.7921 28.406 42.7742 25.5174C42.7921 22.6097 42.5472 19.7155 42.0283 16.856ZM21.3215 30.8707V20.1405L30.6583 25.5174L21.3215 30.8707Z"
+                                        fill="#0A0A30" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="25" cy="25" r="25" fill="white" />
+                                    <rect x="8" y="15" width="36" height="21" fill="#0A0A30" />
+                                    <path
+                                        d="M9.9 12.375C6.38549 15.4504 3 14.6086 3 24.5078V29.0104C3 38.9098 6.38549 35.2998 9.9 38.375C13.4147 41.4503 12.8116 43.875 24.125 43.875H27.375C38.6885 43.875 40.8855 42.4503 44.4 39.375C47.9146 36.2998 46.7 36.2848 46.7 26.3854V22.5136C46.7 12.6143 45.4313 13.9503 41.9166 10.875C38.4021 7.7998 37.4385 4 26.125 4H24.125C12.8115 4 13.4146 9.2998 9.9 12.375ZM8.5625 17.3074H14.2709C14.4584 25.6563 18.6666 29.1928 22 29.922V17.3073H27.375V24.5078C30.6666 24.1979 34.125 20.9167 35.2916 17.3073H40.6666C40.2269 19.1792 39.3505 20.9516 38.0923 22.5136C36.834 24.0756 35.221 25.3937 33.3541 26.3854C35.4386 27.2909 37.2798 28.5732 38.7558 30.1476C40.2318 31.722 41.3092 33.5525 41.9166 35.5183H36C35.4548 33.8108 34.3454 32.2822 32.8109 31.1244C31.2765 29.9666 29.3854 29.2312 27.375 29.0104V35.5183H26.7291C15.3334 35.5183 8.83337 28.6824 8.5625 17.3074Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- <div class="modal">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <form action="#">
+                <h2 class="modal__title">Есть вопрос?</h2>
+                <p class="modal__descr">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                <input class="modal__input" type="text" placeholder="Ваше имя">
+                <input class="modal__input" type="tel" name="phone" placeholder="Ваш Телефон">
+                <textarea class="modal__input" style="resize: none" placeholder="Ваш вопрос"></textarea>
+                <button class="modal__btn">Отправить</button>
+                <label class="modal__checkbox" for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    Согласен с условиями политики конфиденциальности
+                </label>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<footer class="footer">
+    <div class="container">
+        <img class="footer__logo" src="./img/big-logo.png">
+        <div class="footer__menu">
+            <div class="footer__wrap">
+                <ul class="footer__links">
+                    <li><a href="./about.html">О нас</a></li>
+                    <li><a href="./news.html">Новости</a></li>
+                    <li><a href="./tournaments.html">Турниры</a></li>
+                    <li><a href="./sports-schools.html">Спортшколы</a></li>
+                    <li><a href="./media.html">Медиа</a></li>
+                </ul>
+                <div class="footer-contact">
+                    <div class="footer-contact__wrap">
+                        <div class="footer-contact__item">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_9_280)">
+                                    <path
+                                        d="M17.2324 13.9201C16.0242 12.8867 14.7981 12.2608 13.6047 13.2926L12.8921 13.9162C12.3707 14.3689 11.4014 16.484 7.65347 12.1726C3.90635 7.86665 6.1362 7.19621 6.65835 6.74743L7.37484 6.12304C8.56196 5.08889 8.11396 3.78704 7.25776 2.44694L6.74108 1.63524C5.88098 0.29826 4.9444 -0.579789 3.75415 0.452796L3.11103 1.01475C2.58498 1.39797 1.11454 2.64363 0.757861 5.01006C0.328592 7.84948 1.68274 11.101 4.78518 14.6686C7.88372 18.2378 10.9175 20.0306 13.7912 19.9993C16.1795 19.9736 17.6219 18.692 18.073 18.2261L18.7184 17.6633C19.9056 16.6315 19.168 15.581 17.959 14.5453L17.2324 13.9201Z"
+                                        fill="#0077B6" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_9_280">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="callto:+7 (995) 319-09-91">+7 995 319-09-91</a>
+                        </div>
+                        <div class="footer-contact__item">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_9_265)">
+                                    <path
+                                        d="M19.8239 3.97363L13.7583 10.0002L19.8239 16.0267C19.9335 15.7975 20 15.5441 20 15.2736V4.72672C20 4.45613 19.9335 4.20281 19.8239 3.97363Z"
+                                        fill="#0077B6" />
+                                    <path
+                                        d="M18.2422 2.96875H1.75785C1.48726 2.96875 1.23394 3.03527 1.00476 3.14492L8.75722 10.8583C9.44269 11.5438 10.5574 11.5438 11.2428 10.8583L18.9953 3.14492C18.7661 3.03527 18.5128 2.96875 18.2422 2.96875Z"
+                                        fill="#0077B6" />
+                                    <path
+                                        d="M0.176172 3.97363C0.0665234 4.20281 0 4.45613 0 4.72672V15.2736C0 15.5442 0.0665234 15.7975 0.176172 16.0267L6.24176 10.0002L0.176172 3.97363Z"
+                                        fill="#0077B6" />
+                                    <path
+                                        d="M12.9297 10.8286L12.0714 11.6869C10.9293 12.8291 9.07078 12.8291 7.92863 11.6869L7.07035 10.8286L1.00476 16.8551C1.23394 16.9648 1.48726 17.0313 1.75785 17.0313H18.2422C18.5128 17.0313 18.7661 16.9648 18.9953 16.8551L12.9297 10.8286Z"
+                                        fill="#0077B6" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_9_265">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="mailto:ffg@gmail.com">ffg@gmail.com</a>
+                        </div>
+                        <div class="footer-contact__item">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 0C6.00606 0 2.75676 3.2493 2.75676 7.2432C2.75676 12.1998 9.23875 19.4763 9.51473 19.7836C9.77395 20.0723 10.2265 20.0718 10.4853 19.7836C10.7613 19.4763 17.2432 12.1998 17.2432 7.2432C17.2432 3.2493 13.9939 0 10 0ZM10 10.8875C7.99055 10.8875 6.35578 9.25266 6.35578 7.2432C6.35578 5.23375 7.99059 3.59898 10 3.59898C12.0094 3.59898 13.6442 5.23379 13.6442 7.24324C13.6442 9.2527 12.0094 10.8875 10 10.8875Z"
+                                    fill="#0077B6" />
+                            </svg>
+                            <p>ул. Солнцедарская, д. 1з, Геленджик</p>
+                        </div>
+                        <div class="footer-contact__item">
+                            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0ZM13.2803 13.6552C13.134 13.8014 12.942 13.875 12.75 13.875C12.5581 13.875 12.3659 13.8014 12.2198 13.6552L8.46977 9.90527C8.32874 9.76506 8.25005 9.57445 8.25005 9.37505V4.5C8.25005 4.08527 8.58595 3.75005 9 3.75005C9.41405 3.75005 9.74995 4.08527 9.74995 4.5V9.06454L13.2803 12.5947C13.5735 12.8881 13.5735 13.362 13.2803 13.6552Z"
+                                    fill="#0077B6" />
+                            </svg>
+                            <p>Ежедневно 9.00 — 21.00</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact__social-wrap">
+                        <a href="#">
+                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15.5" cy="16.5" r="10.5" fill="#0077B6" />
+                                <path
+                                    d="M15 0C6.71323 0 0 6.71419 0 15C0 23.2858 6.71419 30 15 30C23.2868 30 30 23.2858 30 15C30 6.71419 23.2858 0 15 0ZM22.3674 10.2765L19.9055 21.8777C19.7235 22.7003 19.2339 22.8997 18.5506 22.5126L14.8006 19.7487L12.9919 21.4906C12.7926 21.69 12.6232 21.8594 12.2361 21.8594L12.5023 18.0426L19.4516 11.7639C19.7545 11.4977 19.3848 11.3468 18.9852 11.6129L10.3965 17.0197L6.69484 15.8642C5.89065 15.6106 5.87226 15.06 6.86419 14.6729L21.3261 9.09581C21.9977 8.85387 22.5842 9.25935 22.3665 10.2755L22.3674 10.2765Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="white" />
+                                <path
+                                    d="M25.217 10.1134C25.0923 9.66768 24.8546 9.26171 24.527 8.9348C24.1994 8.60788 23.7929 8.3711 23.3469 8.24738C21.6728 7.79983 14.9428 7.79983 14.9428 7.79983C14.9428 7.79983 8.22549 7.78909 6.53393 8.24738C6.08866 8.37164 5.68297 8.60868 5.35609 8.93556C5.0292 9.26245 4.79217 9.66813 4.66791 10.1134C4.34999 11.8273 4.19341 13.5671 4.20023 15.3102C4.19712 17.0449 4.35368 18.7762 4.66791 20.4822C4.79257 20.9277 5.02968 21.3337 5.35645 21.6612C5.68322 21.9886 6.08869 22.2266 6.53393 22.3523C8.20805 22.7998 14.9428 22.7998 14.9428 22.7998C14.9428 22.7998 21.656 22.7998 23.3469 22.3523C23.7929 22.2272 24.1991 21.9894 24.5267 21.6619C24.8542 21.3344 25.0919 20.9282 25.217 20.4822C25.525 18.7772 25.6753 17.0434 25.6645 15.3102C25.6753 13.5656 25.5283 11.8291 25.217 10.1134V10.1134ZM12.7929 18.5222V12.0841L18.395 15.3102L12.7929 18.5222Z"
+                                    fill="#0077B6" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="white" />
+                                <rect x="4" y="9" width="22" height="13" fill="#0077B6" />
+                                <path
+                                    d="M5.94 7.4249C3.8313 9.27014 1.8 8.76506 1.8 14.7046V17.4062C1.8 23.3458 3.8313 21.1798 5.94 23.0249C8.04884 24.8701 7.68697 26.3249 14.475 26.3249H16.425C23.2131 26.3249 24.5313 25.4701 26.64 23.6249C28.7488 21.7798 28.02 21.7708 28.02 15.8312V13.5081C28.02 7.56848 27.2588 8.37008 25.15 6.5249C23.0413 4.67979 22.4631 2.3999 15.675 2.3999H14.475C7.6869 2.3999 8.04878 5.57978 5.94 7.4249ZM5.1375 10.3844H8.56253C8.67503 15.3937 11.2 17.5156 13.2 17.9531V10.3843H16.425V14.7046C18.4 14.5187 20.475 12.5499 21.175 10.3843H24.4C24.1361 11.5074 23.6103 12.5709 22.8554 13.5081C22.1004 14.4453 21.1326 15.2361 20.0125 15.8312C21.2632 16.3745 22.3679 17.1438 23.2535 18.0885C24.1391 19.0331 24.7855 20.1314 25.15 21.3109H21.6C21.2729 20.2864 20.6072 19.3692 19.6866 18.6746C18.7659 17.9799 17.6312 17.5386 16.425 17.4062V21.3109H16.0375C9.20003 21.3109 5.30003 17.2094 5.1375 10.3844Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <span class="footer__line"></span>
+            <div class="footer-info__wrap">
+                <div class="footer__info">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Порядок использования информации</a>
+                </div>
+                <div class="footer__info">
+                    <a href="#">Сообщить о нарушении</a>
+                    <a href="#">Форма для связи</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-mobile__info">
+            <span class="footer-mobile__line"></span>
+            <div class="footer-mobile__wrap">
+                <div class="footer-mobile__info-block">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Порядок использования информации</a>
+                </div>
+                <div class="footer-mobile__info-block">
+                    <a href="#">Сообщить о нарушении</a>
+                    <a href="#">Форма для связи</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

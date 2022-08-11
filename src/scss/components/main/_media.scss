@@ -14,12 +14,18 @@
         gap: 20px;
     }
     &__item {
+        transform: translateY(0px);
+        transition: transform .3s;
         img {
             max-height: 300px;
             max-width: 385px;
             width: 100%;
             object-fit: cover;
         }
+    }
+    &__item:hover {
+        transform: translateY(-10px);
+        transition: transform .3s;
     }
 
     &__date {
