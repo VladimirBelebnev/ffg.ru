@@ -4,3 +4,4 @@ import "./components/slider";
 import "./components/tabs";
 import "./components/scrolling";
 import "./components/phoneMask";
+import "./components/modals";

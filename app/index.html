@@ -640,7 +640,7 @@
                     </a>
                 </div>
                 <div class="media__btn btn">
-                    <a href="#">
+                    <a class="media__link" data-media="photo-media" href="./media.html">
                         Все фото
                         <svg viewBox="0 0 61 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="43" cy="17.5" r="17" stroke="url(#paint0_linear_3_598)" />
@@ -689,7 +689,7 @@
                     </a>
                 </div>
                 <div class="media__btn btn">
-                    <a href="#">
+                    <a class="media__link" data-media="video-media" href="./media.html">
                         Все видео
                         <svg viewBox="0 0 61 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="43" cy="17.5" r="17" stroke="url(#paint0_linear_3_598)" />
@@ -711,7 +711,6 @@
     </section>
 
     <section class="adversting">
-        <img class="adversting__photo" src="./img/adversting.jpg" alt="advertising">
         <div class="adversting__contact">
             <h3 class="title">Мы в соцсетях:</h3>
             <p>Следите за нами в соиацльных сетях, подписывайтесь на новостные паблики, чтобы узнать о событиях клуба первыми!</p>
@@ -769,25 +768,25 @@
         </div>
     </section>
 
-    <!-- <div class="modal">
+    <div class="modal-question modal hidden">
     <div class="modal__dialog">
         <div class="modal__content">
-            <button class="modal__close">&times;</button>
+            <button class="modal__close">×</button>
             <form action="#">
                 <h2 class="modal__title">Есть вопрос?</h2>
-                <p class="modal__descr">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                <p class="modal__descr">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
                 <input class="modal__input" type="text" placeholder="Ваше имя">
                 <input class="modal__input" type="tel" name="phone" placeholder="Ваш Телефон">
                 <textarea class="modal__input" style="resize: none" placeholder="Ваш вопрос"></textarea>
                 <button class="modal__btn">Отправить</button>
                 <label class="modal__checkbox" for="checkbox">
                     <input type="checkbox" id="checkbox">
-                    Согласен с условиями политики конфиденциальности
+                    Согласен с условиями политики конфиденциальности
                 </label>
             </form>
         </div>
     </div>
-</div> -->
+</div>
 
 <footer class="footer">
     <div class="container">
@@ -895,8 +894,8 @@
                     <a href="#">Порядок использования информации</a>
                 </div>
                 <div class="footer__info">
-                    <a href="#">Сообщить о нарушении</a>
-                    <a href="#">Форма для связи</a>
+                    <button class="">Сообщить о нарушении</button>
+                    <button class="modal-question__btn">Форма для связи</button>
                 </div>
             </div>
         </div>

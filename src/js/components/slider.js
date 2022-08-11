@@ -35,15 +35,15 @@ const slider = () => {
             prevEl: '.calendar__prev',
         },
         breakpoints: {
-            1170: {
+            1171: {
                 spaceBetween: 20,
                 slidesPerView: 3
             },
-            768: {
+            769: {
                 slidesPerView: 2,
-                spaceBetween: 50,
+                spaceBetween: 40,
             },
-            300: {
+            301: {
                 slidesPerView: 1,
             }
         }

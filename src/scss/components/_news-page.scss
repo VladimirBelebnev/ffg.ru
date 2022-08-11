@@ -72,7 +72,7 @@
     }
     &__contact {
         border-radius: 3px;
-        max-height: 580px;
+        height: 580px;
         box-sizing: border-box;
         padding: 40px;
     }
@@ -150,6 +150,9 @@
                 width: 180px;
             }
         }
+        &__contact {
+             height: 540px;
+        }
         &__wrap {
             gap: 10px;
         }
@@ -176,6 +179,9 @@
             input {
                 width: 140px;
             }
+        }
+        &__contact {
+            height: 500px;
         }
         &__btn {
             padding: 10px 15px;

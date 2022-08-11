@@ -20,6 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_scrolling__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_scrolling__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_phoneMask__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/phoneMask */ "./src/js/components/phoneMask.js");
 /* harmony import */ var _components_phoneMask__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_phoneMask__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/modals */ "./src/js/components/modals.js");
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_modals__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -56,6 +59,62 @@ const burger = () => {
 };
 
 burger();
+
+/***/ }),
+
+/***/ "./src/js/components/modals.js":
+/*!*************************************!*\
+  !*** ./src/js/components/modals.js ***!
+  \*************************************/
+/***/ (() => {
+
+const modals = () => {
+  const questionModal = document.querySelector('.modal-question'),
+        btnQuestionModal = document.querySelector('.modal-question__btn'),
+        closeBtnQuestionModal = document.querySelector('.modal-question .modal__close'),
+        scroll = calcScroll();
+
+  const showModal = selector => {
+    selector.classList.remove('hidden');
+    document.body.style.marginRight = "".concat(scroll, "px");
+  };
+
+  const hideModal = selector => {
+    selector.classList.add('hidden');
+    document.body.style.marginRight = '0px';
+  };
+
+  btnQuestionModal.addEventListener('click', () => {
+    showModal(questionModal);
+  });
+  closeBtnQuestionModal.addEventListener('click', () => {
+    hideModal(questionModal);
+  });
+  questionModal.addEventListener('click', event => {
+    if (event.target === questionModal) {
+      hideModal(questionModal);
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.code === 'Escape' && questionModal) {
+      hideModal(questionModal);
+    }
+  });
+
+  function calcScroll() {
+    let div = document.createElement('div');
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+    return scrollWidth;
+  }
+};
+
+modals();
 
 /***/ }),
 
@@ -228,15 +287,15 @@ const slider = () => {
       prevEl: '.calendar__prev'
     },
     breakpoints: {
-      1170: {
+      1171: {
         spaceBetween: 20,
         slidesPerView: 3
       },
-      768: {
+      769: {
         slidesPerView: 2,
-        spaceBetween: 50
+        spaceBetween: 40
       },
-      300: {
+      301: {
         slidesPerView: 1
       }
     }
