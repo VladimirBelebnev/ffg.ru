@@ -6,12 +6,12 @@ const modals = () => {
 
     const showModal = (selector) => {
         selector.classList.remove('hidden');
-        document.body.style.marginRight = `${scroll}px`;
+        // document.body.style.marginRight = `${scroll}px`;
     };
 
     const hideModal = (selector) => {
         selector.classList.add('hidden');
-        document.body.style.marginRight = '0px';
+        // document.body.style.marginRight = '0px';
     };
 
     btnQuestionModal.addEventListener('click', () => {
