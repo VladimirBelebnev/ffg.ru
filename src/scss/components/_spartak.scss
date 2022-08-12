@@ -51,12 +51,6 @@
         background: linear-gradient(121.1deg, #E30613 18.11%, #FF4C59 100%);
         opacity: 0.95;
     }
-    .spartak:hover .player__front {
-        transform: rotateY(0deg);
-    }
-    .spartak:hover .player__back {
-        transform: rotateY(180deg);
-    }
     .player {
         &__wrap {
             margin-top: 30px;
@@ -268,6 +262,13 @@
             &__position {
                 font-size: 18px;
             }
+        }
+        &:hover .player__front {
+            transform: rotateY(0deg);
+        }
+
+        &:hover .player__back {
+            transform: rotateY(180deg);
         }
     }
 }
