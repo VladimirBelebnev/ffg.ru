@@ -4655,58 +4655,6 @@ a {
 .spartak__player {
   margin-top: 60px;
 }
-.spartak__player .player__wrap {
-  margin-top: 30px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 20px;
-}
-.spartak__player .player__card {
-  color: #ffffff;
-  position: relative;
-  height: 350px;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-}
-.spartak__player .player__front, .spartak__player .player__back {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-}
-.spartak__player .player__front {
-  background: red;
-}
-.spartak__player .player__back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  background: #0A0A30;
-}
-.spartak__player .player__card:hover .player__front {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-.spartak__player .player__card:hover .player__back {
-  -webkit-transform: rotateY(360deg);
-  transform: rotateY(360deg);
-}
 .spartak__bg {
   margin-top: 60px;
   width: 100%;
@@ -4716,6 +4664,14 @@ a {
   background: -o-linear-gradient(328.9deg, #E30613 18.11%, #FF4C59 100%);
   background: linear-gradient(121.1deg, #E30613 18.11%, #FF4C59 100%);
   opacity: 0.95;
+}
+.spartak .spartak:hover .player__front {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.spartak .spartak:hover .player__back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .spartak .player__wrap {
   margin-top: 30px;
@@ -4769,11 +4725,11 @@ a {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-.spartak .player__card:hover .spartak .player__front {
+.spartak .player__card:hover .player__front {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-.spartak .player__card:hover .spartak .player__back {
+.spartak .player__card:hover .player__back {
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
 }
