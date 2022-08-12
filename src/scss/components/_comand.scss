@@ -60,24 +60,10 @@
             -webkit-column-count: 2;
             -webkit-column-gap: 155px;
         }
-        &__block {
-            padding: 7.5px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
         &__name {
-            padding: 0;
+            padding: 7.5px 0;
             margin: 0;
             font-weight: $reg;
-            font-size: 18px;
-            line-height: 130%;
-            color: $text;
-        }
-        &__number {
-            padding: 0;
-            margin: 0;
-            font-weight: $medium;
             font-size: 18px;
             line-height: 130%;
             color: $text;
@@ -130,9 +116,6 @@
             &__name {
                 font-size: 16px;
             }
-            &__number {
-                font-size: 16px;
-            }
         }
     }
 }
@@ -181,10 +164,6 @@
             &__name {
                 font-size: 16px;
             }
-
-            &__number {
-                font-size: 16px;
-            }
         }
     }
 }
@@ -199,7 +178,7 @@
             max-height: 400px;
         }
         &__player {
-            margin-top: 40px;
+            margin-top: 30px;
         }
     }
 }

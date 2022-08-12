@@ -41,6 +41,44 @@
     }
     &__player {
         margin-top: 60px;
+        .player__wrap {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .player__card {
+            color: $white;
+            position: relative;
+            height: 350px;
+            perspective: 1000px;
+        }
+        .player__front, .player__back {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            transition: 1s;
+        }
+        .player__front {
+            background: red;
+        }
+        .player__back {
+            transform: rotateY(180deg);
+            background: $dark-blue;
+        }
+        .player__card:hover .player__front {
+            transform: rotateY(180deg);
+        }
+
+        .player__card:hover .player__back {
+            transform: rotateY(360deg);
+        }
     }
     &__bg {
         margin-top: 60px;
@@ -51,15 +89,115 @@
         background: linear-gradient(121.1deg, #E30613 18.11%, #FF4C59 100%);
         opacity: 0.95;
     }
-    // &__contact {
-    //     background: #250000;
-    // }
+    .player {
+        &__wrap {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        &__card {
+            box-sizing: border-box;
+            border-radius:8px;
+            position: relative;
+            height: 400px;
+            perspective: 1000px;
+        }
+        &__front,
+        &__back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            transition: 1s;
+            border-radius:8px;
+        }
+        &__back {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 60px 40px;
+            background: url("../img/spartak-bg.png") center no-repeat;
+            background-size: cover;
+            transform: rotateY(180deg);
+        }
+        &__card:hover &__front {
+            transform: rotateY(180deg);
+        }
+
+        &__card:hover &__back {
+            transform: rotateY(360deg);
+        }
+        &__photo {
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &__fnumber {
+            position: absolute;
+            top: 7%;
+            left: 8%;
+            padding: 0;
+            margin: 0;
+            font-family: $roboto;
+            font-weight: $black-font;
+            color: $white;
+            text-shadow: 2px 2px 2px $text;
+            line-height: 100%;
+        }
+        &__title {
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            font-family: $roboto;
+            font-weight: $black-font;
+            color: $white;
+            font-size: 30px;
+            line-height: 120%;
+            color: $white;
+        }
+        &__date, &__bnumber, &__position {
+            padding: 0;
+            margin: 0;
+            font-size: 22px;
+            line-height: 120%;
+            font-weight: 600;
+            color: $white;
+        }
+    }
 }
 
 @media (max-width: 1680px) {
     .spartak {
         &__bg {
             padding: 60px 350px;
+        }
+        .player {
+            &__wrap {
+                margin-top: 30px;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            &__card {
+                height: 380px;
+            }
+
+            &__back {
+                padding: 50px 35px;
+            }
+            &__title {
+                font-size: 28px;
+            }
+            &__date,
+            &__bnumber,
+            &__position {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -98,6 +236,17 @@
         &__bg {
             padding: 60px 220px;
         }
+        .player {
+            &__wrap {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            &__card {
+                height: 350px;
+            }
+            &__title {
+                font-size: 26px;
+            }
+        }
     }
 }
 
@@ -131,6 +280,28 @@
         &__player {
             margin-top: 50px;
         }
+        .player {
+            &__wrap {
+                gap: 15px;
+            }
+            &__card {
+                height: 325px;
+            }
+
+            &__back {
+                padding: 40px 30px;
+            }
+
+            &__title {
+                font-size: 26px;
+            }
+
+            &__date,
+            &__bnumber,
+            &__position {
+                font-size: 18px;
+            }
+        }
     }
 }
 
@@ -147,6 +318,15 @@
 
         &__bg {
             padding: 30px;
+        }
+        .player {
+            &__wrap {
+                margin-top: 20px;
+                grid-template-columns: 1fr 1fr;
+            }
+            &__back {
+                padding: 35px 25px;
+            }
         }
     }
 }
@@ -171,6 +351,22 @@
         &__player {
             margin-top: 40px;
         }
+        .player {
+            &__card {
+                height: 300px;
+            }
+            &__back {
+                padding: 35px 20px;
+            }
+            &__title {
+                font-size: 24px;
+            }
+            &__date,
+            &__bnumber,
+            &__position {
+                font-size: 16px;
+            }
+        }
     }
 }
 
@@ -178,6 +374,46 @@
     .spartak {
         &__photo {
             max-height: 300px;
+        }
+        .player {
+            &__wrap {
+                gap: 10px;
+            }
+            &__title {
+                font-size: 22px;
+            }
+            &__card {
+                height: 280px;
+            }
+            &__back {
+                padding: 30px 15px;
+            }
+            &__date,
+            &__bnumber,
+            &__position {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .spartak {
+        .player {
+            &__wrap {
+                gap: 5px;
+            }
+            &__card {
+                height: 260px;
+            }
+            &__title {
+                font-size: 20px;
+            }
+            &__date,
+            &__bnumber,
+            &__position {
+                font-size: 14px;
+            }
         }
     }
 }

@@ -56,6 +56,7 @@
         -webkit-column-gap: 20px;
         margin: 0;
         max-width: 100%;
+        -webkit-white-space: pre-wrap;
         white-space: pre-wrap;
         font-weight: $reg;
         font-size: 18px;
@@ -94,11 +95,17 @@
         &__text {
             font-size: 17px;
         }
+        &__wrap {
+            padding-top: 90px;
+        }
     }
 }
 
 @media (max-width: 1400px) {
     .single-news {
+        &__title {
+            line-height: 120%;
+        }
         &__text {
             font-size: 17px;
         }

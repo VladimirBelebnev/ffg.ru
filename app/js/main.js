@@ -70,48 +70,50 @@ burger();
 
 const modals = () => {
   const questionModal = document.querySelector('.modal-question'),
-        btnQuestionModal = document.querySelector('.modal-question__btn'),
+        btnsQuestionModal = document.querySelectorAll('.modal-question__btns'),
         closeBtnQuestionModal = document.querySelector('.modal-question .modal__close'),
-        scroll = calcScroll();
+        violationModal = document.querySelector('.modal-violation'),
+        btnsViolationModal = document.querySelectorAll('.modal-violation__btns'),
+        closeBtnViolationModal = document.querySelector('.modal-violation .modal__close');
 
   const showModal = selector => {
     selector.classList.remove('hidden');
-    document.body.style.marginRight = "".concat(scroll, "px");
+    selector.querySelector('.modal__content').classList.add('animate__animated', 'animate__fadeInDown');
   };
 
   const hideModal = selector => {
     selector.classList.add('hidden');
-    document.body.style.marginRight = '0px';
+    selector.querySelector('.modal__content').classList.remove('animate__animated', 'animate__fadeInDown');
   };
 
-  btnQuestionModal.addEventListener('click', () => {
-    showModal(questionModal);
-  });
-  closeBtnQuestionModal.addEventListener('click', () => {
-    hideModal(questionModal);
-  });
-  questionModal.addEventListener('click', event => {
-    if (event.target === questionModal) {
-      hideModal(questionModal);
-    }
-  });
-  document.addEventListener('keydown', event => {
-    if (event.code === 'Escape' && questionModal) {
-      hideModal(questionModal);
-    }
-  });
+  const openModal = (btns, modal) => {
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        showModal(modal);
+      });
+    });
+  };
 
-  function calcScroll() {
-    let div = document.createElement('div');
-    div.style.width = '50px';
-    div.style.height = '50px';
-    div.style.overflowY = 'scroll';
-    div.style.visibility = 'hidden';
-    document.body.appendChild(div);
-    let scrollWidth = div.offsetWidth - div.clientWidth;
-    div.remove();
-    return scrollWidth;
-  }
+  const closeModal = (btn, modal) => {
+    btn.addEventListener('click', () => {
+      hideModal(modal);
+    });
+    modal.addEventListener('click', event => {
+      if (event.target === modal) {
+        hideModal(modal);
+      }
+    });
+    document.addEventListener('keydown', event => {
+      if (event.code === 'Escape' && modal) {
+        hideModal(modal);
+      }
+    });
+  };
+
+  openModal(btnsQuestionModal, questionModal);
+  openModal(btnsViolationModal, violationModal);
+  closeModal(closeBtnQuestionModal, questionModal);
+  closeModal(closeBtnViolationModal, violationModal);
 };
 
 modals();

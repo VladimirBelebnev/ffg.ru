@@ -72,6 +72,7 @@
         font-size: 16px;
         line-height: 17px;
         color: $text;
+        border: 1px solid $text;
     }
     input::placeholder {
         color: $text;
@@ -125,12 +126,25 @@
     .hidden {
         display: none;
     }
+    &-violation {
+        &__descr {
+            font-size: 16px;
+        }
+        &__input {
+            height: 160px;
+        }
+    }
 }
 
 @media (max-width: 1680px) {
     .modal {
         &__dialog {
             max-width: 420px;
+        }
+        &-violation {
+            &__input {
+                height: 140px;
+            }
         }
     }
 }
@@ -159,6 +173,11 @@
         &__checkbox {
             margin-top: 10px;
         }
+        &-violation {
+            &__input {
+                height: 130px;
+            }
+        }
     }
 }
 
@@ -176,6 +195,14 @@
         }
         &__btn {
             padding: 15px 25px;
+        }
+        &-violation {
+            &__descr {
+                font-size: 15px;
+            }
+            &__input {
+                height: 120px;
+            }
         }
     }
 }
@@ -205,6 +232,15 @@
         }
         &__checkbox {
             font-size: 12px;
+        }
+        &-violation {
+            &__descr {
+                font-size: 14px;
+            }
+            &__input {
+                font-size: 15px;
+                height: 100px;
+            }
         }
     }
 }

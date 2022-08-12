@@ -348,7 +348,26 @@
             </div>
         </main>
 
-        <div class="modal-question modal hidden">
+        <div class="modal-violation modal hidden">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <button class="modal__close">×</button>
+            <form action="#">
+                <h2 class="modal__title">Направить информацию</h2>
+                <p class="modal__descr modal-violation__descr">Функция позволяет своевременно информировать, выявлять и предотвращать организацию договорных матчей,
+                применение допинга и иные факты нарушений принципов честной игры, в том числе несоблюдение этических норм</p>
+                <textarea class="modal__input modal-violation__input" style="resize: none" placeholder="Текст обращения"></textarea>
+                <button class="modal__btn">Отправить</button>
+                <label class="modal__checkbox" for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    Согласен с условиями политики конфиденциальности
+                </label>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal-question modal hidden">
     <div class="modal__dialog">
         <div class="modal__content">
             <button class="modal__close">×</button>
@@ -474,8 +493,8 @@
                     <a href="#">Порядок использования информации</a>
                 </div>
                 <div class="footer__info">
-                    <button class="">Сообщить о нарушении</button>
-                    <button class="modal-question__btn">Форма для связи</button>
+                    <button class="modal-violation__btns">Сообщить о нарушении</button>
+                    <button class="modal-question__btns">Форма для связи</button>
                 </div>
             </div>
         </div>
@@ -489,8 +508,8 @@
                     <a href="#">Порядок использования информации</a>
                 </div>
                 <div class="footer-mobile__info-block">
-                    <a href="#">Сообщить о нарушении</a>
-                    <a href="#">Форма для связи</a>
+                    <button class="modal-violation__btns">Сообщить о нарушении</button>
+                    <button class="modal-question__btns">Форма для связи</button>
                 </div>
             </div>
         </div>
