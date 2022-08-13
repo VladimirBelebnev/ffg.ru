@@ -22,6 +22,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_phoneMask__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_phoneMask__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/modals */ "./src/js/components/modals.js");
 /* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_modals__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_cards__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/cards */ "./src/js/components/cards.js");
+/* harmony import */ var _components_cards__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_cards__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -59,6 +62,38 @@ const burger = () => {
 };
 
 burger();
+
+/***/ }),
+
+/***/ "./src/js/components/cards.js":
+/*!************************************!*\
+  !*** ./src/js/components/cards.js ***!
+  \************************************/
+/***/ (() => {
+
+const cards = () => {
+  const cards = document.querySelectorAll('.player__card');
+  cards.forEach(card => {
+    card.addEventListener('touchstart', () => {
+      cards.forEach(item => {
+        item.querySelector('.player__front').style.transform = 'rotateY(0deg)';
+        item.querySelector('.player__back').style.transform = 'rotateY(180deg)';
+      });
+      card.querySelector('.player__front').style.transform = 'rotateY(180deg)';
+      card.querySelector('.player__back').style.transform = 'rotateY(360deg)';
+    });
+  });
+  window.addEventListener('touchstart', event => {
+    if (!event.target.closest('.player__card') || event.target.closest('.player__back').style.transform === 'rotateY(360deg)') {
+      cards.forEach(card => {
+        card.querySelector('.player__front').style.transform = 'rotateY(0deg)';
+        card.querySelector('.player__back').style.transform = 'rotateY(180deg)';
+      });
+    }
+  });
+};
+
+cards();
 
 /***/ }),
 

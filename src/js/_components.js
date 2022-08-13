@@ -5,3 +5,4 @@ import "./components/tabs";
 import "./components/scrolling";
 import "./components/phoneMask";
 import "./components/modals";
+import "./components/cards";

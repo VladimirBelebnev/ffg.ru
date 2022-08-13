@@ -101,6 +101,7 @@
             object-fit: cover;
         }
         &__ftitle {
+            max-width: 250px;
             text-shadow: 2px 2px 2px $text;
             text-align: left;
             position: absolute;
@@ -221,9 +222,6 @@
 
 @media (max-width: 992px) {
     .spartak {
-        .container {
-            cursor: pointer;
-        }
         &__logo {
             img {
                 max-width: 88px;
@@ -273,13 +271,7 @@
             &__position {
                 font-size: 18px;
             }
-        }
-        &:hover .player__front {
-            transform: rotateY(0deg);
-        }
-
-        &:hover .player__back {
-            transform: rotateY(180deg);
+            
         }
     }
 }
@@ -355,9 +347,9 @@
             max-height: 300px;
         }
         .player {
-            // &__wrap {
-            //     gap: 10px;
-            // }
+            &__wrap {
+                gap: 10px;
+            }
             &__title {
                 font-size: 22px;
             }
