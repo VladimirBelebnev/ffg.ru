@@ -3666,7 +3666,7 @@ a {
   gap: 40px;
 }
 .sports-schools__block {
-  border-radius: 3px;
+  border-radius: 8px;
   position: relative;
   width: 100%;
   height: 600px;
@@ -3674,18 +3674,19 @@ a {
 .sports-schools__photo {
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 8px;
   width: 100%;
   height: 600px;
 }
 .sports-schools__content {
+  border-radius: 0 0 0 8px;
   position: absolute;
   bottom: 0;
   left: 0;
   background: -webkit-gradient(linear, left top, right top, from(#323258), to(rgba(2, 62, 138, 0)));
   background: -o-linear-gradient(left, #323258 0%, rgba(2, 62, 138, 0) 100%);
   background: linear-gradient(90deg, #323258 0%, rgba(2, 62, 138, 0) 100%);
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 0 8px;
   padding: 60px 60px 60px 120px;
 }
 .sports-schools__name {
@@ -3702,6 +3703,13 @@ a {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+}
+
+.stadiums__block {
+  color: #ffffff;
+}
+.stadiums__block .sports-schools__desc {
+  max-width: 650px;
 }
 
 @media (max-width: 1400px) {
@@ -3722,6 +3730,9 @@ a {
     max-width: 500px;
     font-size: 16px;
   }
+  .stadiums__block .sports-schools__desc {
+    max-width: 500px;
+  }
 }
 @media (max-width: 1170px) {
   .sports-schools__block {
@@ -3733,6 +3744,9 @@ a {
   .sports-schools__desc {
     padding-top: 10px;
     max-width: 450px;
+  }
+  .stadiums__block .sports-schools__desc {
+    max-width: 350px;
   }
 }
 @media (max-width: 992px) {
@@ -3766,6 +3780,9 @@ a {
   .sports-schools__desc {
     font-size: 14px;
     max-width: 400px;
+  }
+  .stadiums__block .sports-schools__desc {
+    max-width: 300px;
   }
 }
 @media (max-width: 576px) {
@@ -3873,6 +3890,10 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.stadiums__block {
+  color: #ffffff;
 }
 
 @media (max-width: 1680px) {
@@ -4733,7 +4754,7 @@ a {
   object-fit: cover;
 }
 .spartak .player__ftitle {
-  max-width: 250px;
+  max-width: 240px;
   text-shadow: 2px 2px 2px #333;
   text-align: left;
   position: absolute;
@@ -4770,6 +4791,10 @@ a {
   line-height: 120%;
   font-weight: 600;
   color: #ffffff;
+}
+
+.referees {
+  padding-bottom: 70px;
 }
 
 @media (max-width: 1680px) {
@@ -4829,6 +4854,9 @@ a {
   .spartak .player__title {
     font-size: 26px;
   }
+  .referees {
+    padding-bottom: 60px;
+  }
 }
 @media (max-width: 992px) {
   .spartak__logo img {
@@ -4867,6 +4895,9 @@ a {
   .spartak .player__back {
     padding: 40px 30px;
   }
+  .spartak .player__ftitle {
+    max-width: 220px;
+  }
   .spartak .player__title {
     font-size: 26px;
   }
@@ -4891,6 +4922,9 @@ a {
   }
   .spartak .player__back {
     padding: 35px 25px;
+  }
+  .referees {
+    padding-bottom: 50px;
   }
 }
 @media (max-width: 576px) {

@@ -101,7 +101,7 @@
             object-fit: cover;
         }
         &__ftitle {
-            max-width: 250px;
+            max-width: 240px;
             text-shadow: 2px 2px 2px $text;
             text-align: left;
             position: absolute;
@@ -140,6 +140,10 @@
             color: $white;
         }
     }
+}
+
+.referees {
+    padding-bottom: 70px;
 }
 
 @media (max-width: 1680px) {
@@ -218,6 +222,9 @@
             }
         }
     }
+    .referees {
+        padding-bottom: 60px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -261,7 +268,9 @@
             &__back {
                 padding: 40px 30px;
             }
-
+            &__ftitle {
+                max-width: 220px;
+            }
             &__title {
                 font-size: 26px;
             }
@@ -299,6 +308,9 @@
                 padding: 35px 25px;
             }
         }
+    }
+    .referees {
+        padding-bottom: 50px;
     }
 }
 

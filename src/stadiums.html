@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#111111">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/vendor.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Федерация футбола города-курорта Геленджик</title>
+    </head>
+
+    <body>
+        @include('partials/header.html')
+
+        <main class="sports-schools main">
+            <div class="container">
+                <h1 class="header-title">Стадионы</h1>
+                <div class="sports-schools__wrap">
+                    <div class="sports-schools__block stadiums__block">
+                        <img class="sports-schools__photo" src="./img/spartak-stadium.webp" alt="spartak photo">
+                        <div class="sports-schools__content">
+                            <h2 class="header-title sports-schools__name">"Спартак"</h3>
+                                <p class="sports-schools__desc">Краснодарский край, г-к. Геленджик, ул. Солнцедарская, 1 з</p>
+                        </div>
+                    </div>
+                    <div class="sports-schools__block stadiums__block">
+                        <img class="sports-schools__photo" src="./img/vista-arena.webp" alt="vista-arena photo">
+                        <div class="sports-schools__content">
+                            <h2 class="header-title sports-schools__name">"Vista-Arena"</h3>
+                                <p class="sports-schools__desc">Краснодарский край, г-к. Геленджик, ул.Советская, 61</p>
+                        </div>
+                    </div>
+                    <div class="sports-schools__block stadiums__block">
+                        <img class="sports-schools__photo" src="./img/olimp.webp" alt="olimp photo">
+                        <div class="sports-schools__content">
+                            <h2 class="header-title sports-schools__name">"Олимп"</h3>
+                                <p class="sports-schools__desc">Краснодарский край, г-к. Геленджик, с. Кабардинка, ул. Мира, 26 б</p>
+                        </div>
+                    </div>
+                    <div class="sports-schools__block stadiums__block">
+                        <img class="sports-schools__photo" src="./img/ynost.webp" alt="ynost photo">
+                        <div class="sports-schools__content">
+                            <h2 class="header-title sports-schools__name">"Юность"</h3>
+                                <p class="sports-schools__desc">Краснодарский край, г-к. Геленджик, с. Дивноморское, ул. Короленко, 2 б</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        @include('partials/footer.html')
+        <script src="./js/main.js"></script>
+    </body>
+
+</html>

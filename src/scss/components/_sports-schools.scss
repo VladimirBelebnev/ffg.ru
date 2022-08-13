@@ -6,23 +6,24 @@
         gap: 40px;
     }
     &__block {
-        border-radius: 3px;
+        border-radius: 8px;
         position: relative;
         width: 100%;
         height: 600px;
     }
     &__photo {
         object-fit: cover;
-        border-radius: 3px;
+        border-radius: 8px;
         width: 100%;
         height: 600px;
     }
     &__content {
+        border-radius: 0 0 0 8px;
         position: absolute;
         bottom: 0;
         left: 0;
         background: linear-gradient(90deg, #323258 0%, rgba(2, 62, 138, 0) 100%);
-        border-radius: 0 0 3px 3px;
+        border-radius: 0 0 0 8px;
         padding: 60px 60px 60px 120px;
     }
     &__name {
@@ -39,6 +40,13 @@
         font-weight: $reg;
         font-size: 18px;
         line-height: 21px;
+    }
+}
+
+.stadiums__block {
+    color: $white;
+    .sports-schools__desc {
+        max-width: 650px;
     }
 }
 
@@ -66,6 +74,11 @@
             font-size: 16px;
         }
     }
+    .stadiums__block {
+        .sports-schools__desc {
+            max-width: 500px;
+        }
+    }
 }
 
 @media (max-width: 1170px) {
@@ -80,6 +93,11 @@
         &__desc {
             padding-top: 10px;
             max-width: 450px;
+        }
+    }
+    .stadiums__block {
+        .sports-schools__desc {
+            max-width: 350px;
         }
     }
 }
@@ -121,6 +139,11 @@
         &__desc {
             font-size: 14px;
             max-width: 400px;
+        }
+    }
+    .stadiums__block {
+        .sports-schools__desc {
+            max-width: 300px;
         }
     }
 }
