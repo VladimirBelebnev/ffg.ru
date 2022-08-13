@@ -100,10 +100,17 @@
             height: 100%;
             object-fit: cover;
         }
+        &__ftitle {
+            text-shadow: 2px 2px 2px $text;
+            text-align: left;
+            position: absolute;
+            bottom: 7%;
+            left: 8%;
+        }
         &__fnumber {
             position: absolute;
             top: 7%;
-            left: 8%;
+            right: 8%;
             padding: 0;
             margin: 0;
             font-family: $roboto;
@@ -214,6 +221,9 @@
 
 @media (max-width: 992px) {
     .spartak {
+        .container {
+            cursor: pointer;
+        }
         &__logo {
             img {
                 max-width: 88px;
@@ -345,9 +355,9 @@
             max-height: 300px;
         }
         .player {
-            &__wrap {
-                gap: 10px;
-            }
+            // &__wrap {
+            //     gap: 10px;
+            // }
             &__title {
                 font-size: 22px;
             }
