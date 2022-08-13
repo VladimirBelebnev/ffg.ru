@@ -4665,14 +4665,6 @@ a {
   background: linear-gradient(121.1deg, #E30613 18.11%, #FF4C59 100%);
   opacity: 0.95;
 }
-.spartak .spartak:hover .player__front {
-  -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-}
-.spartak .spartak:hover .player__back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
 .spartak .player__wrap {
   margin-top: 30px;
   display: -ms-grid;
@@ -4855,12 +4847,14 @@ a {
     padding: 60px;
   }
   .spartak__player {
+    cursor: pointer;
     margin-top: 50px;
   }
   .spartak .player__wrap {
     gap: 15px;
   }
   .spartak .player__card {
+    cursor: pointer;
     height: 325px;
   }
   .spartak .player__back {
@@ -4871,6 +4865,14 @@ a {
   }
   .spartak .player__date, .spartak .player__bnumber, .spartak .player__position {
     font-size: 18px;
+  }
+  .spartak:hover .player__front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  .spartak:hover .player__back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 }
 @media (max-width: 768px) {
