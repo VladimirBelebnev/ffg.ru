@@ -13,7 +13,7 @@
         transform: translateY(0px);
         transition: transform .3s;
     }
-    &__block {
+    &__block:hover {
         transform: translateY(-10px);
     }
     &__photo {

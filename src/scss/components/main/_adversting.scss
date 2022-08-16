@@ -38,6 +38,18 @@
     }
 }
 
+@media (max-width: 1680px) {
+    .adversting {
+        &__icon {
+            gap: 35px;
+            svg {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}
+
 @media (max-width: 1170px) {
     .adversting {
         &__icon {
