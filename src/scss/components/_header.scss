@@ -76,6 +76,11 @@
                         cursor: pointer;
                         width: 25px;
                         height: 25px;
+                        opacity: 1;
+                        transition: opacity .3s;
+                    }
+                    svg:hover {
+                        opacity: 0.85;
                     }
                 }
                 &__input {
@@ -103,6 +108,11 @@
                     &-icon {
                         width: 25px;
                         height: 25px;
+                        opacity: 1;
+                        transition: opacity .3s;
+                    }
+                    &-icon:hover {
+                        opacity: 0.85;
                     }
                     &-btn {
                         font-weight: $reg;

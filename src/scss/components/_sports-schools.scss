@@ -10,6 +10,11 @@
         position: relative;
         width: 100%;
         height: 600px;
+        transform: translateY(0px);
+        transition: transform .3s;
+    }
+    &__block {
+        transform: translateY(-10px);
     }
     &__photo {
         object-fit: cover;
@@ -127,7 +132,7 @@
 @media (max-width: 768px) {
     .sports-schools {
         &__wrap {
-            margin-top: 15px;
+            margin-top: 30px;
             gap: 30px;
         }
         &__block {
@@ -153,7 +158,10 @@
         &__block {
             max-height: 300px;
         }
-
+        &__wrap {
+            margin-top: 30px;
+            gap: 20px;
+        }
         &__photo {
             max-height: 300px;
         }

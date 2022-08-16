@@ -85,6 +85,16 @@
             color: $grey;
         }
     }
+    .photo__wrap {
+        position: relative;
+        svg {
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            top: 40%;
+            left: 40%;
+        }
+    }
 }
 
 @media (max-width: 1680px) {
@@ -102,6 +112,14 @@
 
         &__photo {
             height: 300px;
+        }
+    }
+    .photo__wrap {
+        svg {
+            width: 64px;
+            height: 64px;
+            top: 40%;
+            left: 40%;
         }
     }
 }
@@ -195,6 +213,12 @@
             gap: 30px;
             grid-template-columns: 1fr;
         }
+        .photo__wrap {
+            svg {
+                top: 43%;
+                left: 43%;
+            }
+        }
     }
 }
 
@@ -213,6 +237,12 @@
     .media-page {
         &__btn {
            font-size: 12px;
+        }
+        .photo__wrap {
+            svg {
+                top: 40%;
+                left: 40%;
+            }
         }
     }
 }
