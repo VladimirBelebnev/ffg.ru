@@ -31,6 +31,7 @@
             border-radius: 3px;
         }
         &-header {
+            padding-right: 15px;
             max-width: 700px;
             padding-top: 30px;
             margin: 0;
@@ -41,6 +42,7 @@
             line-height: 75px;
         }
         &-descr {
+            padding-right: 15px;
             max-width: 700px;
             margin: 0;
             padding-top: 25px;
@@ -96,8 +98,12 @@
                 height: 750px;
             }
             &-header {
+                max-width: 600px;
                 line-height: 65px;
                 font-size: 58px;
+            }
+            &-descr {
+                max-width: 600px;
             }
         }
         &__number {
@@ -122,6 +128,7 @@
                 padding-left: 90px;
             }
             &-header {
+                max-width: 550px;
                 padding-top: 25px;
                 line-height: 65px;
                 font-size: 52px;
@@ -131,6 +138,7 @@
             }
 
             &-descr {
+                max-width: 550px;
                 font-style: 16px;
             }
         }
@@ -153,11 +161,13 @@
                 padding-left: 0px;
             }
             &-header {
+                max-width: 500px;
                 line-height: 60px;
                 font-size: 48px;
             }
             &-descr {
-               padding-top: 20px;
+                max-width: 500px;
+                padding-top: 20px;
             }
         }
         &__number {
@@ -180,8 +190,12 @@
                 height: 680px;
             }
             &-header {
+                max-width: 450px;
                 line-height: 50px;
                 font-size: 44px;
+            }
+            &-descr {
+                max-width: 450px;
             }
         }
         &__number {
@@ -203,6 +217,7 @@
                 height: 650px;
             }
             &-header {
+                max-width: 380px;
                 line-height: 54px;
                 font-size: 40px;
             }
@@ -210,6 +225,7 @@
                 font-size: 15px;
             }
             &-descr {
+                max-width: 380px;
                 font-size: 15px;
             }
         }
@@ -223,8 +239,12 @@
     .slider {
         &__content {
             &-header {
+                max-width: 350px;
                 line-height: 40px;
                 font-size: 36px;
+            }
+            &-descr {
+                max-width: 350px;
             }
         }
 
@@ -245,7 +265,7 @@
                 height: 600px;
             }
             &-header {
-                line-height: 25px;
+                line-height: 100%;
                 font-size: 28px;
             }
         }

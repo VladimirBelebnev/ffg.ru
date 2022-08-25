@@ -44,8 +44,7 @@
         box-shadow: 0px 8px 20px rgba(217, 217, 217, 0.5);
         border-radius: 3px;
         width: 100%;
-        max-height: 465px;
-        height: 100%;
+        height: auto;
         transform: translateY(0px);
         transition: transform .3s;
     }
@@ -105,11 +104,6 @@
         &__block {
             margin-top: 60px;
         }
-
-        &__item {
-            max-height: 415px;
-        }
-
         &__photo {
             height: 300px;
         }
@@ -143,11 +137,6 @@
             gap: 20px;
             grid-template-columns: 1fr 1fr;
         }
-
-        &__item {
-            max-height: 415px;
-        }
-
         &__name {
             font-size: 16px;
         }

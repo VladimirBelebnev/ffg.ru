@@ -31,13 +31,20 @@
         padding: 0;
         margin: 0;
         padding-top: 40px;
-        white-space: pre-wrap;
         font-weight: $reg;
         font-size: 18px;
         line-height: 130%;
         color: $text;
         text-align: justify;
         -webkit-text-align: justify;
+        p {
+            padding: 0;
+            padding-bottom: 12px;
+            margin: 0;
+        }
+        p:last-child {
+            padding-bottom: 0px;
+        }
     }
     &__player {
         margin-top: 60px;
@@ -45,11 +52,10 @@
     &__bg {
         margin-top: 60px;
         width: 100%;
-        padding: 60px 425px;
-    }
-    &__table {
-        background: linear-gradient(121.1deg, #E30613 18.11%, #FF4C59 100%);
-        opacity: 0.95;
+        padding: 30px 425px;
+        .tournaments-content__table {
+            background: linear-gradient(121.1deg, #E30613 18.11%, #FF4C59 100%);
+        }
     }
     .player {
         &__wrap {
@@ -82,8 +88,7 @@
             align-items: flex-start;
             flex-direction: column;
             box-sizing: border-box;
-            padding: 60px 40px;
-            background: url("../img/spartak-bg.png") center no-repeat;
+            padding: 60px 25px;
             background-size: cover;
             transform: rotateY(180deg);
         }
@@ -127,7 +132,7 @@
             font-family: $roboto;
             font-weight: $black-font;
             color: $white;
-            font-size: 30px;
+            font-size: 28px;
             line-height: 120%;
             color: $white;
         }
@@ -142,6 +147,14 @@
     }
 }
 
+.rotate__front {
+    transform: rotateY(180deg);
+}
+
+.rotate__back {
+    transform: rotateY(360deg);
+}
+
 .referees {
     padding-bottom: 70px;
 }
@@ -149,7 +162,7 @@
 @media (max-width: 1680px) {
     .spartak {
         &__bg {
-            padding: 60px 350px;
+            padding: 30px 350px;
         }
         .player {
             &__wrap {
@@ -162,10 +175,10 @@
             }
 
             &__back {
-                padding: 50px 35px;
+                padding: 50px 25px;
             }
             &__title {
-                font-size: 28px;
+                font-size: 26px;
             }
             &__date,
             &__bnumber,
@@ -178,6 +191,11 @@
 
 @media (max-width: 1400px) {
     .spartak {
+        .player {
+            &__title {
+                font-size: 24px;
+            }
+        }
         &__logo {
             gap: 10px;
 
@@ -196,7 +214,7 @@
         }
 
         &__bg {
-            padding: 60px 280px;
+            padding: 20px 280px;
         }
     }
 }
@@ -208,7 +226,7 @@
         }
 
         &__bg {
-            padding: 60px 220px;
+            padding: 20px 220px;
         }
         .player {
             &__wrap {
@@ -216,9 +234,6 @@
             }
             &__card {
                 height: 350px;
-            }
-            &__title {
-                font-size: 26px;
             }
         }
     }
@@ -252,7 +267,7 @@
         }
         &__bg {
             margin-top: 50px;
-            padding: 60px;
+            padding: 20px 60px;
         }
         &__player {
             margin-top: 50px;
@@ -265,14 +280,23 @@
                 cursor: pointer;
                 height: 325px;
             }
+            &__card:hover .player__front {
+                transform: rotateY(0deg);
+            }
+
+            &__card:hover .player__back {
+                transform: rotateY(180deg);
+            }
             &__back {
-                padding: 40px 30px;
+                padding: 35px 20px;
             }
             &__ftitle {
                 max-width: 220px;
             }
             &__title {
-                font-size: 26px;
+                bottom: 5%;
+                left: 6%;
+                font-size: 22px;
             }
 
             &__date,
@@ -297,12 +321,15 @@
         }
 
         &__bg {
-            padding: 30px;
+            padding: 0px;
         }
         .player {
             &__wrap {
                 margin-top: 20px;
                 grid-template-columns: 1fr 1fr;
+            }
+            &__title {
+                font-size: 24px;
             }
             &__back {
                 padding: 35px 25px;
@@ -339,10 +366,10 @@
                 height: 300px;
             }
             &__back {
-                padding: 35px 20px;
+                padding: 30px 20px;
             }
             &__title {
-                font-size: 24px;
+                font-size: 20px;
             }
             &__date,
             &__bnumber,
@@ -363,18 +390,28 @@
                 gap: 10px;
             }
             &__title {
-                font-size: 22px;
+                font-size: 18px;
+            }
+            &__back {
+                padding: 30px 10px;
             }
             &__card {
                 height: 280px;
-            }
-            &__back {
-                padding: 30px 15px;
             }
             &__date,
             &__bnumber,
             &__position {
                 font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .spartak {
+        .player {
+            &__title {
+                font-size: 16px;
             }
         }
     }
@@ -389,8 +426,13 @@
             &__card {
                 height: 260px;
             }
+            &__back {
+                padding: 30px 7px;
+            }
             &__title {
-                font-size: 20px;
+                left: 4%;
+                bottom: 5%;
+                font-size: 15px;
             }
             &__date,
             &__bnumber,

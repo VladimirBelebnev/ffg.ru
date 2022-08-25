@@ -1,17 +1,41 @@
+        <div class="modal-store modal hidden">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <button class="modal__close">&times;</button>
+                    <p class="modal__descr modal-violation__descr modal-question-thanks__descr">Скоро открытие</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-question-thanks modal hidden">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <button class="modal__close">&times;</button>
+                    <h2 class="modal__title">Спасибо за оставленный вопрос</h2>
+                    <p class="modal__descr modal-violation__descr modal-question-thanks__descr">Мы свяжемся с вами и ответим на него в ближайшее время. Обычно это занимает до 60 минут</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-violation-thanks modal hidden">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <button class="modal__close">&times;</button>
+                    <h2 class="modal__title">Спасибо за направленую информацию</h2>
+                    <p class="modal__descr modal-violation__descr modal-question-thanks__descr">Мы рассмотрим и обработаем ее в ближайшее время</p>
+                </div>
+            </div>
+        </div>
+        
         <div class="modal-violation modal hidden">
             <div class="modal__dialog">
                 <div class="modal__content">
                     <button class="modal__close">&times;</button>
-                    <form action="#">
+                    <form class="form" action="POST" data-modal="violation">
                         <h2 class="modal__title">Направить информацию</h2>
                         <p class="modal__descr modal-violation__descr">Функция позволяет своевременно информировать, выявлять и предотвращать организацию договорных матчей,
                         применение допинга и иные факты нарушений принципов честной игры, в том числе несоблюдение этических норм</p>
-                        <textarea class="modal__input modal-violation__input" style="resize: none" placeholder="Текст обращения"></textarea>
-                        <button class="modal__btn">Отправить</button>
-                        <label class="modal__checkbox" for="checkbox">
-                            <input type="checkbox" id="checkbox-violation">
-                            Согласен с условиями политики конфиденциальности
-                        </label>
+                        <?php echo do_shortcode('[contact-form-7 id="750" title="Информация о нарушении"]'); ?>
                     </form>
                 </div>
             </div>
@@ -21,17 +45,16 @@
             <div class="modal__dialog">
                 <div class="modal__content">
                     <button class="modal__close">&times;</button>
-                    <form action="#">
+                    <form class="form" action="POST" data-modal="question">
+                        <style> 
+                            .form::after{
+                                content:'';
+                                background: url("<?php echo get_template_directory_uri(); ?>/assets/img/loading.gif") center / 50px no-repeat;
+                            }
+                        </style>
                         <h2 class="modal__title">Есть вопрос?</h2>
                         <p class="modal__descr">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-                        <input class="modal__input" type="text" placeholder="Ваше имя">
-                        <input class="modal__input" type="tel" name="phone" placeholder="Ваш Телефон">
-                        <textarea class="modal__input" style="resize: none" placeholder="Ваш вопрос"></textarea>
-                        <button class="modal__btn">Отправить</button>
-                        <label class="modal__checkbox" for="checkbox">
-                            <input type="checkbox" id="checkbox-question">
-                            Согласен с условиями политики конфиденциальности
-                        </label>
+                        <?php echo do_shortcode('[contact-form-7 id="749" title="Вопрос"]'); ?>
                     </form>
                 </div>
             </div>
@@ -43,11 +66,11 @@
                 <div class="footer__menu">
                     <div class="footer__wrap">
                         <ul class="footer__links">
-                            <li><a href="./about.html">О нас</a></li>
-                            <li><a href="./news.html">Новости</a></li>
-                            <li><a href="./tournaments.html">Турниры</a></li>
-                            <li><a href="./sports-schools.html">Спортшколы</a></li>
-                            <li><a href="./media.html">Медиа</a></li>
+                            <li><a href="https://ffgel.ru/about">О нас</a></li>
+                            <li><a href="https://ffgel.ru/news">Новости</a></li>
+                            <li><a href="https://ffgel.ru/tournaments">Турниры</a></li>
+                            <li><a href="https://ffgel.ru/schools">Спортшколы</a></li>
+                            <li><a href=https://ffgel.ru/media-photo">Медиа</a></li>
                         </ul>
                         <div class="footer-contact">
                             <div class="footer-contact__wrap">
@@ -88,7 +111,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <a href="mailto:ffg@gmail.com">ffg@gmail.com</a>
+                                    <a href="mailto:ffgel@mail.ru">ffgel@mail.ru</a>
                                 </div>
                                 <div class="footer-contact__item">
                                     <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,8 +162,8 @@
                     <span class="footer__line"></span>
                     <div class="footer-info__wrap">
                         <div class="footer__info">
-                            <a href="#">Политика конфиденциальности</a>
-                            <a href="#">Порядок использования информации</a>
+                            <a href="https://ffgel.ru/privacy-policy/">Политика конфиденциальности</a>
+                            <a href="https://ffgel.ru/license/">Порядок использования информации</a>
                         </div>
                         <div class="footer__info">
                             <button class="modal-violation__btns">Сообщить о нарушении</button>
@@ -164,8 +187,20 @@
                     </div>
                 </div>
             </div>
+            <div class="container developed-container">
+                <div class="developed">
+                    <a href="#">
+                        <img class="developed-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/developed.png" alt="developed logo">
+                    </a>
+                    <span class="developed-line"></span>
+                    <a href="#">
+                        <p class="developed-descr">Создание сайтов</p>
+                    </a>
+                </в>
+            </div>
         </footer>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <?php 
             wp_footer();
         ?>

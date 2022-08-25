@@ -32,7 +32,7 @@
         margin-top: 90px;
     }
     &__slide {
-        height: 320px;
+        height: 320px !important;
         background: linear-gradient(110.18deg, #1E1E44 0%, rgba(30, 30, 68, 0) 99.2%);
         border-radius: 5px;
         color: $white;
@@ -84,7 +84,7 @@
     }
     &-comand {
         &__photo {
-            width: 145px;
+            object-fit: cover;
             height: 100px;
         }
         &__name {
@@ -103,12 +103,15 @@
     .swiper-pagination,
     .swiper-button-prev,
     .swiper-button-next {
-        top: 94%;
+        top: 95%;
     }
     .swiper-button-prev,
     .swiper-button-next {
         width: 60px;
         height: 35px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
     }
 
     .swiper-pagination-bullet {
@@ -129,6 +132,9 @@
         background: #399E5A;
         opacity: 1;
     }
+    .swiper-slider {
+        height: fit-content !important;
+    }
 }
 
 @media (max-width: 1680px) {
@@ -141,7 +147,6 @@
         &-comand {
             &__photo {
                 height: 90px;
-                width: 130px;
             }
         }
     }
@@ -152,7 +157,6 @@
         &-comand {
             &__photo {
                 height: 80px;
-                width: 115px;
             }
         }
         &-match {
@@ -194,7 +198,7 @@
             height: 360px;
         }
         &__slide {
-            height: 295px;
+            height: 295px !important;
         }
         &-match {
             &__name {
@@ -210,7 +214,6 @@
         &-comand {
             &__photo {
                 height: 60px;
-                width: 90px;
             }
         }
         .swiper-button-prev,
@@ -236,7 +239,7 @@
             height: 310px;
         }
         &__slide {
-            height: 285px;
+            height: 285px !important;
         }
         &-match {
             padding: 25px 40px;
@@ -257,7 +260,6 @@
         &-comand {
             &__photo {
                 height: 80px;
-                width: 115px;
             }
 
             &__name {
@@ -283,7 +285,7 @@
             height: 300px;
         }
         &-slide {
-            height: 275px;
+            height: 275px !important;
         }
         &-match {
             &__block {
@@ -296,7 +298,6 @@
         &-comand {
             &__photo {
                 height: 65px;
-                width: 100px;
             }
 
             &__name {
@@ -324,7 +325,7 @@
             height: 280px;
         }
         &__slide {
-            height: 255px;
+            height: 255px !important;
         }
         &-match {
             &__name {
@@ -348,7 +349,6 @@
         &-comand {
             &__photo {
                 height: 60px;
-                width: 85px;
             }
 
             &__name {
@@ -357,7 +357,7 @@
             }
         }
         .swiper-pagination {
-            top: 95%;
+            top: 94%;
         }
     }
 }

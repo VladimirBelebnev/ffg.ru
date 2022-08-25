@@ -5,9 +5,16 @@ const burger = () => {
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
         mobileMenu.classList.toggle('hidden');
-        // mobileMenu.classList.toggle('animate__animated');
-        // mobileMenu.classList.toggle('animate__fadeInDown');
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 992) {
+            burger.classList.remove('active');
+            mobileMenu.classList.add('hidden');
+        }
     });
 };
 
-burger();
+window.addEventListener('DOMContentLoaded', () => {
+    burger();
+});

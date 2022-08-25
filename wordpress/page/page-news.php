@@ -1,143 +1,75 @@
     <?php 
         /* Template Name: news */
         get_header();
+        $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
     ?>
 
     <main class="news-page main">
         <div class="container">
             <h1 class="header-title">Новости</h1>
             <div class="news-page__menu">
-                <button class="news-page__btn news-page__btn-all active" id="all-news">Все</button>
+                <a href="https://ffgel.ru/news" class="news-page__btn news-page__btn-all active" id="all-news">Все</a>
                 <div class="news-page__wrap">
-                    <button class="news-page__btn" id="local">Местый футбол</button>
-                    <button class="news-page__btn" id="kray">краевой футбол</button>
-                    <button class="news-page__btn" id="rus">Российский футбол</button>
+                    <a href="https://ffgel.ru/news-local" class="news-page__btn" id="local">Местый футбол</a>
+                    <a href="https://ffgel.ru/news-kray" class="news-page__btn" id="kray">Краевой футбол</a>
+                    <a href="https://ffgel.ru/news-rus" class="news-page__btn" id="rus">Российский футбол</a>
                 </div>
                 <div class="news-page__wrap">
-                    <button class="news-page__btn news-page__btn-comand" id="spartak">«Спартак Геленджик»</button>
-                    <button class="news-page__btn news-page__btn-comand" id="vista">«Vista»</button>
+                    <a href="https://ffgel.ru/news-spartak" class="news-page__btn news-page__btn-comand" id="spartak">«Спартак Геленджик»</a>
+                    <a href="https://ffgel.ru/news-vista" class="news-page__btn news-page__btn-comand" id="vista">«Vista»</a>
                 </div>
-                <form class="news-page__search" action="#">
-                    <input placeholder="Поиск по новостям" type="text">
-                    <button>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M17.1901 15.4782L23.6458 21.934C23.8727 22.1611 24.0001 22.469 24 22.79C23.9999 23.111 23.8723 23.4189 23.6452 23.6458C23.4181 23.8727 23.1102 24.0001 22.7892 24C22.4682 23.9999 22.1604 23.8723 21.9335 23.6452L15.4778 17.1893C13.5479 18.6841 11.1211 19.3875 8.69104 19.1565C6.26097 18.9255 4.01018 17.7773 2.39656 15.9457C0.782936 14.114 -0.0723147 11.7364 0.00479537 9.29655C0.0819054 6.85668 1.08558 4.53783 2.81165 2.81172C4.53771 1.08561 6.85651 0.0819075 9.29632 0.00479549C11.7361 -0.0723165 14.1137 0.782955 15.9453 2.39662C17.7769 4.01028 18.925 6.26113 19.156 8.69126C19.387 11.1214 18.6836 13.5483 17.1889 15.4782H17.1901ZM9.60045 16.7993C11.5099 16.7993 13.3412 16.0408 14.6914 14.6905C16.0416 13.3403 16.8001 11.509 16.8001 9.59949C16.8001 7.68997 16.0416 5.85866 14.6914 4.50843C13.3412 3.15819 11.5099 2.39964 9.60045 2.39964C7.69098 2.39964 5.85971 3.15819 4.50951 4.50843C3.15932 5.85866 2.40078 7.68997 2.40078 9.59949C2.40078 11.509 3.15932 13.3403 4.50951 14.6905C5.85971 16.0408 7.69098 16.7993 9.60045 16.7993Z"
-                                fill="#BDBDBD" />
-                        </svg>
-                    </button>
-                </form>
+                <div class="news-page__search">
+                    <?php echo do_shortcode("[wpdreams_ajaxsearchlite]"); ?>
+                </div>
             </div>
             <div class="news-page__block">
-                <div class="news-page__items">
-                    <a class="news-page__item" data-news="local" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-3.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="kray" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-4.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="local" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-5.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="kray" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-6.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="local" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-7.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="rus" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-4.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="spartak" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-5.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="vista" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-6.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="vista" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-7.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="spartak" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-3.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="rus" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-6.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
-                    <a class="news-page__item" data-news="kray" href="./single-news.html">
-                        <img class="news-page__photo" src="./img/news-card-7.webp" alt="news photo">
-                        <div class="news-page__item-wrap">
-                            <p class="news-page__date">12 июля 2022</p>
-                            <h4 class="news-page__header">Информация для болельщиков по посещению “Газпром Арены”</h4>
-                            <p class="news-page__descr">Стартовый свисток матча за OLIMPBET Суперкубок России прозвучит в 19:00, доступ на
-                                территорию стадиона будет</p>
-                        </div>
-                    </a>
+                <div>
+                    <div class="news-page__items">
+                        <?php
+                            $the_query = new WP_Query( array(
+                                'numberposts' => -1,
+                                'category'    => 6,
+                                'category_name'  => 'news',
+                                'orderby'     => 'date',
+                                'order'       => 'DESC',
+                                'include'     => array(),
+                                'exclude'     => array(),
+                                'meta_key'    => '',
+                                'meta_value'  =>'',
+                                'post_type'   => 'post',
+                                'suppress_filters' => true,
+                                'posts_per_page' => 12,
+                                'paged'          => $paged,
+                            ) );
+
+                            while( $the_query->have_posts() ){
+                                $the_query->the_post();
+                                ?>
+                                    <a class="news-page__item" href="<?php the_permalink(); ?>">
+                                        <?php $image = get_field('news_thumbnail'); ?>
+                                        <img class="news-page__photo" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                                        <div class="news-page__item-wrap">
+                                            <p class="news-page__date"><?php the_time('j F Y'); ?></p>
+                                            <h4 class="news-page__header"><?php the_title(); ?></h4>
+                                            <p class="news-page__descr"><?php the_field('news_descr'); ?></p>
+                                        </div>
+                                    </a>
+                                <?php
+                            }
+                            wp_reset_postdata();
+                        ?>
+                    </div>
+                    <div class="pagination">
+                        <?php
+                            $big = 999999999;
+
+                            echo paginate_links( array(
+                                'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                                'current' => max( 1, get_query_var('paged') ),
+                                'total'   => $the_query->max_num_pages
+                            ) );
+                        ?>
+                    </div>
                 </div>
                 <div class="adversting__contact news-page__contact">
                     <h3 class="title">Мы в соцсетях:</h3>

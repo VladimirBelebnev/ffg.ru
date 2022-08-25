@@ -4,7 +4,14 @@ const modals = () => {
           closeBtnQuestionModal = document.querySelector('.modal-question .modal__close'),
           violationModal = document.querySelector('.modal-violation'),
           btnsViolationModal = document.querySelectorAll('.modal-violation__btns'),
-          closeBtnViolationModal = document.querySelector('.modal-violation .modal__close');
+          closeBtnViolationModal = document.querySelector('.modal-violation .modal__close'),
+          questionThanksModal = document.querySelector('.modal-question-thanks'),
+          closeBtnQuestionThanksModal = document.querySelector('.modal-question-thanks .modal__close'),
+          violationThanksModal = document.querySelector('.modal-question-thanks'),
+          closeBtnViolationThanksModal = document.querySelector('.modal-question-thanks .modal__close'),
+          storeModal = document.querySelector('.modal-store'),
+          btnsStore = document.querySelectorAll('.store__btn'),
+          closeBtnStoreModal = document.querySelector('.modal-store .modal__close');
 
     const showModal = (selector) => {
         selector.classList.remove('hidden');
@@ -24,28 +31,43 @@ const modals = () => {
         });
     };
 
+    const resetForm = (selector) => {
+        if (selector.querySelector('form')) {
+            selector.querySelector('.form').reset();
+        }  
+    };
+
     const closeModal = (btn, modal) => {
         btn.addEventListener('click', () => {
             hideModal(modal);
+            resetForm(modal);
         });
 
         modal.addEventListener('click', (event) => {
             if (event.target === modal) {
                 hideModal(modal);
+                resetForm(modal);
             }
         });
 
         document.addEventListener('keydown', (event) => {
             if (event.code === 'Escape' && modal) {
                 hideModal(modal);
+                resetForm(modal);
             }
         });
     };
 
     openModal(btnsQuestionModal, questionModal);
     openModal(btnsViolationModal, violationModal);
+    openModal(btnsStore, storeModal);
     closeModal(closeBtnQuestionModal, questionModal);
     closeModal(closeBtnViolationModal, violationModal);
+    closeModal(closeBtnQuestionThanksModal , questionThanksModal);
+    closeModal(closeBtnViolationThanksModal, violationThanksModal);
+    closeModal(closeBtnStoreModal, storeModal);
 };
 
-modals();
+window.addEventListener('DOMContentLoaded', () => {
+    modals();
+});

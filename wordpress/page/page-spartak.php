@@ -1,369 +1,101 @@
     <?php 
-        /* Template Name: spartak */
+        /* Template Name: spartak-page */
+        /* Template Post Type: post */
         get_header();
     ?>
 
     <main class="main spartak">
         <div class="container">
             <div class="spartak__logo">
-                <img src="./img/spartak-logo.png" alt="spartak logo">
+                <?php $logo = get_field('logo'); ?>
+                <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
                 <h1 class="header-title">“Спартак”</h1>
             </div>
             <div class="spartak__content">
-                <img class="spartak__photo" src="./img/spartak.webp" alt="spartak photo">
-<p class="spartak__descr"><b>Футбольный клуб «Спартак» был образован в 2004 году с целью привлечение жителей курорта к здоровому образу жизни и позиционирования футбола, как любимого вида спорта горожан. Именно тогда по инициативе главы курорта Озерова Сергея Павловича и любителей футбола города Геленджика был создан ФК «Спартак-Геленджик». И уже в наши дни Геленджик поистине живет футболом.</b>
-
-Развивать футбол в Геленджике было нелегкой задачей на тот период. До 2003 года воспитание футбольного поколения не являлось приоритетным направлением работы спортивных школ Геленджикского района. По соседству в п. Лазаревское в тот период активно развивалась местная футбольная команда под руководством Панайота Георгиевича Андреева, в составе которой выступали футболисты Геленджика. Именно тогда было принято решение вернуть команду на законную родину и оказать всевозможную поддержку. Таким образом, на начальном этапе становления клуба команда стартовала с участия в первенстве Краснодарского края.
-
-Двигаясь уверенной поступью к вершинам футбольного мастерства, дебютанты соревнований оказались в середине турнирной таблицы, а затем выиграли краевое первенство, завоевав, таким образом, путевку в высшую лигу кубанских соревнований. С тех пор потеснить Геленджикский «Спартак» из рядов высшей лиги чемпионата Краснодарского края никому не удавалось. В первенстве Краснодарского края по футболу среди команд первой лиги 2004 года команда «Спартак» г. Геленджик заняла 9 место, а в сезоне 2005 года со значительным превосходством заняла первую строчку в турнирной таблице. По итогам сезона 2006, команда заняла второе место в высшей лиге Кубани.
-
-По итогам 2007 года «Спартак» снова занял почетное второе место, по итогам 2008 года - пятое, а по итогам 2009 года - третье. В 2010 году команда приняла участие в соревнованиях за кубок губернатора Краснодарского края и заняла первое место!
-
-Все болельщики рассчитывают на успешное участие футбольной команды «Спартак» города-курорта Геленджик в высшей лиге чемпионата Краснодарского края. В Кубке Краснодарского края по футболу «Спартак» начал принимать участие с момента своего дебюта в краевых соревнованиях. Отрадно то, что столь значимого успеха, как выход в финал соревнований команда добилась именно в юбилейный год столетия Кубанского футбола.
-
-В 2012 году ФК "Спартак -Геленджик" становиться в первый и единственный раз "Чемпионом Краснодарского края по футболу" под руководством Андреева Панайота Георгиевича.
-
-2013 году команда заняла 7-место по итогам сезона, и в 2014 год возглавил команду Денис Александрович Попов бывший игрок футбольного клуба "ЦСКА" ( Москва). Под его руководством команда два раза подряд заняла серебряные медали чемпионата высшей лиги в сезонах 2014 и 2015 годах.
-
-Учредители клуба после окончания сезона на собрании приняли решение о перезагрузке в местном футболе. Сделали ставку на местных футболистов и в 2016 году был назначен местный тренер Анастас Владимирович.
-
-За четыре сезона команда дала свои плоды на футбольных полях края, в 2018 году впервые в истории Геленджикского футбола стали обладателями «Кубка Краснодарского края» это была историческая победа для всего города. В 2019 году команда дошла во второй раз подряд до финала, но в упорной борьбе уступила чемпионам края ФК «Кубань-Холдинг», но свое все равно взяли и стали бронзовыми призерами чемпионата высшей лиги Краснодарского края.
-
-В жизни ФК «Спартак-Геленджик» на сегодняшний день активно принимают участие 21 член клуба. Президент клуба глава города-курорта Геленджик Богодистов Алексей Алексеевич.</p>
+                <?php $image = get_field('comand_photo'); ?>
+                <img class="spartak__photo" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                <div class="spartak__descr"><?php the_content(); ?></div>
             </div>
             <div class="tournaments-content__bg spartak__bg">
-                <div class="tournaments-content__table spartak__table">
-
-                </div>
+                <?php echo do_shortcode("[table id=2 /]"); ?>
             </div>
             <div class="comand__player spartak__player">
                 <h1 class="title comand-player__header">Игроки</h1>
                 <div class="player__wrap">
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
+                     <?php 
+                        $my_posts = get_posts( array(
+                            'numberposts' => -1,
+                            'category'    => 0,
+                            'orderby'     => 'date',
+                            'order'       => 'DESC',
+                            'include'     => array(),
+                            'exclude'     => array(),
+                            'meta_key'    => '',
+                            'meta_value'  =>'',
+                            'post_type'   => 'spartak__players',
+                            'suppress_filters' => true, 
+                        ) );
+
+                        global $post;
+
+                        foreach( $my_posts as $post ){
+                            setup_postdata( $post );
+                            ?>
+                        <div class="player__card">
+                            <div class="player__front">
+                                <?php $image = pods_image_url(get_post_meta($id, 'player_photo', true), null); ?>
+                                <img class="player__photo" src="<?php echo $image; ?>" alt="player name">
+                                <h2 class="header-title player__fnumber"><?php echo get_post_meta(get_the_ID(), 'player_number', true) ?></h2>
+                                <h3 class="player__title player__ftitle"><?php the_title(); ?></h3>
+                            </div>
+                            <div class="player__back" style="background: url(<?php echo get_template_directory_uri(); ?>/assets/img/card-bg.png) center no-repeat">
+                                <h3 class="player__title"><?php the_title(); ?></h3>
+                                <p class="player__date">Дата рождения: <b><?php echo get_post_meta(get_the_ID(), 'player_date', true) ?></b></p>
+                                <p class="player__position">Позиция: <b><?php echo get_post_meta(get_the_ID(), 'player_post', true) ?></b></p>
+                                <p class="player__bnumber">Игровой номер: <b><?php echo get_post_meta(get_the_ID(), 'player_number', true) ?></b></p>
+                            </div>
                         </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
+                    <?php
+                        }
+                        wp_reset_postdata();
+				    ?>
+
+
+                    <?php 
+                        $my_posts = get_posts( array(
+                            'numberposts' => -1,
+                            'category'    => 0,
+                            'orderby'     => 'date',
+                            'order'       => 'DESC',
+                            'include'     => array(),
+                            'exclude'     => array(),
+                            'meta_key'    => '',
+                            'meta_value'  =>'',
+                            'post_type'   => 'spartak__trainer',
+                            'suppress_filters' => true, 
+                        ) );
+
+                        global $post;
+
+                        foreach( $my_posts as $post ){
+                            setup_postdata( $post );
+                            ?>
+                        <div class="player__card">
+                            <div class="player__front">
+                                <?php $image = pods_image_url(get_post_meta($id, 'trainer_photo', true), null); ?>
+                                <img class="player__photo" src="<?php echo $image; ?>" alt="trainer name">
+                                <h3 class="player__title player__ftitle"><?php the_title(); ?></h3>
+                            </div>
+                            <div class="player__back" style="background: url(<?php echo get_template_directory_uri(); ?>/assets/img/card-bg.png) center no-repeat">
+                                <h3 class="player__title"><?php the_title(); ?></h3>
+                                <p class="player__date">Дата рождения: <b><?php echo get_post_meta(get_the_ID(), 'trainer_date', true) ?></b></p>
+                                <p class="player__position">Позиция: <b><?php echo get_post_meta(get_the_ID(), 'trainer_post', true) ?></b></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-3.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">1</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-3.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">1</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-3.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">1</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-3.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">1</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-3.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">1</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-1.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">7</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
-                    <div class="player__card">
-                        <div class="player__front">
-                            <img class="player__photo" src="./img/player-2.webp" alt="player name">
-                            <h2 class="header-title player__fnumber">10</h2>
-                            <h3 class="player__title player__ftitle">Батаев Александр</h3>
-                        </div>
-                        <div class="player__back">
-                            <h3 class="player__title">Батаев Александр</h3>
-                            <p class="player__date">Дата рождения: <b>01.01.1980</b></p>
-                            <p class="player__position">Позиция: <b>нападающий</b></p>
-                            <p class="player__bnumber">Игровой номер: <b>7</b></p>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                        wp_reset_postdata();
+				    ?>
                 </div>
             </div>
         </div>

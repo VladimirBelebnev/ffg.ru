@@ -1,6 +1,6 @@
 .footer {
     z-index: 1;
-    padding: 50px 0;
+    padding: 50px 0 20px;
     background-color: $footer;
     .container {
         display: flex;
@@ -152,6 +152,39 @@
         color: #666666;
         transition: color .2s;
     }
+    .developed {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        &-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        &-logo {
+            width: 60px;
+            opacity: 1;
+            transition: opacity .3s;
+        }
+        &-logo:hover {
+            opacity: 0.9;
+        }
+        &-descr {
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+            font-weight: 300;
+            color: #000;
+        }
+        &-descr:hover {
+            color: #333;
+        }
+        &-line {
+            display: inline-block;
+            height: 21px;
+            width: 1px;
+            background: #000;
+        }
+    }
 }
 
 @media (max-width: 1680px) {
@@ -180,6 +213,12 @@
         &-info__wrap {
             display: flex;
             gap: 45px;
+        }
+        .developed {
+            gap: 12px;
+            &-logo {
+                width: 48px;
+            }
         }
     }
 }
@@ -216,11 +255,24 @@
                 gap: 40px;
             }
         }
+        .developed {
+            gap: 10px;
+            &-logo {
+                width: 44px;
+            }
+            &-descr {
+                font-size: 12px;
+            }
+            &-line {
+                height: 18px;
+            }
+        }
     }
 }
 
 @media (max-width: 992px) {
     .footer {
+        padding: 50px 0 10px;
         .container {
             gap: 80px;
         }
@@ -258,6 +310,19 @@
                 }
             }
         }
+        .developed {
+            margin-top: 25px;
+            &-container {
+                justify-content: flex-start;
+            }
+            &-logo {
+                width: 40px;
+            }
+
+            &-descr {
+                font-size: 10px;
+            }
+        }
     }
 }
 
@@ -271,7 +336,7 @@
             height: 150px;
         }
         &__wrap {
-            gap: 40px;
+            gap: 36px;
         }
         &__links {
             gap: 10px;
@@ -302,6 +367,14 @@
                 gap: 7px;
             }
         }
+        .developed {
+             &-logo {
+                 width: 40px;
+             }
+             &-line {
+                 height: 16px;
+             }
+        }
     }
 }
 
@@ -319,6 +392,9 @@
         }
         &__links {
             gap: 8px;
+        }
+        .developed {
+            margin-top: 20px;
         }
     }
 }
@@ -349,6 +425,15 @@
         }
         &-mobile__info-block {
             gap: 10px;
+        }
+        .developed {
+            gap: 8px;
+            &-logo {
+                width: 34px;
+            }
+            &-line {
+                height: 15px;
+            }
         }
     }
 }

@@ -35,4 +35,6 @@ const scrolling = () => {
     });
 };
 
-scrolling();
+window.addEventListener('DOMContentLoaded', () => {
+    scrolling();
+});

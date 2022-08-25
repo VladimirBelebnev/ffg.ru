@@ -12,72 +12,66 @@
             </div>
             <div class="comands__block">
                 <div class="comands__items" data-comands="local-comands">
-                    <a href="https://ffgel.ru/rssm" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">РССМ</p>
+                    <?php 
+							$my_posts = get_posts( array(
+								'numberposts' => -1,
+								'tag'    => 'local_comands',
+								'orderby'     => 'date',
+								'order'       => 'DESC',
+								'include'     => array(),
+								'exclude'     => array(),
+								'meta_key'    => '',
+								'meta_value'  =>'',
+								'post_type'   => '',
+								'suppress_filters' => true, 
+							) );
+
+							global $post;
+
+							foreach( $my_posts as $post ){
+								setup_postdata( $post );
+								?>
+                    <a href="<?php the_permalink(); ?>" class="comands__item">
+                        <?php $logo = get_field('logo'); ?>
+                        <img class="comands__photo" src="<?php echo $logo['url']; ?>"
+								alt="<?php echo $logo['alt']; ?>">
+                        <p class="comands__name"><?php the_field('comand_name'); ?></p>
                     </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Cпарта</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Волна</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Побережье</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Ника</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Софи</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Ветераны</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Геленстрой</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Чемпион ММА</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Черноморец</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Юность</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Кабардинка</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">Византия</p>
-                    </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/rssm-logo.png" alt="comand logo">
-                        <p class="comands__name">KingBeer</p>
-                    </a>
+                    <?php
+							}
+							wp_reset_postdata();
+						?>
                 </div>
                 <div class="comands__items hidden" data-comands="kray-comands">
-                    <a href="https://ffgel.ru/spartak" class="comands__item">
-                        <img class="comands__photo" src="./img/spartak-logo.png" alt="comand logo">
-                        <p class="comands__name">Cпартак Геленджик</p>
+                    <?php 
+							$my_posts = get_posts( array(
+								'numberposts' => -1,
+								'tag'    => 'kray_comands',
+								'orderby'     => 'date',
+								'order'       => 'DESC',
+								'include'     => array(),
+								'exclude'     => array(),
+								'meta_key'    => '',
+								'meta_value'  =>'',
+								'post_type'   => '',
+								'suppress_filters' => true, 
+							) );
+
+							global $post;
+
+							foreach( $my_posts as $post ){
+								setup_postdata( $post );
+								?>
+                    <a href="<?php the_permalink(); ?>" class="comands__item">
+                        <?php $logo = get_field('logo'); ?>
+                        <img class="comands__photo" src="<?php echo $logo['url']; ?>"
+								alt="<?php echo $logo['alt']; ?>">
+                        <p class="comands__name"><?php the_field('comand_name'); ?></p>
                     </a>
-                    <a href="#" class="comands__item">
-                        <img class="comands__photo" src="./img/vista-logo.png" alt="comand logo">
-                        <p class="comands__name">Vista</p>
-                    </a>
+                    <?php
+							}
+							wp_reset_postdata();
+						?>
                 </div>
             </div>
         </div>

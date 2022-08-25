@@ -1,36 +1,16 @@
 const tabs = () => {
-    const newsBtns = document.querySelectorAll('.news-page__btn'),
-          newsContent = document.querySelectorAll('.news-page__item'),
-          tabsMainBtns = document.querySelectorAll('.tournaments__main-btn'),
+    const tabsMainBtns = document.querySelectorAll('.tournaments__main-btn'),
           tabsMainContent = document.querySelectorAll('.tournaments__main-tab'),
           tabsSecondaryBtns = document.querySelectorAll('.tournaments__btn'),
           tabsSecondaryContent = document.querySelectorAll('.tournaments__content'),
-          mediaBtns = document.querySelectorAll('.media-page__btn'),
-          mediaContent = document.querySelectorAll('.media-page__items'),
           comandsBtns = document.querySelectorAll('.comands__btn'),
           comandsContent = document.querySelectorAll('.comands__items'),
-          newsLinks = document.querySelectorAll('.news__link'),
-          tournamentsLinks = document.querySelectorAll('.tournaments__link'),
-          mediaLinks = document.querySelectorAll('.media__link');
+          tournamentsLinks = document.querySelectorAll('.tournaments__link');
 
     const showContent = (content, selector) => {
-        if (content === newsContent) {
-            if (selector === 'all-news') {
-                content.forEach(item => {
-                    item.classList.remove('hidden');
-                });
-            } else {
-                content.forEach(item => {
-                    item.dataset.news === selector ? item.classList.remove('hidden') : item.classList.add('hidden');
-                });
-            }
-        } else if (content === tabsMainContent || content === tabsSecondaryContent) {
+        if (content === tabsMainContent || content === tabsSecondaryContent) {
             content.forEach(item => {
                 item.dataset.tournaments === selector ? item.classList.remove('hidden') : item.classList.add('hidden');
-            });
-        } else if (content === mediaContent) {
-            content.forEach(item => {
-                item.dataset.media === selector ? item.classList.remove('hidden') : item.classList.add('hidden');
             });
         } else if (content === comandsContent) {
             content.forEach(item => {
@@ -54,46 +34,18 @@ const tabs = () => {
     };
 
     const writeInLocalstorageLinkSelector = (links) => {
-        if (links[0].classList.contains('news__link')) {
-            links.forEach(link => {
-                link.addEventListener('click', function () {
-                    localStorage.setItem('news-link', JSON.stringify(this.dataset.news));
-                });
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                localStorage.setItem('tournaments-link', JSON.stringify(this.dataset.tournaments));
             });
-        } else if (links[0].classList.contains('tournaments__link')) {
-            links.forEach(link => {
-                link.addEventListener('click', function () {
-                    localStorage.setItem('tournaments-link', JSON.stringify(this.dataset.tournaments));
-                });
-            });
-        } else if (links[0].classList.contains('media__link')) {
-            links.forEach(link => {
-                link.addEventListener('click', function () {
-                    localStorage.setItem('media-link', JSON.stringify(this.dataset.media));
-                });
-            });
-        }
+        });
     };
 
-    writeInLocalstorageLinkSelector(newsLinks);
     writeInLocalstorageLinkSelector(tournamentsLinks);
-    writeInLocalstorageLinkSelector(mediaLinks);
 
     const showContentWithLocalstorage = () => {
         window.addEventListener('DOMContentLoaded', () => {
             const tournamentsStorage = JSON.parse(localStorage.getItem('tournaments-link'));
-            const newsStorage = JSON.parse(localStorage.getItem('news-link'));
-            const mediaStorage = JSON.parse(localStorage.getItem('media-link'));
-
-            if (localStorage.getItem('news-link')) {
-                showContent(newsContent, newsStorage);
-                showActiveBtn(newsBtns, newsStorage);
-            }
-
-            if (localStorage.getItem('media-link')) {
-                showContent(mediaContent, mediaStorage);
-                showActiveBtn(mediaBtns, mediaStorage);
-            }
 
             switch (tournamentsStorage) {
                 case 'local-tab':
@@ -153,8 +105,6 @@ const tabs = () => {
             }
 
             localStorage.removeItem('tournaments-link');
-            localStorage.removeItem('news-link');
-            localStorage.removeItem('media-link');
         });
     };
 
@@ -164,30 +114,6 @@ const tabs = () => {
         btns.forEach(btn => {
             btn.addEventListener('click', function () {
                 switch (this.getAttribute('id')) {
-                    case 'local':
-                        showContent(newsContent, 'local');
-                        showActiveBtn(newsBtns, this);
-                        break;
-                    case 'kray':
-                        showContent(newsContent, 'kray');
-                        showActiveBtn(newsBtns, this);
-                        break;
-                    case 'rus':
-                        showContent(newsContent, 'rus');
-                        showActiveBtn(newsBtns, this);
-                        break;
-                    case 'spartak':
-                        showContent(newsContent, 'spartak');
-                        showActiveBtn(newsBtns, this);
-                        break;
-                    case 'vista':
-                        showContent(newsContent, 'vista');
-                        showActiveBtn(newsBtns, this);
-                        break;
-                    case 'all-news':
-                        showContent(newsContent, 'all-news');
-                        showActiveBtn(newsBtns, this);
-                        break;
                     case 'local-tab':
                         showContent(tabsMainContent, 'local-tab');
                         showActiveBtn(tabsMainBtns, this);
@@ -228,14 +154,6 @@ const tabs = () => {
                         showContent(tabsSecondaryContent, 'pervenstvo-goroda');
                         showActiveBtn(tabsSecondaryBtns, this);
                         break;
-                    case 'photo-media':
-                        showContent(mediaContent, 'photo-media');
-                        showActiveBtn(mediaBtns, this);
-                        break;
-                    case 'video-media':
-                        showContent(mediaContent, 'video-media');
-                        showActiveBtn(mediaBtns, this);
-                        break;
                     case 'local-comands':
                         showContent(comandsContent, 'local-comands');
                         showActiveBtn(comandsBtns, this);
@@ -249,10 +167,8 @@ const tabs = () => {
         });
     };
 
-    showContentOnClick(newsBtns);
     showContentOnClick(tabsMainBtns);
     showContentOnClick(tabsSecondaryBtns);
-    showContentOnClick(mediaBtns);
     showContentOnClick(comandsBtns);
 };
 

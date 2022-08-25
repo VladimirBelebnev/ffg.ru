@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
 	    ?>
         <title>Федерация футбола города-курорта Геленджик</title>
     </head>
+
     <body>
         <header class="header">
             <div class="header__block">
@@ -21,138 +23,144 @@
                     <ul class="header__block-nav">
                         <li class="nav__link nav__link-none"><a href="https://ffgel.ru/about">О нас</a></li>
                         <li class="nav__link">
-                            <a href="https://ffgel.ru/news" data-news="all-news">Новости</a>
-                            <ul class="dropdown">
-                                <div class="container">
-                                    <li><a class="news__link" data-news="all-news" href="https://ffgel.ru/news">Все новости</a>
+                            <a href="https://ffgel.ru/news">Новости</a>
+                            <div class="dropdown">
+                                <ul class="container">
+                                    <li><a class="news__link" href="https://ffgel.ru/news">Все новости</a>
                                     </li>
-                                    <li><a class="news__link" data-news="local" href="https://ffgel.ru/news">Местный футбол</a>
+                                    <li><a class="news__link" href="https://ffgel.ru/news-local">Местный футбол</a>
                                     </li>
-                                    <li><a class="news__link" data-news="kray" href="https://ffgel.ru/news">Краевой футбол</a>
+                                    <li><a class="news__link" href="https://ffgel.ru/news-kray">Краевой футбол</a>
                                     </li>
-                                    <li><a class="news__link" data-news="rus" href="https://ffgel.ru/news">Российский футбол</a>
+                                    <li><a class="news__link" href="https://ffgel.ru/news-rus">Российский футбол</a>
                                     </li>
-                                    <li><a class="news__link" data-news="spartak" href="https://ffgel.ru/news">Спартак
+                                    <li><a class="news__link" href="https://ffgel.ru/news-spartak">Спартак
                                             Геленджик</a></li>
-                                    <li><a class="news__link" data-news="vista" href="https://ffgel.ru/news">Vista</a></li>
-                                </div>
-                            </ul>
+                                    <li><a class="news__link" href="https://ffgel.ru/news-vista">Vista</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav__link">
-						<a href="https://ffgel.ru/tournaments" data-tournaments="all-tournaments">Турниры</a>
-						<ul class="dropdown">
-							<div class="container">
-								<li class="dropdown__nav">
-									<a class="dropdown__nav-header tournaments__link" href="https://ffgel.ru/tournaments"
-										data-tournaments="kray-tab">Краевые</a>
-									<ul class="dropdown__nav-links">
-										<li><a class="tournaments__link" data-tournaments="vishaya-liga"
-												href="https://ffgel.ru/tournaments">Высшая
-												лига</a></li>
-										<li><a class="tournaments__link" data-tournaments="kubok-gubernatora"
-												href="https://ffgel.ru/tournaments">Кубок
-												Губернатора</a></li>
-										<li><a class="tournaments__link" data-tournaments="kubok-kraya"
-												href="https://ffgel.ru/tournaments">Кубок
-												Краснодарского Края</a></li>
-									</ul>
-								</li>
-								<li class="dropdown__nav">
-									<a class="dropdown__nav-header tournaments__link" href="https://ffgel.ru/tournaments"
-										data-tournaments="local-tab">Местные</a>
-									<ul class="dropdown__nav-links">
-										<li><a class="tournaments__link" data-tournaments="nfl"
-												href="https://ffgel.ru/tournaments">НФЛ</a></li>
-										<li><a class="tournaments__link" data-tournaments="zimnie-pervenstvo"
-												href="https://ffgel.ru/tournaments">Зимнее
-												первенство</a></li>
-										<li><a class="tournaments__link" data-tournaments="kubok-glavi"
-												href="https://ffgel.ru/tournaments">Кубок
-												Главы</a></li>
-										<li><a class="tournaments__link" data-tournaments="pervenstvo-goroda"
-												href="https://ffgel.ru/tournaments">Первенство города</a></li>
-									</ul>
-								</li>
-								<li class="dropdown__nav">
-									<a class="dropdown__nav-header" href="https://ffgel.ru/comands">Команды</a>
-									<ul class="dropdown__nav-links teams">
-										<a href="https://ffgel.ru/comands">Команды ЛФК МО Геленджик</a>
-										<li><a href="https://ffgel.ru/rssm">РССМ</a></li>
-										<li><a href="./rssm.html">Спарта</a></li>
-										<li><a href="./rssm.html">Волна</a></li>
-										<li><a href="./rssm.html">Побережье</a></li>
-										<li><a href="./rssm.html">Ника</a></li>
-										<li><a href="./rssm.html">Софи</a></li>
-										<li><a href="./rssm.html">Ветераны</a></li>
-										<li><a href="./rssm.html">Геленстрой</a></li>
-										<li><a href="./rssm.html">Чемпион ММА</a></li>
-										<li><a href="./rssm.html">Черноморец</a></li>
-										<li><a href="./rssm.html">Юность</a></li>
-										<li><a href="./rssm.html">Кабардинка</a></li>
-										<li><a href="./rssm.html">Византия</a></li>
-										<li><a href="./rssm.html">KingBeer</a></li>
-									</ul>
-									<ul class="dropdown__nav-links">
-										<li><a href="https://ffgel.ru/spartak">Cпартак Геленджик</a></li>
-										<li><a href="#">Vista</a></li>
-									</ul>
-								</li>
-								<li class="dropdown__nav">
-									<a class="dropdown__nav-header" href="https://ffgel.ru/stadiums">Стадионы</a>
-								</li>
-								<li class="dropdown__nav">
-									<a class="dropdown__nav-header" href="https://ffgel.ru/referees">Судьи</a>
-								</li>
-							</div>
-						</ul>
-					</li>
-                        <li style="display: inline-block;"><a class="nav__link-img" href="https://ffgel.ru"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header-logo.svg" alt="logo"></a></li>
+                            <a href="https://ffgel.ru/tournaments" data-tournaments="all-tournaments">Турниры</a>
+                            <div class="dropdown">
+                                <ul class="container">
+                                    <li class="dropdown__nav">
+                                        <a class="dropdown__nav-header tournaments__link"
+                                            href="https://ffgel.ru/tournaments" data-tournaments="kray-tab">Краевые</a>
+                                        <ul class="dropdown__nav-links">
+                                            <li><a class="tournaments__link" data-tournaments="vishaya-liga"
+                                                    href="https://ffgel.ru/tournaments">Высшая
+                                                    лига</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="kubok-gubernatora"
+                                                    href="https://ffgel.ru/tournaments">Кубок
+                                                    Губернатора</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="kubok-kraya"
+                                                    href="https://ffgel.ru/tournaments">Кубок
+                                                    Краснодарского Края</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown__nav">
+                                        <a class="dropdown__nav-header tournaments__link"
+                                            href="https://ffgel.ru/tournaments" data-tournaments="local-tab">Местные</a>
+                                        <ul class="dropdown__nav-links">
+                                            <li><a class="tournaments__link" data-tournaments="nfl"
+                                                    href="https://ffgel.ru/tournaments">НФЛ</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="zimnie-pervenstvo"
+                                                    href="https://ffgel.ru/tournaments">Зимнее
+                                                    первенство</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="kubok-glavi"
+                                                    href="https://ffgel.ru/tournaments">Кубок
+                                                    Главы</a></li>
+                                            <li><a class="tournaments__link" data-tournaments="pervenstvo-goroda"
+                                                    href="https://ffgel.ru/tournaments">Первенство города</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown__nav">
+                                        <a class="dropdown__nav-header" href="https://ffgel.ru/comands">Команды</a>
+                                        <ul class="dropdown__nav-links teams">
+                                            <a href="https://ffgel.ru/comands">Команды ЛФК МО Геленджик</a>
+                                            <li><a href="https://ffgel.ru/comands/rssm">РССМ</a></li>
+                                            <li><a href="https://ffgel.ru/comands/sparta">Спарта</a></li>
+                                            <li><a href="https://ffgel.ru/comands/volna">Волна</a></li>
+                                            <li><a href="https://ffgel.ru/comands/poberezjie">Побережье</a></li>
+                                            <li><a href="https://ffgel.ru/comands/hika">Ника</a></li>
+                                            <li><a href="https://ffgel.ru/comands/sofi">Софи</a></li>
+                                            <li><a href="https://ffgel.ru/comands/veterany">Ветераны</a></li>
+                                            <li><a href="https://ffgel.ru/comands/gelenstroy">Геленстрой</a></li>
+                                            <li><a href="https://ffgel.ru/comands/champion-mma">Чемпион ММА</a></li>
+                                            <li><a href="https://ffgel.ru/comands/chernomorets">Черноморец</a></li>
+                                            <li><a href="https://ffgel.ru/comands/ynost">Юность</a></li>
+                                            <li><a href="https://ffgel.ru/comands/kabardinka">Кабардинка</a></li>
+                                            <li><a href="https://ffgel.ru/comands/vizantiya">Византия</a></li>
+                                            <li><a href="https://ffgel.ru/comands/kingbeer">KingBeer</a></li>
+                                        </ul>
+                                        <ul class="dropdown__nav-links">
+                                            <li><a href="https://ffgel.ru/comands/spartak">Cпартак Геленджик</a></li>
+                                            <li><a href="https://ffgel.ru/comands/vista">Vista</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown__nav">
+                                        <a class="dropdown__nav-header" href="https://ffgel.ru/stadiums">Стадионы</a>
+                                    </li>
+                                    <li class="dropdown__nav">
+                                        <a class="dropdown__nav-header" href="https://ffgel.ru/referees">Судьи</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li style="display: inline-block;"><a class="nav__link-img" href="https://ffgel.ru"><img
+                                    src="<?php echo get_template_directory_uri(); ?>/assets/img/header-logo.svg"
+                                    alt="logo"></a></li>
                         <li class="nav__link">
                             <a href="https://ffgel.ru/schools">Спортшколы</a>
-						<ul class="dropdown">
-							<div class="container">
-								<li><a href="https://ffgel.ru/schools">Все спортшколы</a></li>
-                                    <li><a href="https://ffgel.ru/fortuna">Фортуна</a></li>
-                                    <li><a href="https://ffgel.ru/start">Старт</a></li>
-									<li><a href="https://ffgel.ru/sparta">Спарта</a></li>
-                                </div>
-                            </ul>
+                            <div class="dropdown">
+                                <ul class="container">
+                                    <li><a href="https://ffgel.ru/schools">Все спортшколы</a></li>
+                                    <li><a href="https://ffgel.ru/schools/fortuna">Фортуна</a></li>
+                                    <li><a href="https://ffgel.ru/schools/start">Старт</a></li>
+                                    <li><a href="https://ffgel.ru/schools/sparta-school">Спарта</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav__link">
-                            <a class="media__link" href="https://ffgel.ru/media" data-media="photo-media">Медиа</a>
-                            <ul class="dropdown">
-                                <div class="container">
-                                    <li><a class="media__link" data-media="photo-media" href="https://ffgel.ru/media">Фото</a></li>
-                                    <li><a class="media__link" data-media="video-media" href="https://ffgel.ru/media">Видео</a></li>
-                                </div>
-                            </ul>
+                            <a class="media__link" href="https://ffgel.ru/media-photo">Медиа</a>
+                            <div class="dropdown">
+                                <ul class="container">
+                                    <li><a class="media__link" href="https://ffgel.ru/media-photo">Фото</a></li>
+                                    <li><a class="media__link" href="https://ffgel.ru/media-video">Видео</a></li>
+                                </ul>
+                            </div>
                         </li>
+                        <li class="nav__link nav__link-none"><button class="store__btn">Магазин</button></li>
                     </ul>
                     <button class="burger">
                         <span class="burger-line top-line"></span>
                         <span class="burger-line mid-line"></span>
                         <span class="burger-line bottom-line"></span>
                     </button>
-                    <a class="mobile__logo" href="https://ffgel.ru"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header-logo.svg" alt="logo"></a>
+                    <a class="mobile__logo" href="https://ffgel.ru"><img
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/header-logo.svg" alt="logo"></a>
                     <div class="header__block-entry">
-                        <button class="entry__search">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M17.1901 15.4782L23.6458 21.934C23.8727 22.1611 24.0001 22.469 24 22.79C23.9999 23.111 23.8723 23.4189 23.6452 23.6458C23.4181 23.8727 23.1102 24.0001 22.7892 24C22.4682 23.9999 22.1604 23.8723 21.9335 23.6452L15.4778 17.1893C13.5479 18.6841 11.1211 19.3875 8.69104 19.1565C6.26097 18.9255 4.01018 17.7773 2.39656 15.9457C0.782936 14.114 -0.0723147 11.7364 0.00479537 9.29655C0.0819054 6.85668 1.08558 4.53783 2.81165 2.81172C4.53771 1.08561 6.85651 0.0819075 9.29632 0.00479549C11.7361 -0.0723165 14.1137 0.782955 15.9453 2.39662C17.7769 4.01028 18.925 6.26113 19.156 8.69126C19.387 11.1214 18.6836 13.5483 17.1889 15.4782H17.1901ZM9.60045 16.7993C11.5099 16.7993 13.3412 16.0408 14.6914 14.6905C16.0416 13.3403 16.8001 11.509 16.8001 9.59949C16.8001 7.68997 16.0416 5.85866 14.6914 4.50843C13.3412 3.15819 11.5099 2.39964 9.60045 2.39964C7.69098 2.39964 5.85971 3.15819 4.50951 4.50843C3.15932 5.85866 2.40078 7.68997 2.40078 9.59949C2.40078 11.509 3.15932 13.3403 4.50951 14.6905C5.85971 16.0408 7.69098 16.7993 9.60045 16.7993Z"
-                                    fill="white" />
-                            </svg>
-                        </button>
-                        <input class="entry__input hidden" type="text" placeholder="Поиск">
                         <div class="entry__user">
-                            <a href="https://ffgel.ru/enter">
-							<svg class="entry__user-icon" viewBox="0 0 25 25" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M15.1023 14.8438H10.1313C5.44023 14.8438 1.6355 18.6328 1.6355 23.3057C1.6355 24.2432 2.39635 25 3.33466 25H21.8999C22.8382 25 23.5981 24.2432 23.5981 23.3057C23.5981 18.6328 19.7939 14.8438 15.1023 14.8438ZM12.6168 12.5C16.0828 12.5 18.8918 9.70166 18.8918 6.25C18.8918 2.79834 16.0828 0 12.6168 0C9.15083 0 6.34177 2.79834 6.34177 6.25C6.34177 9.70166 9.15083 12.5 12.6168 12.5Z"
-									fill="white" />
-							</svg>
-						</a>
-						<a class="entry__user-btn" href="https://ffgel.ru/enter">Войти</a>
+                            <?php 
+                                if ( is_user_logged_in() ) {
+                                   ?><a href="https://ffgel.ru/account">
+                                        <?php echo get_avatar( wp_get_current_user(), '', '', '', array('class'=>'avatar') ); ?>
+                                   </a><?php
+                                } else {
+                                    ?> 
+                                        <a href="<?php echo wp_login_url(); ?>">
+                                            <svg class="entry__user-icon" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.1023 14.8438H10.1313C5.44023 14.8438 1.6355 18.6328 1.6355 23.3057C1.6355 24.2432 2.39635 25 3.33466 25H21.8999C22.8382 25 23.5981 24.2432 23.5981 23.3057C23.5981 18.6328 19.7939 14.8438 15.1023 14.8438ZM12.6168 12.5C16.0828 12.5 18.8918 9.70166 18.8918 6.25C18.8918 2.79834 16.0828 0 12.6168 0C9.15083 0 6.34177 2.79834 6.34177 6.25C6.34177 9.70166 9.15083 12.5 12.6168 12.5Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </a>
+                                        <a class="entry__user-btn" href="<?php echo wp_login_url(); ?>">Войти</a>
+                                    <?php
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -163,14 +171,16 @@
                         <ul class="mobile__nav">
                             <li class="mobile__link mobile__link-none"><a href="https://ffgel.ru/about">О нас</a></li>
                             <li class="mobile__link">
-                                <a class="news__link" href="https://ffgel.ru/news" data-news="all-news">Новости</a>
+                                <a class="news__link" href="https://ffgel.ru/news">Новости</a>
                                 <ul class="mobile__dropdown">
-                                    <li><a class="news__link" data-news="all-news" href="https://ffgel.ru/news">Все новости</a></li>
-                                    <li><a class="news__link" data-news="local" href="https://ffgel.ru/news">Местный футбол</a></li>
-                                    <li><a class="news__link" data-news="kray" href="https://ffgel.ru/news">Краевой футбол</a></li>
-                                    <li><a class="news__link" data-news="rus" href="https://ffgel.ru/news">Российский футбол</a></li>
-                                    <li><a class="news__link" data-news="spartak" href="https://ffgel.ru/news">Спартак Геленджик</a></li>
-                                    <li><a class="news__link" data-news="vista" href="https://ffgel.ru/news">Vista</a></li>
+                                    <li><a class="news__link" href="https://ffgel.ru/news">Все новости</a></li>
+                                    <li><a class="news__link" href="https://ffgel.ru/news-local">Местный футбол</a></li>
+                                    <li><a class="news__link" href="https://ffgel.ru/news-kray">Краевой футбол</a></li>
+                                    <li><a class="news__link" href="https://ffgel.ru/news-rus">Российский футбол</a>
+                                    </li>
+                                    <li><a class="news__link" href="https://ffgel.ru/news-spartak">Спартак Геленджик</a>
+                                    </li>
+                                    <li><a class="news__link" href="https://ffgel.ru/news-vista">Vista</a></li>
                                 </ul>
                             </li>
                             <li class="mobile__link">
@@ -181,8 +191,8 @@
                                             href="https://ffgel.ru/tournaments">Краевые</a>
                                     </li>
                                     <li class="mobile__dropdown-block">
-                                        <a class="mobile__dropdown-header tournaments__link" data-tournaments="local-tab"
-                                            href="https://ffgel.ru/tournaments">Местные</a>
+                                        <a class="mobile__dropdown-header tournaments__link"
+                                            data-tournaments="local-tab" href="https://ffgel.ru/tournaments">Местные</a>
                                     </li>
                                     <li class="mobile__dropdown-block">
                                         <a class="mobile__dropdown-header" href="https://ffgel.ru/comands">Команды</a>
@@ -196,21 +206,23 @@
                                 </ul>
                             </li>
                             <li class="mobile__link">
-                                <a href="https://ffgel.ru/schools">Спортшколы</a>
-                                <ul class="mobile__dropdown">
-                                    <li><a href="https://ffgel.ru/schools">Все спортшколы</a></li>
-                                    <li><a href="https://ffgel.ru/fortuna">Фортуна</a></li>
-                                    <li><a href="https://ffgel.ru/start">Старт</a></li>
-									<li><a href="https://ffgel.ru/sparta">Спарта</a></li>
-                                </ul>
-                            </li>
+								<a href="https://ffgel.ru/schools">Спортшколы</a>
+								<ul class="mobile__dropdown">
+									<li><a href="https://ffgel.ru/schools">Все спортшколы</a></li>
+									<li><a href="https://ffgel.ru/schools/fortuna">Фортуна</a></li>
+									<li><a href="https://ffgel.ru/schools/start">Старт</a></li>
+									<li><a href="https://ffgel.ru/schools/sparta-school">Спарта</a></li>
+								</ul>
+							</li>
                             <li class="mobile__link">
-							<a class="media__link" href="https://ffgel.ru/media" data-media="photo-media">Медиа</a>
-							<ul class="mobile__dropdown">
-								<li><a class="media__link" href="https://ffgel.ru/media" data-media="photo-media">Фото</a></li>
-								<li><a class="media__link" href="https://ffgel.ru/media" data-media="video-media">Видео</a></li>
-							</ul>
-						</li>
+                                <a class="media__link" href="https://ffgel.ru/media-photo">Медиа</a>
+                                <ul class="mobile__dropdown">
+                                    <li><a class="media__link" href="https://ffgel.ru/media-photo">Фото</a></li>
+                                    <li><a class="media__link" href="https://ffgel.ru/media-video">Видео</a></li>
+                                </ul>
+                            <li class="mobile__link mobile__link-none"><button class="store__btn">Магазин</button></li>
+                            </li>
+                            </li>
                         </ul>
                         <div class="mobile__contact">
                             <div class="mobile__contact-wrap">
@@ -267,7 +279,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <a href="mailto:ffg@gmail.com">ffg@gmail.com</a>
+                                    <a href="mailto:ffgel@mail.ru">ffgel@mail.ru</a>
                                 </div>
                             </div>
                             <div class="mobile__social-wrap">
@@ -305,4 +317,3 @@
                 </div>
             </div>
         </header>
-

@@ -1,13 +1,13 @@
-import Swiper, {Pagination, Navigation} from "swiper";
+import Swiper, {Pagination, Navigation, Autoplay} from "swiper";
 
-Swiper.use([Pagination, Navigation]);
+Swiper.use([Pagination, Navigation, Autoplay]);
 
 const slider = () => {
     const sliderSlider = new Swiper('.slider__slider', {
         direction: 'horizontal',
         loop: true,
         autoplay: {
-            delay: 15000,
+            delay: 10000,
         },
         slidesPerView: 1,
         pagination: {
@@ -50,4 +50,6 @@ const slider = () => {
     });
 };
 
-slider();
+window.addEventListener('DOMContentLoaded', () => {
+    slider();
+});

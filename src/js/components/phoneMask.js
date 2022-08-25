@@ -49,8 +49,10 @@ const phoneMask = () => {
     input.addEventListener('blur', createMask);
 };
 
-try {
-    phoneMask();
-} catch(error) {
-    console.log(error.message);
-}
+window.addEventListener('DOMContentLoaded', () => {
+    try {
+        phoneMask();
+    } catch (error) {
+        console.log(error.message);
+    }
+});

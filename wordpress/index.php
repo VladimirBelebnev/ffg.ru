@@ -5,39 +5,40 @@
 	<section class="slider" id="slider">
 		<div class="swiper slider__slider">
 			<div class="swiper-wrapper slider__wrapper">
+				<?php 
+					$my_posts = get_posts( array(
+						'numberposts' => 3,
+						'category'    => 0,
+						'orderby'     => 'date',
+						'order'       => 'DESC',
+						'include'     => array(),
+						'exclude'     => array(),
+						'meta_key'    => '',
+						'meta_value'  =>'',
+						'post_type'   => 'slider',
+						'suppress_filters' => true, 
+					) );
+
+					global $post;
+
+					foreach( $my_posts as $post ){
+						setup_postdata( $post );
+						?>
 				<div class="slider__content swiper-slide">
-					<img class="slider__content-photo" src="./img/slider.webp" alt="slider">
+					<img class="slider__content-photo" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="slider">
 					<div class="container">
 						<div class="slider__content-block">
-							<span class="slider__content-type">НОВОСТИ</span>
-							<h2 class="slider__content-header">Репортаж о ночной футбольной лиге!</h2>
-							<p class="slider__content-descr">Геленджикская ночная футбольная лига – новый турнир, который
-								стремительно набирает все больше популярности.</p>
+							<span
+								class="slider__content-type"><?php echo get_post_meta(get_the_ID(), 'category_post', true) ?></span>
+							<h2 class="slider__content-header"><?php the_title(); ?></h2>
+							<p class="slider__content-descr"><?php echo get_post_meta(get_the_ID(), 'descr', true) ?></p>
 						</div>
 					</div>
 				</div>
-				<div class="slider__content swiper-slide">
-					<img class="slider__content-photo" src="./img/slider.webp" alt="slider">
-					<div class="container">
-						<div class="slider__content-block">
-							<span class="slider__content-type">НОВОСТИ</span>
-							<h2 class="slider__content-header">Репортаж о ночной футбольной лиге!</h2>
-							<p class="slider__content-descr">Геленджикская ночная футбольная лига – новый турнир, который
-								стремительно набирает все больше популярности.</p>
-						</div>
-					</div>
-				</div>
-				<div class="slider__content swiper-slide">
-					<img class="slider__content-photo" src="./img/slider.webp" alt="slider">
-					<div class="container">
-						<div class="slider__content-block">
-							<span class="slider__content-type">НОВОСТИ</span>
-							<h2 class="slider__content-header">Репортаж о ночной футбольной лиге!</h2>
-							<p class="slider__content-descr">Геленджикская ночная футбольная лига – новый турнир, который
-								стремительно набирает все больше популярности.</p>
-						</div>
-					</div>
-				</div>
+				<?php
+					}
+					wp_reset_postdata();
+				?>
 			</div>
 			<div class="slider__pagination swiper-pagination"></div>
 		</div>
@@ -51,74 +52,67 @@
 			<div class="calendar__block">
 				<div class="calendar__header">
 					<h2>Календарь<br>матчей</h2>
-					<a  href="https://ffgel.ru/tournaments" data-tournaments="all-tournaments">Турниры</a>
+					<a href="https://ffgel.ru/tournaments" data-tournaments="all-tournaments">Турниры</a>
 				</div>
 				<div class="calendar__slider swiper">
 					<div class="calendar__wrapper swiper-wrapper">
-						<div class="calendar__slide swiper-slide">
+						<?php 
+							$my_posts = get_posts( array(
+								'numberposts' => 3,
+								'category'    => 0,
+								'orderby'     => 'date',
+								'order'       => 'DESC',
+								'include'     => array(),
+								'exclude'     => array(),
+								'meta_key'    => '',
+								'meta_value'  =>'',
+								'post_type'   => 'match_calendar',
+								'suppress_filters' => true, 
+							) );
+
+							global $post;
+
+							foreach( $my_posts as $post ){
+								setup_postdata( $post );
+								?>
+						<div class="swiper-slide calendar__slide">
 							<div class="calendar-match__block">
-								<p class="calendar-match__name">Матч легенд PARI</p>
+								<p class="calendar-match__name">
+									<?php echo get_post_meta(get_the_ID(), 'tournament', true) ?></p>
 								<div class="calendar-match__comand">
 									<div class="calendar-comand__wrap">
-										<img class="calendar-comand__photo" src="./img/comand.png" alt="comand photo">
-										<p class="calendar-comand__name">Зенит</p>
+										<?php 
+											$logo1 = pods_image_url(get_post_meta($id, 'comand_logo-1', true), null); ?>
+										<img class="calendar-comand__photo" src="<?php echo $logo1; ?>" alt="comand photo">
+										<p class="calendar-comand__name">
+											<?php echo get_post_meta(get_the_ID(), 'comand_name-1', true) ?></p>
 									</div>
-									<p class="calendar-match__check">2:2</p>
+									<p class="calendar-match__check">
+										<?php echo get_post_meta(get_the_ID(), 'match_check', true) ?></p>
 									<div class="calendar-comand__wrap">
-										<img class="calendar-comand__photo" src="./img/comand.png" alt="comand photo">
-										<p class="calendar-comand__name">Зенит</p>
+										<?php 
+											$logo2 = pods_image_url(get_post_meta($id, 'comand_logo-2', true), null); ?>
+										<img class="calendar-comand__photo" src="<?php echo $logo2; ?>" alt="comand photo">
+										<p class="calendar-comand__name"><?php echo get_post_meta(get_the_ID(), 'comand_name-2', true) ?></p>
 									</div>
 								</div>
 								<div class="calendar-match__info">
-									<p class="calendar-info__date">08.07.2022</p>
-									<p class="calendar-info__place">“Петровский” (Россия, Санкт-Петербург)</p>
+									<p class="calendar-info__date">
+										<?php echo get_post_meta(get_the_ID(), 'match_date', true) ?></p>
+									<p class="calendar-info__place">
+										<?php echo get_post_meta(get_the_ID(), 'match_place', true) ?></p>
 								</div>
 							</div>
 						</div>
-						<div class="calendar__slide swiper-slide">
-							<div class="calendar-match__block">
-								<p class="calendar-match__name">Матч легенд PARI</p>
-								<div class="calendar-match__comand">
-									<div class="calendar-comand__wrap">
-										<img class="calendar-comand__photo" src="./img/comand.png" alt="comand photo">
-										<p class="calendar-comand__name">Зенит</p>
-									</div>
-									<p class="calendar-match__check">2:2</p>
-									<div class="calendarcomand__wrap">
-										<img class="calendar-comand__photo" src="./img/comand.png" alt="comand photo">
-										<p class="calendar-comand__name">Зенит</p>
-									</div>
-								</div>
-								<div class="calendar-match__info">
-									<p class="calendar-info__date">08.07.2022</p>
-									<p class="calendar-info__place">“Петровский” (Россия, Санкт-Петербург)</p>
-								</div>
-							</div>
-						</div>
-						<div class="calendar__slide swiper-slide">
-							<div class="calendar-match__block">
-								<p class="calendar-match__name">Матч легенд PARI</p>
-								<div class="calendar-match__comand">
-									<div class="calendar-comand__wrap">
-										<img class="calendar-comand__photo" src="./img/comand.png" alt="comand photo">
-										<p class="calendar-comand__name">Зенит</p>
-									</div>
-									<p class="calendar-match__check">2:2</p>
-									<div class="calendar-comand__wrap">
-										<img class="calendar-comand__photo" src="./img/comand.png" alt="comand photo">
-										<p class="calendar-comand__name">Зенит</p>
-									</div>
-								</div>
-								<div class="calendar-match__info">
-									<p class="calendar-info__date">08.07.2022</p>
-									<p class="calendar-info__place">“Петровский” (Россия, Санкт-Петербург)</p>
-								</div>
-							</div>
-						</div>
+						<?php
+							}
+							wp_reset_postdata();
+						?>
 					</div>
 					<div class="calendar__navigation">
 						<div class="calendar__pagination swiper-pagination"></div>
-						<svg class="calendar__prev swiper-button-prev" viewBox="0 0 61 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="calendar__prev swiper-button-prev" viewBox="0 0 61 35" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
 							<circle r="17" transform="matrix(-1 0 0 1 18 17.5)" stroke="url(#paint0_linear_1_206)" />
 							<path
 								d="M60.5 17C60.7761 17 61 17.2239 61 17.5C61 17.7761 60.7761 18 60.5 18V17ZM18.1464 17.8536C17.9512 17.6583 17.9512 17.3417 18.1464 17.1464L21.3284 13.9645C21.5237 13.7692 21.8403 13.7692 22.0355 13.9645C22.2308 14.1597 22.2308 14.4763 22.0355 14.6716L19.2071 17.5L22.0355 20.3284C22.2308 20.5237 22.2308 20.8403 22.0355 21.0355C21.8403 21.2308 21.5237 21.2308 21.3284 21.0355L18.1464 17.8536ZM60.5 18H18.5V17H60.5V18Z"
@@ -131,13 +125,15 @@
 								</linearGradient>
 							</defs>
 						</svg>
-						<svg class="calendar__next swiper-button-next" viewBox="0 0 61 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="calendar__next swiper-button-next" viewBox="0 0 61 35" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
 							<circle cx="43" cy="17.5" r="17" stroke="url(#paint0_linear_2_206)" />
 							<path
 								d="M1 17C0.723858 17 0.5 17.2239 0.5 17.5C0.5 17.7761 0.723858 18 1 18V17ZM43.3536 17.8536C43.5488 17.6583 43.5488 17.3417 43.3536 17.1464L40.1716 13.9645C39.9763 13.7692 39.6597 13.7692 39.4645 13.9645C39.2692 14.1597 39.2692 14.4763 39.4645 14.6716L42.2929 17.5L39.4645 20.3284C39.2692 20.5237 39.2692 20.8403 39.4645 21.0355C39.6597 21.2308 39.9763 21.2308 40.1716 21.0355L43.3536 17.8536ZM1 18H43V17H1V18Z"
 								fill="#EDF6F9" />
 							<defs>
-								<linearGradient id="paint0_linear_2_206" x1="60.5" y1="17.5" x2="25.5" y2="17.5" gradientUnits="userSpaceOnUse">
+								<linearGradient id="paint0_linear_2_206" x1="60.5" y1="17.5" x2="25.5" y2="17.5"
+									gradientUnits="userSpaceOnUse">
 									<stop stop-color="#EDF6F9" />
 									<stop offset="1" stop-color="#EDF6F9" stop-opacity="0" />
 								</linearGradient>
@@ -155,41 +151,39 @@
 				<div class="news__news">
 					<h2 class="header-title">Новости</h2>
 					<div class="news__cards">
-						<a href="./single-news.html" class="news-card">
-							<img class="news-card__photo" src="./img/news-card-2.webp" alt="news card photo">
+						<?php 
+							$my_posts = get_posts( array(
+								'numberposts' => 4,
+								'category'    => 6,
+								'orderby'     => 'date',
+								'order'       => 'DESC',
+								'include'     => array(),
+								'exclude'     => array(),
+								'meta_key'    => '',
+								'meta_value'  =>'',
+								'post_type'   => 'post',
+								'suppress_filters' => true, 
+							) );
+
+							global $post;
+
+							foreach( $my_posts as $post ){
+								setup_postdata( $post );
+								?>
+						<a href="<?php the_permalink(); ?>" class="news-card">
+							<?php $image = get_field('news_thumbnail'); ?>
+							<img class="news-card__photo" src="<?php echo $image['url']; ?>"
+								alt="<?php echo $image['alt']; ?>">
 							<div class="news-card__content">
-								<p class="news-card__date">10 июля 2022</p>
-								<h4 class="news-card__header">Главные арбитры ЮФЛ и МФЛ завершили подготовку к новому сезону</h4>
-								<p class="news-card__descr">Олег Романцев, Анатолий Дывадов, Дмитрий Аленичев и Алексей Игонин - о мачте легенд “Зенита” и “Спартака”</p>
+								<p class="news-card__date"><?php the_time('j F Y'); ?></p>
+								<h4 class="news-card__header"><?php the_title(); ?></h4>
+								<p class="news-card__descr"><?php the_field('news_descr'); ?></p>
 							</div>
 						</a>
-						<a href="./single-news.html" class="news-card">
-							<img class="news-card__photo" src="./img/news-card-1.webp" alt="news card photo">
-							<div class="news-card__content">
-								<p class="news-card__date">10 июля 2022</p>
-								<h4 class="news-card__header">Главные арбитры ЮФЛ и МФЛ завершили подготовку к новому сезону</h4>
-								<p class="news-card__descr">Олег Романцев, Анатолий Дывадов, Дмитрий Аленичев и Алексей Игонин - о мачте
-									легенд “Зенита” и “Спартака”</p>
-							</div>
-						</a>
-						<a href="./single-news.html" class="news-card">
-							<img class="news-card__photo" src="./img/news-card-1.webp" alt="news card photo">
-							<div class="news-card__content">
-								<p class="news-card__date">10 июля 2022</p>
-								<h4 class="news-card__header">Главные арбитры ЮФЛ и МФЛ завершили подготовку к новому сезону</h4>
-								<p class="news-card__descr">Олег Романцев, Анатолий Дывадов, Дмитрий Аленичев и Алексей Игонин - о мачте
-									легенд “Зенита” и “Спартака”</p>
-							</div>
-						</a>
-						<a href="./single-news.html" class="news-card">
-							<img class="news-card__photo" src="./img/news-card-2.webp" alt="news card photo">
-							<div class="news-card__content">
-								<p class="news-card__date">10 июля 2022</p>
-								<h4 class="news-card__header">Главные арбитры ЮФЛ и МФЛ завершили подготовку к новому сезону</h4>
-								<p class="news-card__descr">Олег Романцев, Анатолий Дывадов, Дмитрий Аленичев и Алексей Игонин - о мачте
-									легенд “Зенита” и “Спартака”</p>
-							</div>
-						</a>
+						<?php
+							}
+							wp_reset_postdata();
+						?>
 					</div>
 					<div class="news__btn btn">
 						<a class="news__link" data-news="all-news" href="https://ffgel.ru/news">
@@ -200,7 +194,8 @@
 									d="M1 17C0.723858 17 0.5 17.2239 0.5 17.5C0.5 17.7761 0.723858 18 1 18V17ZM43.3536 17.8536C43.5488 17.6583 43.5488 17.3417 43.3536 17.1464L40.1716 13.9645C39.9763 13.7692 39.6597 13.7692 39.4645 13.9645C39.2692 14.1597 39.2692 14.4763 39.4645 14.6716L42.2929 17.5L39.4645 20.3284C39.2692 20.5237 39.2692 20.8403 39.4645 21.0355C39.6597 21.2308 39.9763 21.2308 40.1716 21.0355L43.3536 17.8536ZM1 18H43V17H1V18Z"
 									fill="#023E8A" />
 								<defs>
-									<linearGradient id="paint0_linear_3_597" x1="60.5" y1="17.5" x2="25.5" y2="17.5" gradientUnits="userSpaceOnUse">
+									<linearGradient id="paint0_linear_3_598" x1="60.5" y1="17.5" x2="25.5" y2="17.5"
+										gradientUnits="userSpaceOnUse">
 										<stop stop-color="#023E8A" />
 										<stop offset="1" stop-color="#EDF6F9" stop-opacity="0" />
 									</linearGradient>
@@ -212,101 +207,21 @@
 				<div class="news__tables">
 					<div class="news-tables__wrap">
 						<p class="news-tables__header">"Спартак Геленджик" - Кубок Губернатора Краснодарского края</p>
-						<table class="news-tables__table">
-							<!-- <tr>
-								<span class="line"></span>
-								<th class="news-table__header right">№</th>
-								<th class="news-table__header">Название команды</th>
-								<th class="news-table__header">И</th>
-								<th class="news-table__header">О</th>
-							</tr>
-							<tr>
-								<th class="news-table__header right">1</th>
-								<td class="news-table__content">
-									<p class="news-table__name">Нива</p>
-									<p class="news-table__place">Славянский р-н</p>
-								</td>
-								<td class="news-table__header">11</td>
-								<td class="news-table__header">29</td>
-							</tr>
-							<tr>
-								<th class="news-table__header right">2</th>
-								<td class="news-table__content">
-									<p class="news-table__name">Анапа</p>
-									<p class="news-table__place">г. Анапа</p>
-								</td>
-								<td class="news-table__header">11</td>
-								<td class="news-table__header">25</td>
-							</tr>
-							<tr>
-								<th class="news-table__header right">3</th>
-								<td class="news-table__content">
-									<p class="news-table__name">Спартак Геленджик</p>
-									<p class="news-table__place">г. Геленджик</p>
-								</td>
-								<td class="news-table__header">11</td>
-								<td class="news-table__header">23</td>
-							</tr>
-							<tr>
-								<th class="news-table__header right">4</th>
-								<td class="news-table__content">
-									<p class="news-table__name">Сопка Героев</p>
-									<p class="news-table__place">Крымский р-н</p>
-								</td>
-								<td class="news-table__header">11</td>
-								<td class="news-table__header">22</td>
-							</tr> -->
-						</table>
+						<a class="tournaments__link" data-tournaments="kubok-gubernatora"
+													href="https://ffgel.ru/tournaments">
+							<?php echo do_shortcode("[table id=4 /]"); ?>
+						</a>
 					</div>
 					<div class="news-tables__wrap">
 						<p class="news-tables__header">"Vista" - чемпионат Краснодарского края</p>
-						<table class="news-tables__table">
-							<!-- <tr>
-								<th class="news-table__header right">№</th>
-								<th class="news-table__header">Название команды</th>
-								<th class="news-table__header">И</th>
-								<th class="news-table__header">О</th>
-							</tr>
-							<tr>
-								<th class="news-table__header right">1</th>
-								<td class="news-table__content">
-									<p class="news-table__name">Нива</p>
-									<p class="news-table__place">Славянский р-н</p>
-								</td>
-								<td class="news-table__header">11</td>
-								<td class="news-table__header">29</td>
-							</tr>
-							<tr>
-								<th class="news-table__header right">2</th>
-								<td class="news-table__content">
-									<p class="news-table__name">Анапа</p>
-									<p class="news-table__place">г. Анапа</p>
-								</td>
-								<td class="news-table__header">11</td>
-								<td class="news-table__header">25</td>
-							</tr>
-							<tr>
-								<th class="news-table__header right">3</th>
-								<td class="news-table__content">
-									<p class="news-table__name">Спартак Геленджик</p>
-									<p class="news-table__place">г. Геленджик</p>
-								</td>
-								<td class="news-table__header">11</td>
-								<td class="news-table__header">23</td>
-							</tr>
-							<tr>
-								<th class="news-table__header right">4</th>
-								<td class="news-table__content">
-									<p class="news-table__name">Сопка Героев</p>
-									<p class="news-table__place">Крымский р-н</p>
-								</td>
-								<td class="news-table__header">11</td>
-								<td class="news-table__header">22</td>
-							</tr> -->
-						</table>
+						<a class="tournaments__link" data-tournaments="vishaya-liga"
+													href="https://ffgel.ru/tournaments">
+							<?php echo do_shortcode("[table id=3 /]"); ?>
+						</a>
 					</div>
 					<div class="news__btn news-table__btn btn">
-						<a class="tournaments__link" data-tournaments="all-tournaments" href="https://ffgel.ru/tournaments">
+						<a class="tournaments__link" data-tournaments="all-tournaments"
+							href="https://ffgel.ru/tournaments">
 							Все турниры
 							<svg viewBox="0 0 61 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="43" cy="17.5" r="17" stroke="url(#paint0_linear_3_598)" />
@@ -333,19 +248,38 @@
 			<div class="media__photo">
 				<h3 class="title media__header">фото</h3>
 				<div class="media__block">
-					<a href="#" class="media__item">
-						<img src="./img/media-photo.webp" alt="photo">
-						<p class="media__date">09 июля 2022</p>
-						<p class="media__name">Матч легенд PARI Зенит - Спартак</p>
+					<?php 
+						$my_posts = get_posts( array(
+							'numberposts' => 2,
+							'category'    => 8,
+							'orderby'     => 'date',
+							'order'       => 'DESC',
+							'include'     => array(),
+							'exclude'     => array(),
+							'meta_key'    => '',
+							'meta_value'  =>'',
+							'post_type'   => 'post',
+							'suppress_filters' => true, 
+						) );
+
+						global $post;
+
+						foreach( $my_posts as $post ){
+							setup_postdata( $post );
+							?>
+					<a href="<?php the_permalink(); ?>" class="media__item">
+						<?php $image = get_field('main-photo_thumbnail'); ?>
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+						<p class="media__date"><?php the_time('j F Y'); ?></p>
+						<p class="media__name"><?php the_title(); ?></p>
 					</a>
-					<a href="#" class="media__item">
-						<img src="./img/media-video.webp" alt="photo">
-						<p class="media__date">10 июля 2022</p>
-						<p class="media__name">Россия - “Смена” - 0:1. Юноши 2007 года рождения. Товарищеский матч. Обзор</p>
-					</a>
+					<?php
+						}
+						wp_reset_postdata();
+					?>
 				</div>
 				<div class="media__btn btn">
-					<a class="media__link" data-media="photo-media" href="https://ffgel.ru/media">
+					<a href="https://ffgel.ru/media-photo">
 						Все фото
 						<svg viewBox="0 0 61 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="43" cy="17.5" r="17" stroke="url(#paint0_linear_3_598)" />
@@ -353,7 +287,7 @@
 								d="M1 17C0.723858 17 0.5 17.2239 0.5 17.5C0.5 17.7761 0.723858 18 1 18V17ZM43.3536 17.8536C43.5488 17.6583 43.5488 17.3417 43.3536 17.1464L40.1716 13.9645C39.9763 13.7692 39.6597 13.7692 39.4645 13.9645C39.2692 14.1597 39.2692 14.4763 39.4645 14.6716L42.2929 17.5L39.4645 20.3284C39.2692 20.5237 39.2692 20.8403 39.4645 21.0355C39.6597 21.2308 39.9763 21.2308 40.1716 21.0355L43.3536 17.8536ZM1 18H43V17H1V18Z"
 								fill="#023E8A" />
 							<defs>
-								<linearGradient id="paint0_linear_3_599" x1="60.5" y1="17.5" x2="25.5" y2="17.5"
+								<linearGradient id="paint0_linear_3_598" x1="60.5" y1="17.5" x2="25.5" y2="17.5"
 									gradientUnits="userSpaceOnUse">
 									<stop stop-color="#023E8A" />
 									<stop offset="1" stop-color="#EDF6F9" stop-opacity="0" />
@@ -366,9 +300,29 @@
 			<div class="media__video">
 				<h3 class="title media__header">видео</h3>
 				<div class="media__block">
-					<a href="#" class="media__item">
+					<?php 
+						$my_posts = get_posts( array(
+							'numberposts' => 2,
+							'category'    => 10,
+							'orderby'     => 'date',
+							'order'       => 'DESC',
+							'include'     => array(),
+							'exclude'     => array(),
+							'meta_key'    => '',
+							'meta_value'  =>'',
+							'post_type'   => 'post',
+							'suppress_filters' => true, 
+						) );
+
+						global $post;
+
+						foreach( $my_posts as $post ){
+							setup_postdata( $post );
+							?>
+					<a href="<?php the_field('video_url'); ?>" class="media__item">
 						<div class="media__wrap">
-							<img src="./img/media-photo.webp" alt="photo">
+							<?php $image = get_field('video_thumbnail'); ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="15" cy="15" r="15" fill="#EDF6F9" />
 								<path
@@ -376,25 +330,16 @@
 									fill="#023E8A" />
 							</svg>
 						</div>
-						<p class="media__date">09 июля 2022</p>
-						<p class="media__name">Белоруссия - Россия - 1:3. Девушки U-19. Контрольный матч в Минске</p>
+						<p class="media__date"><?php the_time('j F Y'); ?></p>
+						<p class="media__name"><?php the_title(); ?></p>
 					</a>
-					<a href="#" class="media__item">
-						<div class="media__wrap">
-							<img src="./img/media-video.webp" alt="photo">
-							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<circle cx="15" cy="15" r="15" fill="#EDF6F9" />
-								<path
-									d="M20.7 14.4338C21.3667 14.8187 21.3667 15.7809 20.7 16.1658L12.45 20.929C11.7833 21.3139 10.95 20.8327 10.95 20.0629V10.5367C10.95 9.76686 11.7833 9.28574 12.45 9.67064L20.7 14.4338Z"
-									fill="#023E8A" />
-							</svg>
-						</div>
-						<p class="media__date">10 июля 2022</p>
-						<p class="media__name">Матч легенд PARI Зенит - Спартак</p>
-					</a>
+					<?php
+						}
+						wp_reset_postdata();
+					?>
 				</div>
 				<div class="media__btn btn">
-					<a class="media__link" data-media="video-media" href="https://ffgel.ru/media">
+					<a class="media__link" href="https://ffgel.ru/media-video">
 						Все видео
 						<svg viewBox="0 0 61 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="43" cy="17.5" r="17" stroke="url(#paint0_linear_3_598)" />
@@ -402,7 +347,7 @@
 								d="M1 17C0.723858 17 0.5 17.2239 0.5 17.5C0.5 17.7761 0.723858 18 1 18V17ZM43.3536 17.8536C43.5488 17.6583 43.5488 17.3417 43.3536 17.1464L40.1716 13.9645C39.9763 13.7692 39.6597 13.7692 39.4645 13.9645C39.2692 14.1597 39.2692 14.4763 39.4645 14.6716L42.2929 17.5L39.4645 20.3284C39.2692 20.5237 39.2692 20.8403 39.4645 21.0355C39.6597 21.2308 39.9763 21.2308 40.1716 21.0355L43.3536 17.8536ZM1 18H43V17H1V18Z"
 								fill="#023E8A" />
 							<defs>
-								<linearGradient id="paint0_linear_3_600" x1="60.5" y1="17.5" x2="25.5" y2="17.5"
+								<linearGradient id="paint0_linear_3_598" x1="60.5" y1="17.5" x2="25.5" y2="17.5"
 									gradientUnits="userSpaceOnUse">
 									<stop stop-color="#023E8A" />
 									<stop offset="1" stop-color="#EDF6F9" stop-opacity="0" />
@@ -418,7 +363,8 @@
 	<section class="adversting">
 		<div class="adversting__contact">
 			<h3 class="title">Мы в соцсетях:</h3>
-			<p>Следите за нами в соиацльных сетях, подписывайтесь на новостные паблики, чтобы узнать о событиях клуба первыми!</p>
+			<p>Следите за нами в соиацльных сетях, подписывайтесь на новостные паблики, чтобы узнать о событиях клуба
+				первыми!</p>
 			<div class="adversting__icon">
 				<a href="https://t.me/FedFGel">
 					<svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -447,7 +393,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="partner">
 		<div class="container">
 			<div class="partner__header">
@@ -456,23 +402,43 @@
 				<span class="partner__line"></span>
 			</div>
 			<div class="partner__block">
+				<?php 
+					$image1 = get_field('partner_logo-1');
+					$image2 = get_field('partner_logo-2');
+					$image3 = get_field('partner_logo-3');
+					$image4 = get_field('partner_logo-4');
+					$image5 = get_field('partner_logo-5');
+					$image6 = get_field('partner_logo-6');
+					$image7 = get_field('partner_logo-7');
+					$image8 = get_field('partner_logo-8');
+					$image9 = get_field('partner_logo-9');
+				?>
 				<div class="partner__row">
-					<a href="#"><img src="./img/partner-1.png" alt="partner logo"></a>
-					<a href="#"><img src="./img/partner-2.png" alt="partner logo"></a>
-					<a href="#"><img src="./img/partner-3.png" alt="partner logo"></a>
-					<a href="#"><img src="./img/partner-2.png" alt="partner logo"></a>
-					<a href="#"><img src="./img/partner-1.png" alt="partner logo"></a>
+					<a href="<?php the_field('partner_url-1'); ?>"><img src="<?php echo $image1['url']; ?>"
+							alt="<?php echo $image1['alt']; ?>"></a>
+					<a href="<?php the_field('partner_url-2'); ?>"><img src="<?php echo $image2['url']; ?>"
+							alt="<?php echo $image2['alt']; ?>"></a>
+					<a href="<?php the_field('partner_url-3'); ?>"><img src="<?php echo $image3['url']; ?>"
+							alt="<?php echo $image3['alt']; ?>"></a>
+					<a href="<?php the_field('partner_url-4'); ?>"><img src="<?php echo $image4['url']; ?>"
+							alt="<?php echo $image4['alt']; ?>"></a>
+					<a href="<?php the_field('partner_url-5'); ?>"><img src="<?php echo $image5['url']; ?>"
+							alt="<?php echo $image5['alt']; ?>"></a>
 				</div>
 				<div class="partner__row">
-					<a href="#"><img src="./img/partner-1.png" alt="partner logo"></a>
-					<a href="#"><img src="./img/partner-2.png" alt="partner logo"></a>
-					<a href="#"><img src="./img/partner-3.png" alt="partner logo"></a>
-					<a href="#"><img src="./img/partner-2.png" alt="partner logo"></a>
+					<a href="<?php the_field('partner_url-6'); ?>"><img src="<?php echo $image6['url']; ?>"
+							alt="<?php echo $image6['alt']; ?>"></a>
+					<a href="<?php the_field('partner_url-7'); ?>"><img src="<?php echo $image7['url']; ?>"
+							alt="<?php echo $image7['alt']; ?>"></a>
+					<a href="<?php the_field('partner_url-8'); ?>"><img src="<?php echo $image8['url']; ?>"
+							alt="<?php echo $image8['alt']; ?>"></a>
+					<a href="<?php the_field('partner_url-9'); ?>"><img src="<?php echo $image9['url']; ?>"
+							alt="<?php echo $image9['alt']; ?>"></a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-    <?php 
+	<?php 
         get_footer();
     ?>

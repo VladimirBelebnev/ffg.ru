@@ -13,8 +13,7 @@ const cards = () => {
     });
 
     window.addEventListener('touchstart', event => {
-        if (!event.target.closest('.player__card') || 
-            event.target.closest('.player__back').style.transform === 'rotateY(360deg)') {
+        if (!event.target.closest('.player__card') || event.target.closest('.player__back')) {
             cards.forEach(card => {
                 card.querySelector('.player__front').style.transform = 'rotateY(0deg)';
                 card.querySelector('.player__back').style.transform = 'rotateY(180deg)';
@@ -23,4 +22,6 @@ const cards = () => {
     });
 };
 
-cards();
+window.addEventListener('DOMContentLoaded', () => {
+    cards();
+});
