@@ -1,3 +1,3 @@
-# ffgel.ru
+# Сайт ffgel.ru
 
-Football federation website: https://ffgel.ru
+https://ffgel.ru (временно не работает)
